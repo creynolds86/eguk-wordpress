@@ -1,0 +1,52 @@
+/*=> Variables
+--------------------------------------------------*/
+$brand-primary:         #000;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$img-url:               "/eguk/wp-content/themes/eguk/assets/images";
+$gutter:                30px;
+$gutter-half:           $gutter / 2;
+
+$copy-text:             invert($brand-primary);
+
+/*=> Styles
+--------------------------------------------------*/
+body {
+  background: url("#{$img-url}/battlefield_4-1485608.jpg") $brand-primary no-repeat;
+  color: #000;
+}
+
+.site-title a {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-image: url("#{$img-url}/logo.png");
+  background-size: 200px;
+}
+
+#page {
+
+  color: $copy-text;
+
+  #main > article, #secondary {
+
+    padding: $gutter-half;
+    background: rgba(0,0,0,.35);
+    box-sizing: border-box;
+
+    .entry-header h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+#secondary {
+  margin: $gutter-half;
+  padding: $gutter-half;
+  background: rgba(0,0,0,.35);
+  box-sizing: border-box;
+}

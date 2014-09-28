@@ -1,45 +1,47 @@
 <?php
-/**
- * The template for displaying search results pages.
- *
- * @package _egukbasetheme
- */
 
-get_header(); ?>
+  /**
+   * The template for displaying search results pages.
+   *
+   * @package _egukbasetheme
+   */
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  get_header(); ?>
 
-		<?php if ( have_posts() ) : ?>
+  <main id="main" class="site-main" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_egukbasetheme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+    <?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+      <section id="search-results" role="region">
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
+        <header class="page-header">
+          <h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_egukbasetheme' ), '<i>' . get_search_query() . '</i>' ); ?></h1>
+        </header><!-- .page-header -->
 
-			<?php endwhile; ?>
+        <?php /* Start the Loop */ ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php _egukbasetheme_paging_nav(); ?>
+          <?php
+          /**
+           * Run the loop for the search to output the results.
+           * If you want to overload this in a child theme then include a file
+           * called content-search.php and that will be used instead.
+           */
+          get_template_part( 'content', 'search' );
+          ?>
 
-		<?php else : ?>
+        <?php endwhile; ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+        <?php _egukbasetheme_paging_nav(); ?>
 
-		<?php endif; ?>
+      <?php else : ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+        <?php get_template_part( 'content', 'none' ); ?>
 
-<?php get_sidebar(); ?>
+      <?php endif; ?>
+
+    </section>
+
+  </main><!-- #main -->
+
 <?php get_footer(); ?>

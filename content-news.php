@@ -46,7 +46,7 @@
         </footer><!-- .entry-footer -->
         <?php endif; ?>
 
-      </article><!-- #post-## -->
+      </article><!-- #post-<?php the_ID(); ?> -->
 
     <?php endwhile;
 

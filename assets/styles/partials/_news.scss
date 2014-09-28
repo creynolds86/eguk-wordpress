@@ -1,11 +1,7 @@
-#news {
-
-  padding: 0 !important;
-  background: transparent !important;
+#news, #search-results {
 
   article {
 
-    margin-bottom: $gutter;
     padding-right: 0 !important;
 
     .entry-meta {
@@ -23,8 +19,15 @@
     .entry-date {
       font-size: 3rem;
     }
+    .entry-footer {
+      clear: both;
+    }
     .edit-link {
       margin-bottom: 0;
     }
   }
+}
+.home #news {
+  padding: 0 !important;
+  background: none !important;
 }

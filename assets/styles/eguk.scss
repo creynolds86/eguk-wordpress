@@ -2,6 +2,7 @@
 /*=> Variables
 --------------------------------------------------*/
 $brand-primary:         #111;
+$brand-accent:          #428bca;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
@@ -9,6 +10,7 @@ $brand-danger:          #d9534f;
 
 $black:                 #000;
 $alpha:                 .8;
+$light-alpha:           .5;
 
 $img-url:               "/eguk/wp-content/themes/eguk/assets/images";
 
@@ -30,6 +32,10 @@ body {
   color: #000;
 }
 
+#masthead {
+  margin-top: ($gutter * 2) + $gutter-half;
+}
+
 .logged-in {
 
   #masthead {
@@ -45,6 +51,7 @@ body {
   height: 200px;
   background-image: url("#{$img-url}/logo.png");
   background-size: 200px;
+  opacity: $light-alpha;
 }
 
 #page {
@@ -61,14 +68,26 @@ body {
     border-radius: $border-radius;
     box-sizing: border-box;
 
+    .page-header {
+      
+      border: none;
+
+      i {
+        color: darken($copy-text, 35%);
+      }
+    }
     .entry-header h1 {
       margin-top: 0;
     }
   }
+  #content article:last-of-type,
+  #content section:last-of-type {
+    margin-bottom: 0;
+  }
 }
 .jumbotron {
   padding: $gutter * 2 !important;
-  background-color: rgba($brand-primary, .5) !important;
+  background-color: rgba($brand-primary, $light-alpha) !important;
 }
 
 .entry-header {

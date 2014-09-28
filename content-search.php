@@ -9,47 +9,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+  <div class="entry-meta">
+    <span class="entry-date"><?php echo esc_html( get_the_date('j') ); ?></span>
+    <span class="entry-month"><?php echo esc_html( get_the_date('M') ); ?></span>
+  </div><!-- .entry-meta -->
+  <header class="entry-header">
+    <?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '">', '</a></h1>' ); ?>
+  </header><!-- .entry-header -->
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php _egukbasetheme_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+  <div class="entry-summary">
+    <?php the_excerpt(); ?>
+    <?php
+      wp_link_pages( array(
+        'before' => '<div class="page-links">' . __( 'Pages:', '_egukbasetheme' ),
+        'after'  => '</div>',
+      ) );
+    ?>
+  </div><!-- .entry-content -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+  <?php if (current_user_can('edit_posts')) : ?>
+  <footer class="entry-footer">
+    <?php edit_post_link( __( 'Edit post', '_egukbasetheme' ), '<p class="edit-link">', '</p>' ); ?>
+  </footer><!-- .entry-footer -->
+  <?php endif; ?>
 
-	<footer class="entry-footer">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', '_egukbasetheme' ) );
-				if ( $categories_list && _egukbasetheme_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', '_egukbasetheme' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
-
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', '_egukbasetheme' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', '_egukbasetheme' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
-
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_egukbasetheme' ), __( '1 Comment', '_egukbasetheme' ), __( '% Comments', '_egukbasetheme' ) ); ?></span>
-		<?php endif; ?>
-
-		<?php edit_post_link( __( 'Edit', '_egukbasetheme' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->

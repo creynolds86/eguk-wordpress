@@ -47,14 +47,18 @@
 				}
 			} // end check for categories on this blog
 
+			echo '<p>';
+
 			printf(
 				$meta_text,
 				$category_list,
 				$tag_list,
 				get_permalink()
 			);
+
+			echo '</p>';
 		?>
 
-		<?php edit_post_link( __( 'Edit', '_egukbasetheme' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit post', '_egukbasetheme' ), '<p class="edit-link">', '</p>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

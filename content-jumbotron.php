@@ -17,7 +17,7 @@
 
   if ( $jumbotron->have_posts() ) :
 
-    echo '<article class="jumbotron">';
+    echo '<section class="jumbotron col-md-12" role="region">';
 
     while ( $jumbotron->have_posts() ) : $jumbotron->the_post();
       
@@ -26,6 +26,6 @@
 
     endwhile;
 
-    echo '</article>';
+    echo '</section>';
 
   endif;

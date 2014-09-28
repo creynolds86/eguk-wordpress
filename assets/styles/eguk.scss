@@ -6,13 +6,18 @@ $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 
+$black:                 #000;
+$alpha:                 .8;
+
 $img-url:               "/eguk/wp-content/themes/eguk/assets/images";
+
 $gutter:                30px;
 $gutter-half:           $gutter / 2;
 
 $copy-text:             invert($brand-primary);
 
-$black:                 #000;
+$border-radius:         6px;
+
 
 /*=> Styles
 --------------------------------------------------*/
@@ -32,12 +37,14 @@ body {
 
 #page {
 
+  max-width: 100%;
   color: $copy-text;
 
-  #main > article, #secondary {
+  #content article {
 
-    padding: $gutter-half;
-    background: rgba(0,0,0,.35);
+    padding: $gutter;
+    background: rgba($brand-primary, $alpha);
+    border-radius: $border-radius;
     box-sizing: border-box;
 
     .entry-header h1 {
@@ -46,12 +53,24 @@ body {
   }
 }
 .jumbotron {
-  background-color: $brand-primary;
+  background-color: rgba($brand-primary, .5);
 }
 
-#secondary {
-  margin: $gutter-half;
-  padding: $gutter-half;
-  background: rgba(0,0,0,.35);
-  box-sizing: border-box;
+.entry-header {
+  margin-bottom: $gutter;
+}
+
+.post-edit-link {
+  @extend .btn;
+  @extend .btn-default;
+}
+
+blockquote {
+  @extend .well;
+}
+
+.well {
+  border-color: rgba($brand-primary, 1);
+  border-left: $gutter-half solid invert($brand-primary);
+  background: rgba($brand-primary, .75);
 }

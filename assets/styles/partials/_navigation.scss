@@ -1,5 +1,6 @@
 .navbar {
   margin-bottom: $gutter !important;
+  background: rgba($brand-primary, .8);
 }
 .logged-in .navbar {
   top: 32px;

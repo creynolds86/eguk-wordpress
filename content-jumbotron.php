@@ -1,4 +1,5 @@
 <?php
+
   /**
   * The template for displaying news articles in the jumbtron.
   *
@@ -7,18 +8,24 @@
   */
 
   $args = array(
-    'posts_per_page'      => 1,
-    'post__in'            => get_option( 'sticky_posts' ),
-    'ignore_sticky_posts' => 1,
-  );
+            'posts_per_page'      => 1,
+            'post__in'            => get_option( 'sticky_posts' ),
+            'ignore_sticky_posts' => 1,
+          );
 
-  $jumbotron = new WP_Query( 'category_name=jumbotron' );
+  $jumbotron = new WP_Query( $args );
 
+  if ( $jumbotron->have_posts() ) :
 
-?>
+    echo '<article class="jumbotron">';
 
-<article class="jumbotron">
-  <h1>We are recruiting!</h1>
-  <p>EGUK are currently searching for active members.</p>
-  <p><a href="#" class="btn btn-primary btn-lg" role="button">Want to join us</a>?</p>
-</article>
+    while ( $jumbotron->have_posts() ) : $jumbotron->the_post();
+      
+      echo '<h1>' . get_the_title() . '</h1>';
+      echo get_the_content();
+
+    endwhile;
+
+    echo '</article>';
+
+  endif;

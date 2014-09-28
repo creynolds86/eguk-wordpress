@@ -35,7 +35,7 @@
       <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
     </div>
     <div class="site-navigation">
-      <nav class="navbar navbar-inverse" role="navigation">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -52,16 +52,19 @@
                 'theme_location'  => 'primary',
                 'depth'           => 2,
                 'container'       => 'div',
-                'container_class' => 'collapse navbar-collapse',
+                'container_class' => 'collapse navbar-collapse navbar-left',
                 'container_id'    => 'bs-example-navbar-collapse-1',
                 'menu_class'      => 'nav navbar-nav',
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker())
               );
           ?>
-          </div>
+          <?php if ( !is_user_logged_in() ) : ?>
+          <p class="navbar-text navbar-right"><?php _e('Hello, Guest.'); ?>&nbsp;<a href="<?php echo get_page_link(18); ?>"><?php _e('Please sign in to your account'); ?></a>.</p>
+          <?php endif; ?>
+        </div>
       </nav>
     </div>
   </header><!-- #masthead -->
 
-  <main id="content" class="site-content">
+  <div id="content" class="site-content">

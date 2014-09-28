@@ -1,3 +1,4 @@
+
 /*=> Variables
 --------------------------------------------------*/
 $brand-primary:         #111;
@@ -18,12 +19,23 @@ $copy-text:             invert($brand-primary);
 
 $border-radius:         6px;
 
+@import "partials/_forms.scss";
+@import "partials/_news.scss";
+@import "partials/_navigation.scss";
 
 /*=> Styles
 --------------------------------------------------*/
 body {
   background: url("#{$img-url}/battlefield_4-1485608.jpg") $black no-repeat;
   color: #000;
+}
+
+.logged-in {
+
+  #masthead {
+    margin-top: ($gutter * 2) + $gutter-half;
+  }
+
 }
 
 .site-title a {
@@ -40,8 +52,10 @@ body {
   max-width: 100%;
   color: $copy-text;
 
-  #content article {
+  #content article,
+  #content section {
 
+    margin-bottom: $gutter;
     padding: $gutter;
     background: rgba($brand-primary, $alpha);
     border-radius: $border-radius;
@@ -53,7 +67,8 @@ body {
   }
 }
 .jumbotron {
-  background-color: rgba($brand-primary, .5);
+  padding: $gutter * 2 !important;
+  background-color: rgba($brand-primary, .5) !important;
 }
 
 .entry-header {
@@ -73,4 +88,8 @@ blockquote {
   border-color: rgba($brand-primary, 1);
   border-left: $gutter-half solid invert($brand-primary);
   background: rgba($brand-primary, .75);
+}
+
+.screen-reader-text {
+  @extend .sr-only;
 }

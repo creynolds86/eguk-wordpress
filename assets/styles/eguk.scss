@@ -1,6 +1,6 @@
 /*=> Variables
 --------------------------------------------------*/
-$brand-primary:         #000;
+$brand-primary:         #111;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
@@ -12,10 +12,12 @@ $gutter-half:           $gutter / 2;
 
 $copy-text:             invert($brand-primary);
 
+$black:                 #000;
+
 /*=> Styles
 --------------------------------------------------*/
 body {
-  background: url("#{$img-url}/battlefield_4-1485608.jpg") $brand-primary no-repeat;
+  background: url("#{$img-url}/battlefield_4-1485608.jpg") $black no-repeat;
   color: #000;
 }
 
@@ -42,6 +44,9 @@ body {
       margin-top: 0;
     }
   }
+}
+.jumbotron {
+  background-color: $brand-primary;
 }
 
 #secondary {

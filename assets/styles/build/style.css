@@ -2881,7 +2881,7 @@ output {
   color: #555555;
 }
 
-.form-control {
+.form-control, input[type="text"], textarea, select {
   display: block;
   width: 100%;
   height: 34px;
@@ -2897,28 +2897,28 @@ output {
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.form-control:focus {
+.form-control:focus, input[type="text"]:focus, textarea:focus, select:focus {
   border-color: #66afe9;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, input[type="text"]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
   color: #777777;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
   color: #777777;
 }
-.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
   color: #777777;
 }
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-control[disabled], input[disabled][type="text"], textarea[disabled], select[disabled], .form-control[readonly], input[readonly][type="text"], textarea[readonly], select[readonly], fieldset[disabled] .form-control, fieldset[disabled] input[type="text"], fieldset[disabled] textarea, fieldset[disabled] select {
   cursor: not-allowed;
   background-color: #eeeeee;
   opacity: 1;
 }
 
-textarea.form-control {
+textarea.form-control, textarea {
   height: auto;
 }
 
@@ -2933,7 +2933,7 @@ input[type="month"] {
   line-height: 34px;
   line-height: 1.42857 \0;
 }
-input[type="date"].input-sm, .form-horizontal .form-group-sm input[type="date"].form-control, .input-group-sm > input[type="date"].form-control,
+input[type="date"].input-sm, .form-horizontal .form-group-sm input[type="date"].form-control, .form-horizontal .form-group-sm input[type="date"][type="text"], .input-group-sm > input[type="date"].form-control, .input-group-sm > input[type="date"][type="text"],
 .input-group-sm > input[type="date"].input-group-addon,
 .input-group-sm > .input-group-btn > input[type="date"].btn,
 .input-group-sm > .input-group-btn > input[type="date"][type="submit"],
@@ -2941,7 +2941,9 @@ input[type="date"].input-sm, .form-horizontal .form-group-sm input[type="date"].
 .input-group-sm > .input-group-btn > input[type="date"].post-edit-link,
 input[type="time"].input-sm,
 .form-horizontal .form-group-sm input[type="time"].form-control,
+.form-horizontal .form-group-sm input[type="time"][type="text"],
 .input-group-sm > input[type="time"].form-control,
+.input-group-sm > input[type="time"][type="text"],
 .input-group-sm > input[type="time"].input-group-addon,
 .input-group-sm > .input-group-btn > input[type="time"].btn,
 .input-group-sm > .input-group-btn > input[type="time"][type="submit"],
@@ -2949,7 +2951,9 @@ input[type="time"].input-sm,
 .input-group-sm > .input-group-btn > input[type="time"].post-edit-link,
 input[type="datetime-local"].input-sm,
 .form-horizontal .form-group-sm input[type="datetime-local"].form-control,
+.form-horizontal .form-group-sm input[type="datetime-local"][type="text"],
 .input-group-sm > input[type="datetime-local"].form-control,
+.input-group-sm > input[type="datetime-local"][type="text"],
 .input-group-sm > input[type="datetime-local"].input-group-addon,
 .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
 .input-group-sm > .input-group-btn > input[type="datetime-local"][type="submit"],
@@ -2957,7 +2961,9 @@ input[type="datetime-local"].input-sm,
 .input-group-sm > .input-group-btn > input[type="datetime-local"].post-edit-link,
 input[type="month"].input-sm,
 .form-horizontal .form-group-sm input[type="month"].form-control,
+.form-horizontal .form-group-sm input[type="month"][type="text"],
 .input-group-sm > input[type="month"].form-control,
+.input-group-sm > input[type="month"][type="text"],
 .input-group-sm > input[type="month"].input-group-addon,
 .input-group-sm > .input-group-btn > input[type="month"].btn,
 .input-group-sm > .input-group-btn > input[type="month"][type="submit"],
@@ -2965,7 +2971,7 @@ input[type="month"].input-sm,
 .input-group-sm > .input-group-btn > input[type="month"].post-edit-link {
   line-height: 30px;
 }
-input[type="date"].input-lg, .form-horizontal .form-group-lg input[type="date"].form-control, .input-group-lg > input[type="date"].form-control,
+input[type="date"].input-lg, .form-horizontal .form-group-lg input[type="date"].form-control, .form-horizontal .form-group-lg input[type="date"][type="text"], .input-group-lg > input[type="date"].form-control, .input-group-lg > input[type="date"][type="text"],
 .input-group-lg > input[type="date"].input-group-addon,
 .input-group-lg > .input-group-btn > input[type="date"].btn,
 .input-group-lg > .input-group-btn > input[type="date"][type="submit"],
@@ -2973,7 +2979,9 @@ input[type="date"].input-lg, .form-horizontal .form-group-lg input[type="date"].
 .input-group-lg > .input-group-btn > input[type="date"].post-edit-link,
 input[type="time"].input-lg,
 .form-horizontal .form-group-lg input[type="time"].form-control,
+.form-horizontal .form-group-lg input[type="time"][type="text"],
 .input-group-lg > input[type="time"].form-control,
+.input-group-lg > input[type="time"][type="text"],
 .input-group-lg > input[type="time"].input-group-addon,
 .input-group-lg > .input-group-btn > input[type="time"].btn,
 .input-group-lg > .input-group-btn > input[type="time"][type="submit"],
@@ -2981,7 +2989,9 @@ input[type="time"].input-lg,
 .input-group-lg > .input-group-btn > input[type="time"].post-edit-link,
 input[type="datetime-local"].input-lg,
 .form-horizontal .form-group-lg input[type="datetime-local"].form-control,
+.form-horizontal .form-group-lg input[type="datetime-local"][type="text"],
 .input-group-lg > input[type="datetime-local"].form-control,
+.input-group-lg > input[type="datetime-local"][type="text"],
 .input-group-lg > input[type="datetime-local"].input-group-addon,
 .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
 .input-group-lg > .input-group-btn > input[type="datetime-local"][type="submit"],
@@ -2989,7 +2999,9 @@ input[type="datetime-local"].input-lg,
 .input-group-lg > .input-group-btn > input[type="datetime-local"].post-edit-link,
 input[type="month"].input-lg,
 .form-horizontal .form-group-lg input[type="month"].form-control,
+.form-horizontal .form-group-lg input[type="month"][type="text"],
 .input-group-lg > input[type="month"].form-control,
+.input-group-lg > input[type="month"][type="text"],
 .input-group-lg > input[type="month"].input-group-addon,
 .input-group-lg > .input-group-btn > input[type="month"].btn,
 .input-group-lg > .input-group-btn > input[type="month"][type="submit"],
@@ -2998,7 +3010,7 @@ input[type="month"].input-lg,
   line-height: 46px;
 }
 
-.form-group {
+.form-group, #bbpress-forums #new-post p {
   margin-bottom: 15px;
 }
 
@@ -3072,13 +3084,13 @@ input[type="checkbox"] {
   padding-bottom: 7px;
   margin-bottom: 0;
 }
-.form-control-static.input-lg, .form-horizontal .form-group-lg .form-control-static.form-control, .input-group-lg > .form-control-static.form-control,
+.form-control-static.input-lg, .form-horizontal .form-group-lg .form-control-static.form-control, .form-horizontal .form-group-lg input.form-control-static[type="text"], .form-horizontal .form-group-lg textarea.form-control-static, .form-horizontal .form-group-lg select.form-control-static, .input-group-lg > .form-control-static.form-control, .input-group-lg > input.form-control-static[type="text"], .input-group-lg > textarea.form-control-static, .input-group-lg > select.form-control-static,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
 .input-group-lg > .input-group-btn > input.form-control-static[type="submit"],
 .input-group-lg > .input-group-btn > input.form-control-static[type="reset"],
 .input-group-lg > .input-group-btn > button.form-control-static,
-.input-group-lg > .input-group-btn > .form-control-static.post-edit-link, .form-control-static.input-sm, .form-horizontal .form-group-sm .form-control-static.form-control, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.post-edit-link, .form-control-static.input-sm, .form-horizontal .form-group-sm .form-control-static.form-control, .form-horizontal .form-group-sm input.form-control-static[type="text"], .form-horizontal .form-group-sm textarea.form-control-static, .form-horizontal .form-group-sm select.form-control-static, .input-group-sm > .form-control-static.form-control, .input-group-sm > input.form-control-static[type="text"], .input-group-sm > textarea.form-control-static, .input-group-sm > select.form-control-static,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 .input-group-sm > .input-group-btn > input.form-control-static[type="submit"],
@@ -3089,7 +3101,7 @@ input[type="checkbox"] {
   padding-right: 0;
 }
 
-.input-sm, .form-horizontal .form-group-sm .form-control, .input-group-sm > .form-control,
+.input-sm, .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm input[type="text"], .form-horizontal .form-group-sm textarea, .form-horizontal .form-group-sm select, .input-group-sm > .form-control, .input-group-sm > input[type="text"], .input-group-sm > textarea, .input-group-sm > select,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > input[type="submit"],
@@ -3103,7 +3115,7 @@ input[type="checkbox"] {
   border-radius: 3px;
 }
 
-select.input-sm, .form-horizontal .form-group-sm select.form-control, .input-group-sm > select.form-control,
+select.input-sm, .form-horizontal .form-group-sm select, .input-group-sm > select,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
 .input-group-sm > .input-group-btn > select.post-edit-link {
@@ -3111,20 +3123,19 @@ select.input-sm, .form-horizontal .form-group-sm select.form-control, .input-gro
   line-height: 30px;
 }
 
-textarea.input-sm, .form-horizontal .form-group-sm textarea.form-control, .input-group-sm > textarea.form-control,
+textarea.input-sm, .form-horizontal .form-group-sm textarea, .input-group-sm > textarea,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .input-group-sm > .input-group-btn > textarea.post-edit-link,
 select[multiple].input-sm,
-.form-horizontal .form-group-sm select[multiple].form-control,
-.input-group-sm > select[multiple].form-control,
-.input-group-sm > select[multiple].input-group-addon,
+.form-horizontal .form-group-sm select[multiple],
+.input-group-sm > select[multiple],
 .input-group-sm > .input-group-btn > select[multiple].btn,
 .input-group-sm > .input-group-btn > select[multiple].post-edit-link {
   height: auto;
 }
 
-.input-lg, .form-horizontal .form-group-lg .form-control, .input-group-lg > .form-control,
+.input-lg, .form-horizontal .form-group-lg .form-control, .form-horizontal .form-group-lg input[type="text"], .form-horizontal .form-group-lg textarea, .form-horizontal .form-group-lg select, .input-group-lg > .form-control, .input-group-lg > input[type="text"], .input-group-lg > textarea, .input-group-lg > select,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > input[type="submit"],
@@ -3138,7 +3149,7 @@ select[multiple].input-sm,
   border-radius: 6px;
 }
 
-select.input-lg, .form-horizontal .form-group-lg select.form-control, .input-group-lg > select.form-control,
+select.input-lg, .form-horizontal .form-group-lg select, .input-group-lg > select,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
 .input-group-lg > .input-group-btn > select.post-edit-link {
@@ -3146,14 +3157,13 @@ select.input-lg, .form-horizontal .form-group-lg select.form-control, .input-gro
   line-height: 46px;
 }
 
-textarea.input-lg, .form-horizontal .form-group-lg textarea.form-control, .input-group-lg > textarea.form-control,
+textarea.input-lg, .form-horizontal .form-group-lg textarea, .input-group-lg > textarea,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .input-group-lg > .input-group-btn > textarea.post-edit-link,
 select[multiple].input-lg,
-.form-horizontal .form-group-lg select[multiple].form-control,
-.input-group-lg > select[multiple].form-control,
-.input-group-lg > select[multiple].input-group-addon,
+.form-horizontal .form-group-lg select[multiple],
+.input-group-lg > select[multiple],
 .input-group-lg > .input-group-btn > select[multiple].btn,
 .input-group-lg > .input-group-btn > select[multiple].post-edit-link {
   height: auto;
@@ -3162,7 +3172,7 @@ select[multiple].input-lg,
 .has-feedback {
   position: relative;
 }
-.has-feedback .form-control {
+.has-feedback .form-control, .has-feedback input[type="text"], .has-feedback textarea, .has-feedback select {
   padding-right: 42.5px;
 }
 
@@ -3178,7 +3188,7 @@ select[multiple].input-lg,
   text-align: center;
 }
 
-.input-lg + .form-control-feedback, .form-horizontal .form-group-lg .form-control + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
+.input-lg + .form-control-feedback, .form-horizontal .form-group-lg .form-control + .form-control-feedback, .form-horizontal .form-group-lg input[type="text"] + .form-control-feedback, .form-horizontal .form-group-lg textarea + .form-control-feedback, .form-horizontal .form-group-lg select + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > input[type="text"] + .form-control-feedback, .input-group-lg > textarea + .form-control-feedback, .input-group-lg > select + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .input-group-btn > input[type="submit"] + .form-control-feedback,
@@ -3190,7 +3200,7 @@ select[multiple].input-lg,
   line-height: 46px;
 }
 
-.input-sm + .form-control-feedback, .form-horizontal .form-group-sm .form-control + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
+.input-sm + .form-control-feedback, .form-horizontal .form-group-sm .form-control + .form-control-feedback, .form-horizontal .form-group-sm input[type="text"] + .form-control-feedback, .form-horizontal .form-group-sm textarea + .form-control-feedback, .form-horizontal .form-group-sm select + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .input-group-sm > input[type="text"] + .form-control-feedback, .input-group-sm > textarea + .form-control-feedback, .input-group-sm > select + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .input-group-btn > input[type="submit"] + .form-control-feedback,
@@ -3210,11 +3220,11 @@ select[multiple].input-lg,
 .has-success .checkbox-inline {
   color: #3c763d;
 }
-.has-success .form-control {
+.has-success .form-control, .has-success input[type="text"], .has-success textarea, .has-success select {
   border-color: #3c763d;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-success .form-control:focus {
+.has-success .form-control:focus, .has-success input[type="text"]:focus, .has-success textarea:focus, .has-success select:focus {
   border-color: #2b542c;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
@@ -3235,11 +3245,11 @@ select[multiple].input-lg,
 .has-warning .checkbox-inline {
   color: #8a6d3b;
 }
-.has-warning .form-control {
+.has-warning .form-control, .has-warning input[type="text"], .has-warning textarea, .has-warning select {
   border-color: #8a6d3b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-warning .form-control:focus {
+.has-warning .form-control:focus, .has-warning input[type="text"]:focus, .has-warning textarea:focus, .has-warning select:focus {
   border-color: #66512c;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
@@ -3260,11 +3270,11 @@ select[multiple].input-lg,
 .has-error .checkbox-inline {
   color: #a94442;
 }
-.has-error .form-control {
+.has-error .form-control, .has-error input[type="text"], .has-error textarea, .has-error select {
   border-color: #a94442;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-error .form-control:focus {
+.has-error .form-control:focus, .has-error input[type="text"]:focus, .has-error textarea:focus, .has-error select:focus {
   border-color: #843534;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
@@ -3289,12 +3299,12 @@ select[multiple].input-lg,
 }
 
 @media (min-width: 768px) {
-  .form-inline .form-group, .navbar-form .form-group {
+  .form-inline .form-group, .navbar-form .form-group, .form-inline #bbpress-forums #new-post p, #bbpress-forums #new-post .form-inline p, .navbar-form #bbpress-forums #new-post p, #bbpress-forums #new-post .navbar-form p {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
   }
-  .form-inline .form-control, .navbar-form .form-control {
+  .form-inline .form-control, .navbar-form .form-control, .form-inline input[type="text"], .navbar-form input[type="text"], .form-inline textarea, .navbar-form textarea, .form-inline select, .navbar-form select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -3307,10 +3317,16 @@ select[multiple].input-lg,
   .form-inline .input-group .input-group-btn,
   .navbar-form .input-group .input-group-btn,
   .form-inline .input-group .form-control,
-  .navbar-form .input-group .form-control {
+  .navbar-form .input-group .form-control,
+  .form-inline .input-group input[type="text"],
+  .navbar-form .input-group input[type="text"],
+  .form-inline .input-group textarea,
+  .navbar-form .input-group textarea,
+  .form-inline .input-group select,
+  .navbar-form .input-group select {
     width: auto;
   }
-  .form-inline .input-group > .form-control, .navbar-form .input-group > .form-control {
+  .form-inline .input-group > .form-control, .navbar-form .input-group > .form-control, .form-inline .input-group > input[type="text"], .navbar-form .input-group > input[type="text"], .form-inline .input-group > textarea, .navbar-form .input-group > textarea, .form-inline .input-group > select, .navbar-form .input-group > select {
     width: 100%;
   }
   .form-inline .control-label, .navbar-form .control-label {
@@ -3353,15 +3369,15 @@ select[multiple].input-lg,
 .form-horizontal .checkbox {
   min-height: 27px;
 }
-.form-horizontal .form-group {
+.form-horizontal .form-group, .form-horizontal #bbpress-forums #new-post p, #bbpress-forums #new-post .form-horizontal p {
   margin-left: -15px;
   margin-right: -15px;
 }
-.form-horizontal .form-group:before, .form-horizontal .form-group:after {
+.form-horizontal .form-group:before, .form-horizontal #bbpress-forums #new-post p:before, #bbpress-forums #new-post .form-horizontal p:before, .form-horizontal .form-group:after, .form-horizontal #bbpress-forums #new-post p:after, #bbpress-forums #new-post .form-horizontal p:after {
   content: " ";
   display: table;
 }
-.form-horizontal .form-group:after {
+.form-horizontal .form-group:after, .form-horizontal #bbpress-forums #new-post p:after, #bbpress-forums #new-post .form-horizontal p:after {
   clear: both;
 }
 @media (min-width: 768px) {
@@ -4229,7 +4245,7 @@ button .caret, .post-edit-link .caret {
   padding-left: 0;
   padding-right: 0;
 }
-.input-group .form-control {
+.input-group .form-control, .input-group input[type="text"], .input-group textarea, .input-group select {
   position: relative;
   z-index: 2;
   float: left;
@@ -4239,12 +4255,18 @@ button .caret, .post-edit-link .caret {
 
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group input[type="text"],
+.input-group textarea,
+.input-group select {
   display: table-cell;
 }
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group input[type="text"]:not(:first-child):not(:last-child),
+.input-group textarea:not(:first-child):not(:last-child),
+.input-group select:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -4266,7 +4288,7 @@ button .caret, .post-edit-link .caret {
   border: 1px solid #cccccc;
   border-radius: 4px;
 }
-.input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control,
+.input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control, .form-horizontal .form-group-sm input.input-group-addon[type="text"], .form-horizontal .form-group-sm textarea.input-group-addon, .form-horizontal .form-group-sm select.input-group-addon,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
@@ -4277,7 +4299,7 @@ button .caret, .post-edit-link .caret {
   font-size: 12px;
   border-radius: 3px;
 }
-.input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control,
+.input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control, .form-horizontal .form-group-lg input.input-group-addon[type="text"], .form-horizontal .form-group-lg textarea.input-group-addon, .form-horizontal .form-group-lg select.input-group-addon,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
@@ -4293,7 +4315,7 @@ button .caret, .post-edit-link .caret {
   margin-top: 0;
 }
 
-.input-group .form-control:first-child,
+.input-group .form-control:first-child, .input-group input[type="text"]:first-child, .input-group textarea:first-child, .input-group select:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > input[type="submit"],
@@ -4324,7 +4346,7 @@ button .caret, .post-edit-link .caret {
   border-right: 0;
 }
 
-.input-group .form-control:last-child,
+.input-group .form-control:last-child, .input-group input[type="text"]:last-child, .input-group textarea:last-child, .input-group select:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > input[type="submit"],
@@ -4813,7 +4835,7 @@ button .caret, .post-edit-link .caret {
   margin-bottom: 8px;
 }
 @media (max-width: 767px) {
-  .navbar-form .form-group {
+  .navbar-form .form-group, .navbar-form #bbpress-forums #new-post p, #bbpress-forums #new-post .navbar-form p {
     margin-bottom: 5px;
   }
 }
@@ -5380,24 +5402,26 @@ a.thumbnail.active {
   border-color: #428bca;
 }
 
-.alert {
+.alert, #bbpress-forums .bbp-template-notice, .info {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
-.alert h4 {
+.alert h4, #bbpress-forums .bbp-template-notice h4, .info h4 {
   margin-top: 0;
   color: inherit;
 }
-.alert .alert-link {
+.alert .alert-link, #bbpress-forums .bbp-template-notice .alert-link, .info .alert-link {
   font-weight: bold;
 }
-.alert > p,
-.alert > ul {
+.alert > p, #bbpress-forums .bbp-template-notice > p, .info > p,
+.alert > ul,
+#bbpress-forums .bbp-template-notice > ul,
+.info > ul {
   margin-bottom: 0;
 }
-.alert > p + p {
+.alert > p + p, #bbpress-forums .bbp-template-notice > p + p, .info > p + p {
   margin-top: 5px;
 }
 
@@ -5425,15 +5449,15 @@ a.thumbnail.active {
   color: #2b542c;
 }
 
-.alert-info {
+.alert-info, #bbpress-forums .bbp-template-notice, .info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
 }
-.alert-info hr {
+.alert-info hr, #bbpress-forums .bbp-template-notice hr, .info hr {
   border-top-color: #a6e1ec;
 }
-.alert-info .alert-link {
+.alert-info .alert-link, #bbpress-forums .bbp-template-notice .alert-link, .info .alert-link {
   color: #245269;
 }
 
@@ -7051,6 +7075,159 @@ button.close {
 }
 /*=> Variables
 --------------------------------------------------*/
+input[type="text"], textarea, select {
+  margin-bottom: 30px !important;
+}
+
+input[type="text"] {
+  width: 50%;
+}
+
+select {
+  width: auto;
+}
+
+fieldset {
+  padding: 0 !important;
+  border: 0 !important;
+}
+fieldset legend {
+  padding: 15px !important;
+  width: auto !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+/*=> Forum Sprites
+--------------------------------------------------*/
+#bbpress-forums .bbp-topics .bbp-body .bbp-topic-title, #bbpress-forums #new-post legend, #bbpress-forums .bbp-topics .bbp-body .sticky .bbp-topic-title, #bbpress-forums .bbp-topics .bbp-body .sticky.status-closed .bbp-topic-title, #bbpress-forums .bbp-topics .bbp-body .status-closed .bbp-topic-title {
+  background: url("/eguk/wp-content/themes/eguk/assets/images/forum-sprite.png") no-repeat;
+}
+
+#bbpress-forums .bbp-topics .bbp-body .bbp-topic-title {
+  background-position: -2px 0;
+}
+
+#bbpress-forums #new-post legend {
+  background-position: -2px -300px;
+}
+
+#bbpress-forums .bbp-topics .bbp-body .sticky .bbp-topic-title, #bbpress-forums .bbp-topics .bbp-body .sticky.status-closed .bbp-topic-title {
+  background-position: -2px -149px;
+}
+
+#bbpress-forums .bbp-topics .bbp-body .status-closed .bbp-topic-title {
+  background-position: -2px -222px;
+}
+
+/*=> Forum styles
+--------------------------------------------------*/
+#bbpress-forums {
+  color: white;
+}
+#bbpress-forums ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#bbpress-forums li {
+  background: none;
+  margin: 0;
+  list-style: none;
+}
+#bbpress-forums .bbp-template-notice p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#bbpress-forums .bbp-pagination {
+  margin-bottom: 30px;
+}
+#bbpress-forums .avatar {
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  vertical-align: top;
+}
+#bbpress-forums .bbp-topic-title, #bbpress-forums .bbp-topic-voice-count, #bbpress-forums .bbp-topic-reply-count, #bbpress-forums .bbp-topic-freshness {
+  float: left;
+}
+#bbpress-forums .bbp-topic-voice-count, #bbpress-forums .bbp-forum-reply-count, #bbpress-forums .bbp-topic-reply-count, #bbpress-forums .bbp-topic-freshness {
+  width: 10%;
+  text-align: center;
+}
+#bbpress-forums .bbp-topic-freshness {
+  width: 22%;
+}
+#bbpress-forums .bbp-topics {
+  border: none !important;
+}
+#bbpress-forums .bbp-topics li.bbp-forum-info, #bbpress-forums .bbp-topics li.bbp-topic-title {
+  width: 55%;
+}
+#bbpress-forums .bbp-topics .bbp-header {
+  padding: 15px;
+  width: 100%;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#bbpress-forums .bbp-topics .bbp-header .bbp-topic-title, #bbpress-forums .bbp-topics .bbp-header .bbp-topic-voice-count, #bbpress-forums .bbp-topics .bbp-header .bbp-topic-reply-count, #bbpress-forums .bbp-topics .bbp-header .bbp-topic-freshness {
+  font-weight: bold;
+}
+#bbpress-forums .bbp-topics .bbp-body {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+#bbpress-forums .bbp-topics .bbp-body ul {
+  padding: 8px;
+  border: none !important;
+  border-bottom: rgba(255, 255, 255, 0.5) !important;
+  background: none !important;
+}
+#bbpress-forums .bbp-topics .bbp-body .bbp-topic-title, #bbpress-forums .bbp-topics .bbp-body .bbp-topic-voice-count, #bbpress-forums .bbp-topics .bbp-body .bbp-topic-reply-count, #bbpress-forums .bbp-topics .bbp-body .bbp-topic-freshness {
+  float: left;
+  padding: 15px;
+  font-size: 1.2em;
+}
+#bbpress-forums .bbp-topics .bbp-body .bbp-topic-title {
+  padding-left: 65px;
+}
+#bbpress-forums .bbp-topics .bbp-footer {
+  background: none;
+}
+#bbpress-forums .bbp-topics .bbp-body, #bbpress-forums .bbp-topics .bbp-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+#bbpress-forums .bbp-topics:before,
+#bbpress-forums .bbp-topics:after,
+#bbpress-forums .bbp-header:before,
+#bbpress-forums .bbp-header:after,
+#bbpress-forums .bbp-body:before,
+#bbpress-forums .bbp-body:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#bbpress-forums .bbp-topics:after,
+#bbpress-forums .bbp-header:after,
+#bbpress-forums .bbp-body:after {
+  clear: both;
+}
+#bbpress-forums #new-post legend {
+  padding: 15px 30px 15px 60px !important;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+#bbpress-forums #new-post textarea {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#bbpress-forums #new-post .bbp-submit-wrapper {
+  float: none;
+}
+
 #news article, #search-results article {
   padding-right: 0 !important;
 }
@@ -7060,7 +7237,7 @@ button.close {
   width: 90px;
   height: 90px;
   padding: 15px;
-  border-radius: 6px 0 0 6px;
+  border-radius: 4px 0 0 4px;
   background-color: rgba(238, 238, 238, 0.1);
 }
 #news article .entry-date, #news article .entry-month, #search-results article .entry-date, #search-results article .entry-month {
@@ -7084,10 +7261,40 @@ button.close {
 .navbar {
   margin-bottom: 30px !important;
   background: rgba(17, 17, 17, 0.8);
+  height: 55px;
+}
+.navbar #menu-primary-navigation > li.current-menu-item, .navbar .current-menu-parent {
+  background: rgba(17, 17, 17, 0.5);
+  border-bottom: 3px solid rgba(238, 238, 238, 0.5);
+  height: 55px;
+}
+.navbar #menu-primary-navigation > li.current-menu-item > a, .navbar .current-menu-parent > a {
+  color: white !important;
 }
 
 .logged-in .navbar {
   top: 32px;
+}
+
+.blue-bg, .btn-primary, input[type="submit"],
+button[type="submit"], .bbp-header {
+  background-color: #098cc8 !important;
+  color: #fff;
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 transparent !important;
+  border-radius: 2px;
+  -webkit-transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
+  transition: background-color .2s,box-shadow 1.2s,background-color .2s,border-color .2s,color .2s;
+  background-image: -webkit-linear-gradient(top, #0f9ada, #0076ad) !important;
+  background-image: linear-gradient(to bottom, #0f9ada, #0076ad) !important;
+  border: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+.btn-primary:focus, input[type="submit"]:focus,
+button[type="submit"]:focus {
+  background-image: -webkit-linear-gradient(top, #37c0ff, #0097dd);
+  background-image: linear-gradient(to bottom, #37c0ff, #0097dd);
 }
 
 /*=> Styles
@@ -7124,7 +7331,7 @@ body {
   margin-bottom: 30px;
   padding: 30px;
   background: rgba(17, 17, 17, 0.8);
-  border-radius: 6px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 #page #content article .page-header,

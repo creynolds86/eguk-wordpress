@@ -1,6 +1,17 @@
 .navbar {
+
   margin-bottom: $gutter !important;
   background: rgba($brand-primary, .8);
+  height: 55px;
+
+  #menu-primary-navigation > li.current-menu-item, .current-menu-parent {
+    background: rgba($brand-primary, $light-alpha);
+    border-bottom: 3px solid rgba(invert($brand-primary), $light-alpha);
+    height: 55px;
+  }
+  #menu-primary-navigation > li.current-menu-item > a, .current-menu-parent > a {
+    color: $white !important;
+  }
 }
 .logged-in .navbar {
   top: 32px;

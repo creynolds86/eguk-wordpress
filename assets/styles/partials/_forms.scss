@@ -11,3 +11,26 @@ input[type="reset"],
 button {
   @extend .btn-default;
 }
+input[type="text"], textarea, select {
+  @extend .form-control;
+  margin-bottom: $gutter !important;
+}
+input[type="text"] {
+  width: 50%
+}
+select {
+  width: auto;
+}
+fieldset {
+
+  padding: 0 !important;
+  border: 0 !important;
+
+  legend {
+
+    padding: $gutter-half !important;
+    width: auto !important;
+    background-color: rgba($white, .05);
+    color: $white;
+  }
+}

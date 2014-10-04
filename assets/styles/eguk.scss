@@ -9,6 +9,7 @@ $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 
 $black:                 #000;
+$white:                 invert($black);
 $alpha:                 .8;
 $light-alpha:           .5;
 
@@ -19,11 +20,34 @@ $gutter-half:           $gutter / 2;
 
 $copy-text:             invert($brand-primary);
 
-$border-radius:         6px;
+$border-radius:         4px;
 
 @import "partials/_forms.scss";
+@import "partials/_forums.scss";
 @import "partials/_news.scss";
 @import "partials/_navigation.scss";
+
+.blue-bg {
+  background-color: #098cc8 !important;
+  color: #fff;
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 rgba($black, 0) !important;
+  border-radius: 2px;
+  -webkit-transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
+  transition: background-color .2s,box-shadow 1.2s,background-color .2s,border-color .2s,color .2s;
+  background-image: -webkit-linear-gradient(top,#0f9ada,#0076ad) !important;
+  background-image: linear-gradient(to bottom,#0f9ada,#0076ad) !important;
+  border: 0;
+  box-shadow: 0 1px 1px rgba($black, 0.3),0 0 0 1px rgba($white,0.15) inset;
+}
+
+.btn-primary, .bbp-header {
+  @extend .blue-bg;
+}
+.btn-primary:focus {
+  background-image: -webkit-linear-gradient(top,#37c0ff,#0097dd);
+  background-image: linear-gradient(to bottom,#37c0ff,#0097dd);
+}
 
 /*=> Styles
 --------------------------------------------------*/
@@ -111,4 +135,9 @@ blockquote {
 
 .screen-reader-text {
   @extend .sr-only;
+}
+
+.info {
+  @extend .alert;
+  @extend .alert-info;
 }

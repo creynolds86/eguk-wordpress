@@ -13,3 +13,27 @@
 
   if ( has_filter('bbp_get_user_subscribe_link') )
     add_filter( 'bbp_get_user_subscribe_link', eguk_add_subscribe_link_icon, 10 );
+
+  function eguk_add_favourites_link_icon($link_html) {
+
+    $replace = '<span class="glyphicon glyphicon-heart"></span>' . __('Favourite', 'bbpress' );
+
+    $link_html = str_replace(__('Favorite', 'bbpress' ), $replace, $link_html);
+
+    return $link_html;
+  }
+
+  if ( has_filter('bbp_get_user_favorites_link') )
+    add_filter( 'bbp_get_user_favorites_link', eguk_add_favourites_link_icon, 10 );
+
+  function eguk_remove_forum_post_meta_sep($html) {
+
+    $html = str_replace(' | ', '', $html);
+
+    echo $html;
+  }
+
+  add_filter( 'bbp_get_reply_admin_links', eguk_remove_forum_post_meta_sep, 10 );
+  add_filter( 'bbp_get_topic_admin_links', eguk_remove_forum_post_meta_sep, 10 );
+
+

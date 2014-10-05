@@ -27,7 +27,7 @@ $border-radius:         4px;
   color: desaturate(lighten($colour, 100%), 100%);
   border: 1px solid transparent;
   box-shadow: 0 0 rgba($black, 0);
-  border-radius: 2px;
+  border-radius: 2px !important;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   background-image: -webkit-linear-gradient(top, $colour, darken($colour, 20%));
@@ -43,23 +43,33 @@ $border-radius:         4px;
     background-color: lighten($colour, 20%);
     background-image: -webkit-linear-gradient(top, darken($colour, 20%), $colour);
     background-image: linear-gradient(to bottom, darken($colour, 20%), $colour);
+    border: 1px solid transparent;
   }
 
 }
 
+@import "partials/_icons.scss";
 @import "partials/_forms.scss";
 @import "partials/_forums.scss";
 @import "partials/_news.scss";
 @import "partials/_navigation.scss";
 
+.btn-default {
+  @include btn-bg($btn-default-bg);
+  color: $brand-primary !important;
+}
 .btn-primary {
   @include btn-bg($brand-accent);
+  //color: $white !important;
 }
 .btn-info {
   @include btn-bg($brand-accent);
 }
 .btn-success {
   @include btn-bg($btn-success-bg);
+}
+.btn-danger {
+  @include btn-bg($btn-danger-bg);
 }
 .btn-primary:focus {
   background-image: -webkit-linear-gradient(top,#37c0ff,#0097dd);

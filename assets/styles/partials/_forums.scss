@@ -47,13 +47,13 @@
 
   .subscription-toggle {
     @extend .btn;
-    @extend .btn-info;
+    @extend .btn-success;
     float: right;
     margin: 9px;
   }
   .is-subscribed .subscription-toggle {
     @extend .btn;
-    @extend .btn-success;
+    @extend .btn-danger;
     margin-bottom: $gutter;
   }
 
@@ -78,7 +78,6 @@
     margin-top: 2px;
     vertical-align: top; 
   }
-
   .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness,
   .bbp-forum-info, .bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness,
   .bbp-reply-author, .bbp-reply-content {
@@ -95,6 +94,96 @@
     width: 22%;
   }
 
+  .favorite-toggle {
+    @extend .btn;
+    color: $white;
+  }
+
+  .bbp-reply-header {
+
+    .bbp-meta {
+      
+      padding: $gutter-half;
+      width: 100%;
+      text-align: right;
+
+      .bbp-reply-post-date {
+        float: left;
+        margin-top: 6px;
+      }
+      .bbp-admin-links a {
+
+        @extend .btn;
+        @extend .btn-default;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .topic, .reply {
+
+    @extend .clearfix;
+
+    .bbp-header {
+
+      .bbp-reply-author {     
+        width: 20%;
+      }
+    }
+
+    .bbp-reply-author, .bbp-reply-content {
+      padding: $gutter-half;
+    }
+    .bbp-reply-author {
+      margin-right: $gutter-half;
+      width: 20% !important;
+      background-color: rgba($white, 0.04);
+      border-right: 15px solid rgba($white, 0.2);
+      box-sizing: border-box;
+    }
+    .bbp-reply-content {
+      width: calc(80% - 15px);
+    }
+    .bbp-author-avatar .avatar {
+      margin-bottom: $gutter-half;
+    }
+  }
+
+  .bbp-replies {
+
+    @extend .clearfix; 
+
+    .bbp-header {
+
+      .bbp-reply-author {
+        margin-top: 6px;
+      }
+      .bbp-reply-content {
+        float: right;
+      }
+      .subscription-toggle {
+        @extend .btn;
+        float: none;
+        margin: 0;
+        background: none;
+        border: 1px solid transparent;
+        box-shadow: none;
+        transition: none;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+          background: none;
+          border: 1px solid transparent;
+          box-shadow: none;
+          transition: none;
+        }
+      }
+    }
+  }
   .bbp-topics, .bbp-forums, .bbp-replies {
 
     margin-bottom: $gutter;

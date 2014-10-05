@@ -1,3 +1,6 @@
+
+/*=> Navigation styles
+--------------------------------------------------*/
 .navbar {
 
   margin-bottom: $gutter !important;
@@ -15,4 +18,19 @@
 }
 .logged-in .navbar {
   top: 32px;
+}
+
+.breadcrumb {
+
+  margin-bottom: $gutter;
+  background-color: rgba($brand-primary, $alpha);
+
+  > li + li:before {
+    padding-left: 8px;
+  }
+}
+.post-edit-link {
+  @extend .btn;
+  @extend .btn-default;
+  float: right;
 }

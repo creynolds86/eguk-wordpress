@@ -52,6 +52,5 @@
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_egukbasetheme' ), __( '1 Comment', '_egukbasetheme' ), __( '% Comments', '_egukbasetheme' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', '_egukbasetheme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

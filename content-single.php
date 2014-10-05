@@ -59,6 +59,5 @@
 			echo '</p>';
 		?>
 
-		<?php edit_post_link( __( 'Edit post', '_egukbasetheme' ), '<p class="edit-link">', '</p>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

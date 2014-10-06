@@ -60,16 +60,19 @@ $border-radius:         4px;
 }
 .btn-primary {
   @include btn-bg($brand-accent);
-  //color: $white !important;
+  color: $white !important;
 }
 .btn-info {
   @include btn-bg($brand-accent);
+  color: $white !important;
 }
 .btn-success {
   @include btn-bg($btn-success-bg);
+  color: $white !important;
 }
 .btn-danger {
   @include btn-bg($btn-danger-bg);
+  color: $white !important;
 }
 .btn-primary:focus {
   background-image: -webkit-linear-gradient(top,#37c0ff,#0097dd);

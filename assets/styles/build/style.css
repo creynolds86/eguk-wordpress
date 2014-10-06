@@ -334,7 +334,7 @@ th {
   src: url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 .glyphicon, a[class*="edit-link"]:before, a[class*="close-link"]:before, a[class*="sticky-link"]:before, a[class*="merge-link"]:before, a[class*="trash-link"]:before, a[class*="spam-link"]:before, a[class*="reply-to-link"]:before,
-a[class*="reply-link"]:before {
+a[class*="reply-link"]:before, a[class*="move-link"]:before, a[class*="split-link"]:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -3613,75 +3613,75 @@ form button .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links
 }
 
 .btn-primary, form input[type="submit"],
-form button[type="submit"] {
+form button[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"] {
   color: white;
   background-color: #428bca;
   border-color: #357ebd;
 }
 .btn-primary:hover, form input[type="submit"]:hover,
-form button[type="submit"]:hover, .btn-primary:focus, form input[type="submit"]:focus,
-form button[type="submit"]:focus, .btn-primary:active, form input[type="submit"]:active,
-form button[type="submit"]:active, .btn-primary.active, form input.active[type="submit"],
-form button.active[type="submit"], .open > .btn-primary.dropdown-toggle, form .open > input.dropdown-toggle[type="submit"],
-form .open > button.dropdown-toggle[type="submit"] {
+form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:hover, .btn-primary:focus, form input[type="submit"]:focus,
+form button[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:focus, .btn-primary:active, form input[type="submit"]:active,
+form button[type="submit"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:active, .btn-primary.active, form input.active[type="submit"],
+form button.active[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="edit-link"], .open > .btn-primary.dropdown-toggle, form .open > input.dropdown-toggle[type="submit"],
+form .open > button.dropdown-toggle[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="edit-link"] {
   color: white;
   background-color: #3071a9;
   border-color: #285e8e;
 }
 .btn-primary:active, form input[type="submit"]:active,
-form button[type="submit"]:active, .btn-primary.active, form input.active[type="submit"],
-form button.active[type="submit"], .open > .btn-primary.dropdown-toggle, form .open > input.dropdown-toggle[type="submit"],
-form .open > button.dropdown-toggle[type="submit"] {
+form button[type="submit"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:active, .btn-primary.active, form input.active[type="submit"],
+form button.active[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="edit-link"], .open > .btn-primary.dropdown-toggle, form .open > input.dropdown-toggle[type="submit"],
+form .open > button.dropdown-toggle[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="edit-link"] {
   background-image: none;
 }
 .btn-primary.disabled, form input.disabled[type="submit"],
-form button.disabled[type="submit"], .btn-primary.disabled:hover, form input.disabled[type="submit"]:hover,
-form button.disabled[type="submit"]:hover, .btn-primary.disabled:focus, form input.disabled[type="submit"]:focus,
-form button.disabled[type="submit"]:focus, .btn-primary.disabled:active, form input.disabled[type="submit"]:active,
-form button.disabled[type="submit"]:active, .btn-primary.disabled.active, form input.disabled.active[type="submit"],
-form button.disabled.active[type="submit"], .btn-primary[disabled], form input[disabled][type="submit"],
-form button[disabled][type="submit"], .btn-primary[disabled]:hover, form input[disabled][type="submit"]:hover,
-form button[disabled][type="submit"]:hover, .btn-primary[disabled]:focus, form input[disabled][type="submit"]:focus,
-form button[disabled][type="submit"]:focus, .btn-primary[disabled]:active, form input[disabled][type="submit"]:active,
-form button[disabled][type="submit"]:active, .btn-primary[disabled].active, form input[disabled].active[type="submit"],
-form button[disabled].active[type="submit"], fieldset[disabled] .btn-primary, fieldset[disabled] form input[type="submit"], form fieldset[disabled] input[type="submit"],
+form button.disabled[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="edit-link"], .btn-primary.disabled:hover, form input.disabled[type="submit"]:hover,
+form button.disabled[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="edit-link"]:hover, .btn-primary.disabled:focus, form input.disabled[type="submit"]:focus,
+form button.disabled[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="edit-link"]:focus, .btn-primary.disabled:active, form input.disabled[type="submit"]:active,
+form button.disabled[type="submit"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="edit-link"]:active, .btn-primary.disabled.active, form input.disabled.active[type="submit"],
+form button.disabled.active[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled.active[class*="edit-link"], .btn-primary[disabled], form input[disabled][type="submit"],
+form button[disabled][type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="edit-link"], .btn-primary[disabled]:hover, form input[disabled][type="submit"]:hover,
+form button[disabled][type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="edit-link"]:hover, .btn-primary[disabled]:focus, form input[disabled][type="submit"]:focus,
+form button[disabled][type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="edit-link"]:focus, .btn-primary[disabled]:active, form input[disabled][type="submit"]:active,
+form button[disabled][type="submit"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="edit-link"]:active, .btn-primary[disabled].active, form input[disabled].active[type="submit"],
+form button[disabled].active[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled].active[class*="edit-link"], fieldset[disabled] .btn-primary, fieldset[disabled] form input[type="submit"], form fieldset[disabled] input[type="submit"],
 fieldset[disabled] form button[type="submit"],
-form fieldset[disabled] button[type="submit"], fieldset[disabled] .btn-primary:hover, fieldset[disabled] form input[type="submit"]:hover, form fieldset[disabled] input[type="submit"]:hover,
+form fieldset[disabled] button[type="submit"], fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="edit-link"], fieldset[disabled] .btn-primary:hover, fieldset[disabled] form input[type="submit"]:hover, form fieldset[disabled] input[type="submit"]:hover,
 fieldset[disabled] form button[type="submit"]:hover,
-form fieldset[disabled] button[type="submit"]:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] form input[type="submit"]:focus, form fieldset[disabled] input[type="submit"]:focus,
+form fieldset[disabled] button[type="submit"]:hover, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="edit-link"]:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] form input[type="submit"]:focus, form fieldset[disabled] input[type="submit"]:focus,
 fieldset[disabled] form button[type="submit"]:focus,
-form fieldset[disabled] button[type="submit"]:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] form input[type="submit"]:active, form fieldset[disabled] input[type="submit"]:active,
+form fieldset[disabled] button[type="submit"]:focus, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="edit-link"]:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] form input[type="submit"]:active, form fieldset[disabled] input[type="submit"]:active,
 fieldset[disabled] form button[type="submit"]:active,
-form fieldset[disabled] button[type="submit"]:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] form input.active[type="submit"], form fieldset[disabled] input.active[type="submit"],
+form fieldset[disabled] button[type="submit"]:active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="edit-link"]:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] form input.active[type="submit"], form fieldset[disabled] input.active[type="submit"],
 fieldset[disabled] form button.active[type="submit"],
-form fieldset[disabled] button.active[type="submit"] {
+form fieldset[disabled] button.active[type="submit"], fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="edit-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a.active[class*="edit-link"] {
   background-color: #428bca;
   border-color: #357ebd;
 }
 .btn-primary .badge, form input[type="submit"] .badge,
-form button[type="submit"] .badge {
+form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"] .badge {
   color: #428bca;
   background-color: white;
 }
 
-.btn-success, #bbpress-forums .subscription-toggle {
+.btn-success, #bbpress-forums .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"] {
   color: white;
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.btn-success:hover, #bbpress-forums .subscription-toggle:hover, .btn-success:focus, #bbpress-forums .subscription-toggle:focus, .btn-success:active, #bbpress-forums .subscription-toggle:active, .btn-success.active, #bbpress-forums .active.subscription-toggle, .open > .btn-success.dropdown-toggle, #bbpress-forums .open > .dropdown-toggle.subscription-toggle {
+.btn-success:hover, #bbpress-forums .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:hover, .btn-success:focus, #bbpress-forums .subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:focus, .btn-success:active, #bbpress-forums .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:active, .btn-success.active, #bbpress-forums .active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-to-link"], .open > .btn-success.dropdown-toggle, #bbpress-forums .open > .dropdown-toggle.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="reply-to-link"] {
   color: white;
   background-color: #449d44;
   border-color: #398439;
 }
-.btn-success:active, #bbpress-forums .subscription-toggle:active, .btn-success.active, #bbpress-forums .active.subscription-toggle, .open > .btn-success.dropdown-toggle, #bbpress-forums .open > .dropdown-toggle.subscription-toggle {
+.btn-success:active, #bbpress-forums .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:active, .btn-success.active, #bbpress-forums .active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-to-link"], .open > .btn-success.dropdown-toggle, #bbpress-forums .open > .dropdown-toggle.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="reply-to-link"] {
   background-image: none;
 }
-.btn-success.disabled, #bbpress-forums .disabled.subscription-toggle, .btn-success.disabled:hover, #bbpress-forums .disabled.subscription-toggle:hover, .btn-success.disabled:focus, #bbpress-forums .disabled.subscription-toggle:focus, .btn-success.disabled:active, #bbpress-forums .disabled.subscription-toggle:active, .btn-success.disabled.active, #bbpress-forums .disabled.active.subscription-toggle, .btn-success[disabled], #bbpress-forums [disabled].subscription-toggle, .btn-success[disabled]:hover, #bbpress-forums [disabled].subscription-toggle:hover, .btn-success[disabled]:focus, #bbpress-forums [disabled].subscription-toggle:focus, .btn-success[disabled]:active, #bbpress-forums [disabled].subscription-toggle:active, .btn-success[disabled].active, #bbpress-forums [disabled].active.subscription-toggle, fieldset[disabled] .btn-success, fieldset[disabled] #bbpress-forums .subscription-toggle, #bbpress-forums fieldset[disabled] .subscription-toggle, fieldset[disabled] .btn-success:hover, fieldset[disabled] #bbpress-forums .subscription-toggle:hover, #bbpress-forums fieldset[disabled] .subscription-toggle:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] #bbpress-forums .subscription-toggle:focus, #bbpress-forums fieldset[disabled] .subscription-toggle:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] #bbpress-forums .subscription-toggle:active, #bbpress-forums fieldset[disabled] .subscription-toggle:active, fieldset[disabled] .btn-success.active, fieldset[disabled] #bbpress-forums .active.subscription-toggle, #bbpress-forums fieldset[disabled] .active.subscription-toggle {
+.btn-success.disabled, #bbpress-forums .disabled.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-to-link"], .btn-success.disabled:hover, #bbpress-forums .disabled.subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-to-link"]:hover, .btn-success.disabled:focus, #bbpress-forums .disabled.subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-to-link"]:focus, .btn-success.disabled:active, #bbpress-forums .disabled.subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="reply-to-link"]:active, .btn-success.disabled.active, #bbpress-forums .disabled.active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled.active[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled.active[class*="reply-to-link"], .btn-success[disabled], #bbpress-forums [disabled].subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-to-link"], .btn-success[disabled]:hover, #bbpress-forums [disabled].subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-to-link"]:hover, .btn-success[disabled]:focus, #bbpress-forums [disabled].subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-to-link"]:focus, .btn-success[disabled]:active, #bbpress-forums [disabled].subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="reply-to-link"]:active, .btn-success[disabled].active, #bbpress-forums [disabled].active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled].active[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled].active[class*="reply-to-link"], fieldset[disabled] .btn-success, fieldset[disabled] #bbpress-forums .subscription-toggle, #bbpress-forums fieldset[disabled] .subscription-toggle, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-link"], fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-to-link"], fieldset[disabled] .btn-success:hover, fieldset[disabled] #bbpress-forums .subscription-toggle:hover, #bbpress-forums fieldset[disabled] .subscription-toggle:hover, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-link"]:hover, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-to-link"]:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] #bbpress-forums .subscription-toggle:focus, #bbpress-forums fieldset[disabled] .subscription-toggle:focus, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-link"]:focus, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-to-link"]:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] #bbpress-forums .subscription-toggle:active, #bbpress-forums fieldset[disabled] .subscription-toggle:active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-link"]:active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="reply-to-link"]:active, fieldset[disabled] .btn-success.active, fieldset[disabled] #bbpress-forums .active.subscription-toggle, #bbpress-forums fieldset[disabled] .active.subscription-toggle, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a.active[class*="reply-link"], fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-to-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a.active[class*="reply-to-link"] {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.btn-success .badge, #bbpress-forums .subscription-toggle .badge {
+.btn-success .badge, #bbpress-forums .subscription-toggle .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"] .badge {
   color: #5cb85c;
   background-color: white;
 }
@@ -3730,24 +3730,24 @@ form button[type="submit"] .badge {
   background-color: white;
 }
 
-.btn-danger, #bbpress-forums .is-subscribed .subscription-toggle {
+.btn-danger, #bbpress-forums .is-subscribed .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"] {
   color: white;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
-.btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover, .btn-danger:focus, #bbpress-forums .is-subscribed .subscription-toggle:focus, .btn-danger:active, #bbpress-forums .is-subscribed .subscription-toggle:active, .btn-danger.active, #bbpress-forums .is-subscribed .active.subscription-toggle, .open > .btn-danger.dropdown-toggle, #bbpress-forums .is-subscribed .open > .dropdown-toggle.subscription-toggle {
+.btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:hover, .btn-danger:focus, #bbpress-forums .is-subscribed .subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:focus, .btn-danger:active, #bbpress-forums .is-subscribed .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:active, .btn-danger.active, #bbpress-forums .is-subscribed .active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="spam-link"], .open > .btn-danger.dropdown-toggle, #bbpress-forums .is-subscribed .open > .dropdown-toggle.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="spam-link"] {
   color: white;
   background-color: #c9302c;
   border-color: #ac2925;
 }
-.btn-danger:active, #bbpress-forums .is-subscribed .subscription-toggle:active, .btn-danger.active, #bbpress-forums .is-subscribed .active.subscription-toggle, .open > .btn-danger.dropdown-toggle, #bbpress-forums .is-subscribed .open > .dropdown-toggle.subscription-toggle {
+.btn-danger:active, #bbpress-forums .is-subscribed .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:active, .btn-danger.active, #bbpress-forums .is-subscribed .active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="spam-link"], .open > .btn-danger.dropdown-toggle, #bbpress-forums .is-subscribed .open > .dropdown-toggle.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="spam-link"] {
   background-image: none;
 }
-.btn-danger.disabled, #bbpress-forums .is-subscribed .disabled.subscription-toggle, .btn-danger.disabled:hover, #bbpress-forums .is-subscribed .disabled.subscription-toggle:hover, .btn-danger.disabled:focus, #bbpress-forums .is-subscribed .disabled.subscription-toggle:focus, .btn-danger.disabled:active, #bbpress-forums .is-subscribed .disabled.subscription-toggle:active, .btn-danger.disabled.active, #bbpress-forums .is-subscribed .disabled.active.subscription-toggle, .btn-danger[disabled], #bbpress-forums .is-subscribed [disabled].subscription-toggle, .btn-danger[disabled]:hover, #bbpress-forums .is-subscribed [disabled].subscription-toggle:hover, .btn-danger[disabled]:focus, #bbpress-forums .is-subscribed [disabled].subscription-toggle:focus, .btn-danger[disabled]:active, #bbpress-forums .is-subscribed [disabled].subscription-toggle:active, .btn-danger[disabled].active, #bbpress-forums .is-subscribed [disabled].active.subscription-toggle, fieldset[disabled] .btn-danger, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle, fieldset[disabled] .btn-danger:hover, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle:focus, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle:active, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle:active, fieldset[disabled] .btn-danger.active, fieldset[disabled] #bbpress-forums .is-subscribed .active.subscription-toggle, #bbpress-forums .is-subscribed fieldset[disabled] .active.subscription-toggle {
+.btn-danger.disabled, #bbpress-forums .is-subscribed .disabled.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="spam-link"], .btn-danger.disabled:hover, #bbpress-forums .is-subscribed .disabled.subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="spam-link"]:hover, .btn-danger.disabled:focus, #bbpress-forums .is-subscribed .disabled.subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="trash-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="spam-link"]:focus, .btn-danger.disabled:active, #bbpress-forums .is-subscribed .disabled.subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled[class*="spam-link"]:active, .btn-danger.disabled.active, #bbpress-forums .is-subscribed .disabled.active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled.active[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.disabled.active[class*="spam-link"], .btn-danger[disabled], #bbpress-forums .is-subscribed [disabled].subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="spam-link"], .btn-danger[disabled]:hover, #bbpress-forums .is-subscribed [disabled].subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="spam-link"]:hover, .btn-danger[disabled]:focus, #bbpress-forums .is-subscribed [disabled].subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="trash-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="spam-link"]:focus, .btn-danger[disabled]:active, #bbpress-forums .is-subscribed [disabled].subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled][class*="spam-link"]:active, .btn-danger[disabled].active, #bbpress-forums .is-subscribed [disabled].active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled].active[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[disabled].active[class*="spam-link"], fieldset[disabled] .btn-danger, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="trash-link"], fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="spam-link"], fieldset[disabled] .btn-danger:hover, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle:hover, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="trash-link"]:hover, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="spam-link"]:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle:focus, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle:focus, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="trash-link"]:focus, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="spam-link"]:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] #bbpress-forums .is-subscribed .subscription-toggle:active, #bbpress-forums .is-subscribed fieldset[disabled] .subscription-toggle:active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="trash-link"]:active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a[class*="spam-link"]:active, fieldset[disabled] .btn-danger.active, fieldset[disabled] #bbpress-forums .is-subscribed .active.subscription-toggle, #bbpress-forums .is-subscribed fieldset[disabled] .active.subscription-toggle, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a.active[class*="trash-link"], fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="spam-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a.active[class*="spam-link"] {
   background-color: #d9534f;
   border-color: #d43f3a;
 }
-.btn-danger .badge, #bbpress-forums .is-subscribed .subscription-toggle .badge {
+.btn-danger .badge, #bbpress-forums .is-subscribed .subscription-toggle .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"] .badge {
   color: #d9534f;
   background-color: white;
 }
@@ -5741,26 +5741,38 @@ a.thumbnail.active {
   border-color: #428bca;
 }
 
-.alert, #bbpress-forums .bbp-template-notice, .info {
+.alert, #bbpress-forums .bbp-topic-revision-log-item,
+#bbpress-forums .bbp-reply-revision-log-item,
+#bbpress-forums .bbp-template-notice, .info {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
-.alert h4, #bbpress-forums .bbp-template-notice h4, .info h4 {
+.alert h4, #bbpress-forums .bbp-topic-revision-log-item h4,
+#bbpress-forums .bbp-reply-revision-log-item h4,
+#bbpress-forums .bbp-template-notice h4, .info h4 {
   margin-top: 0;
   color: inherit;
 }
-.alert .alert-link, #bbpress-forums .bbp-template-notice .alert-link, .info .alert-link {
+.alert .alert-link, #bbpress-forums .bbp-topic-revision-log-item .alert-link,
+#bbpress-forums .bbp-reply-revision-log-item .alert-link,
+#bbpress-forums .bbp-template-notice .alert-link, .info .alert-link {
   font-weight: bold;
 }
-.alert > p, #bbpress-forums .bbp-template-notice > p, .info > p,
+.alert > p, #bbpress-forums .bbp-topic-revision-log-item > p,
+#bbpress-forums .bbp-reply-revision-log-item > p,
+#bbpress-forums .bbp-template-notice > p, .info > p,
 .alert > ul,
+#bbpress-forums .bbp-topic-revision-log-item > ul,
+#bbpress-forums .bbp-reply-revision-log-item > ul,
 #bbpress-forums .bbp-template-notice > ul,
 .info > ul {
   margin-bottom: 0;
 }
-.alert > p + p, #bbpress-forums .bbp-template-notice > p + p, .info > p + p {
+.alert > p + p, #bbpress-forums .bbp-topic-revision-log-item > p + p,
+#bbpress-forums .bbp-reply-revision-log-item > p + p,
+#bbpress-forums .bbp-template-notice > p + p, .info > p + p {
   margin-top: 5px;
 }
 
@@ -5788,15 +5800,21 @@ a.thumbnail.active {
   color: #2b542c;
 }
 
-.alert-info, #bbpress-forums .bbp-template-notice, .info {
+.alert-info, #bbpress-forums .bbp-topic-revision-log-item,
+#bbpress-forums .bbp-reply-revision-log-item,
+#bbpress-forums .bbp-template-notice, .info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
 }
-.alert-info hr, #bbpress-forums .bbp-template-notice hr, .info hr {
+.alert-info hr, #bbpress-forums .bbp-topic-revision-log-item hr,
+#bbpress-forums .bbp-reply-revision-log-item hr,
+#bbpress-forums .bbp-template-notice hr, .info hr {
   border-top-color: #a6e1ec;
 }
-.alert-info .alert-link, #bbpress-forums .bbp-template-notice .alert-link, .info .alert-link {
+.alert-info .alert-link, #bbpress-forums .bbp-topic-revision-log-item .alert-link,
+#bbpress-forums .bbp-reply-revision-log-item .alert-link,
+#bbpress-forums .bbp-template-notice .alert-link, .info .alert-link {
   color: #245269;
 }
 
@@ -7596,6 +7614,14 @@ a[class*="reply-link"]:before {
   content: "\e111";
 }
 
+a[class*="move-link"]:before {
+  content: "\e068";
+}
+
+a[class*="split-link"]:before {
+  content: "\e096";
+}
+
 form * {
   font-family: inherit !important;
 }
@@ -7675,6 +7701,17 @@ form fieldset legend {
 #bbpress-forums #bbp-search-form {
   margin-bottom: 30px;
 }
+#bbpress-forums .bbp-topic-revision-log,
+#bbpress-forums .bbp-reply-revision-log {
+  padding: 0 !important;
+}
+#bbpress-forums .bbp-topic-revision-log .bbp-topic-revision-log-item,
+#bbpress-forums .bbp-topic-revision-log .bbp-reply-revision-log-item,
+#bbpress-forums .bbp-reply-revision-log .bbp-topic-revision-log-item,
+#bbpress-forums .bbp-reply-revision-log .bbp-reply-revision-log-item {
+  padding: 10px;
+  font-size: .9em !important;
+}
 #bbpress-forums .bbp-template-notice {
   margin-bottom: 30px;
 }
@@ -7714,6 +7751,12 @@ form fieldset legend {
 }
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a {
   margin-right: 10px;
+}
+#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"] {
+  color: white;
+}
+#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"] {
+  color: white;
 }
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:last-child {
   margin-right: 0;
@@ -7760,6 +7803,9 @@ form fieldset legend {
   box-shadow: none;
   -webkit-transition: none;
           transition: none;
+}
+#bbpress-forums .bbp-replies .bbp-body {
+  background: none !important;
 }
 #bbpress-forums .bbp-topics, #bbpress-forums .bbp-forums, #bbpress-forums .bbp-replies {
   margin-bottom: 30px;
@@ -7995,7 +8041,7 @@ form button:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links 
 }
 
 .btn-primary, form input[type="submit"],
-form button[type="submit"] {
+form button[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"] {
   background-color: #428bca;
   color: white;
   border: 1px solid transparent;
@@ -8006,9 +8052,10 @@ form button[type="submit"] {
   background-image: -webkit-linear-gradient(top, #428bca, #245682);
   background-image: linear-gradient(to bottom, #428bca, #245682);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
+  color: white !important;
 }
 .btn-primary:hover, form input[type="submit"]:hover,
-form button[type="submit"]:hover {
+form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:hover {
   background-color: #92bce0;
   background-image: -webkit-linear-gradient(top, #245682, #428bca);
   background-image: linear-gradient(to bottom, #245682, #428bca);
@@ -8026,6 +8073,7 @@ form button[type="submit"]:hover {
   background-image: -webkit-linear-gradient(top, #428bca, #245682);
   background-image: linear-gradient(to bottom, #428bca, #245682);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
+  color: white !important;
 }
 .btn-info:hover {
   background-color: #92bce0;
@@ -8034,7 +8082,7 @@ form button[type="submit"]:hover {
   border: 1px solid transparent;
 }
 
-.btn-success, #bbpress-forums .subscription-toggle {
+.btn-success, #bbpress-forums .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"] {
   background-color: #5cb85c;
   color: white;
   border: 1px solid transparent;
@@ -8045,15 +8093,16 @@ form button[type="submit"]:hover {
   background-image: -webkit-linear-gradient(top, #5cb85c, #357935);
   background-image: linear-gradient(to bottom, #5cb85c, #357935);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
+  color: white !important;
 }
-.btn-success:hover, #bbpress-forums .subscription-toggle:hover {
+.btn-success:hover, #bbpress-forums .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:hover {
   background-color: #a3d7a3;
   background-image: -webkit-linear-gradient(top, #357935, #5cb85c);
   background-image: linear-gradient(to bottom, #357935, #5cb85c);
   border: 1px solid transparent;
 }
 
-.btn-danger, #bbpress-forums .is-subscribed .subscription-toggle {
+.btn-danger, #bbpress-forums .is-subscribed .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"] {
   background-color: #d9534f;
   color: white;
   border: 1px solid transparent;
@@ -8064,8 +8113,9 @@ form button[type="submit"]:hover {
   background-image: -webkit-linear-gradient(top, #d9534f, #a02622);
   background-image: linear-gradient(to bottom, #d9534f, #a02622);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
+  color: white !important;
 }
-.btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover {
+.btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:hover {
   background-color: #eba5a3;
   background-image: -webkit-linear-gradient(top, #a02622, #d9534f);
   background-image: linear-gradient(to bottom, #a02622, #d9534f);
@@ -8073,7 +8123,7 @@ form button[type="submit"]:hover {
 }
 
 .btn-primary:focus, form input[type="submit"]:focus,
-form button[type="submit"]:focus {
+form button[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:focus {
   background-image: -webkit-linear-gradient(top, #37c0ff, #0097dd);
   background-image: linear-gradient(to bottom, #37c0ff, #0097dd);
 }
@@ -8166,7 +8216,7 @@ body {
 }
 
 .glyphicon, a[class*="edit-link"]:before, a[class*="close-link"]:before, a[class*="sticky-link"]:before, a[class*="merge-link"]:before, a[class*="trash-link"]:before, a[class*="spam-link"]:before, a[class*="reply-to-link"]:before,
-a[class*="reply-link"]:before {
+a[class*="reply-link"]:before, a[class*="move-link"]:before, a[class*="split-link"]:before {
   margin-right: 8px;
 }
 

@@ -30,10 +30,18 @@
 
     $html = str_replace(' | ', '', $html);
 
-    echo $html;
+    return $html;
   }
 
   add_filter( 'bbp_get_reply_admin_links', eguk_remove_forum_post_meta_sep, 10 );
   add_filter( 'bbp_get_topic_admin_links', eguk_remove_forum_post_meta_sep, 10 );
 
+  function eguk_forum_breadcrumb_crumbs($crumbs) {
 
+    foreach ($crumbs as $crumb)      
+      $html[]= "<li>$crumb</li>";
+
+    echo '<ol class="breadcrumb">' . join('', $html) . '</ol>';
+  }
+
+  add_filter( 'bbp_breadcrumbs', eguk_forum_breadcrumb_crumbs, 10 );

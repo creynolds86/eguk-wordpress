@@ -92,3 +92,6 @@ require_once(EGUK_INC_DIR . 'class-bootstrap-navwalker.php');
 
 // Enqueue the EGUK css and scripts
 require_once(EGUK_INC_DIR . 'functions-enqueue.php');
+
+// Enqueue the EGUK filters
+require_once(EGUK_INC_DIR . 'functions-filters.php');

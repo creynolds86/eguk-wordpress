@@ -1,0 +1,30 @@
+
+a[class*="edit-link"]:before {
+  @extend .glyphicon;
+  content: "\270f";
+}
+a[class*="close-link"]:before {
+  @extend .glyphicon;
+  content: "\e033";
+}
+a[class*="sticky-link"]:before {
+  @extend .glyphicon;
+  content: "\e064";
+}
+a[class*="merge-link"]:before {
+  @extend .glyphicon;
+  content: "\e097";
+}
+a[class*="trash-link"]:before {
+  @extend .glyphicon;
+  content: "\e020";
+}
+a[class*="spam-link"]:before {
+  @extend .glyphicon;
+  content: "\e090";
+}
+a[class*="reply-to-link"]:before,
+a[class*="reply-link"]:before {
+  @extend .glyphicon;
+  content: "\e111";
+}

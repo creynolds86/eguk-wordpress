@@ -27,10 +27,4 @@
     ?>
   </div><!-- .entry-content -->
 
-  <?php if (current_user_can('edit_posts')) : ?>
-  <footer class="entry-footer">
-    <?php edit_post_link( __( 'Edit post', '_egukbasetheme' ), '<p class="edit-link">', '</p>' ); ?>
-  </footer><!-- .entry-footer -->
-  <?php endif; ?>
-
 </article><!-- #post-<?php the_ID(); ?> -->

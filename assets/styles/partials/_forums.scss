@@ -32,15 +32,33 @@
 
   color: $white;
 
-  ul {
+  li {
     margin: 0;
-    padding: 0;
     list-style: none;
   }
-  li {
-    background: none;
-    margin: 0;
-    list-style: none;
+
+  .breadcrumb {
+    margin-left: -$gutter;
+    padding: $gutter-half $gutter-half $gutter-half $gutter;
+    width: calc(100% + $gutter);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .subscription-toggle {
+    @extend .btn;
+    @extend .btn-success;
+    float: right;
+    margin: 9px;
+  }
+  .is-subscribed .subscription-toggle {
+    @extend .btn;
+    @extend .btn-danger;
+    margin-bottom: $gutter;
+  }
+
+  #bbp-search-form {
+    margin-bottom: $gutter;
   }
 
   .bbp-template-notice {
@@ -48,41 +66,145 @@
     @extend .alert;
     @extend .alert-info;
 
+    margin-bottom: $gutter;
+
     p {
       margin: 0 !important;
-      padding: 0 !important;
+      padding: 0;
     }
-  }
-
-  .bbp-pagination {
-    margin-bottom: $gutter; 
   }
 
   .avatar {
-    margin-bottom: 0 !important;
-    border: 0 !important;
+    margin-top: 2px;
     vertical-align: top; 
   }
-
-  .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness {
+  .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness,
+  .bbp-forum-info, .bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness,
+  .bbp-reply-author, .bbp-reply-content {
     float: left;
   }
-  .bbp-topic-voice-count, .bbp-forum-reply-count, .bbp-topic-reply-count, .bbp-topic-freshness {
+  .bbp-topic-voice-count, .bbp-forum-reply-count, .bbp-topic-reply-count, .bbp-topic-freshness,
+  .bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness {
+    @extend .text-center;
     width: 10%;
     text-align: center;
   }
-  .bbp-topic-freshness {
+  .bbp-topic-freshness,
+  .bbp-forum-freshness {
     width: 22%;
   }
 
-  .bbp-topics {
+  .favorite-toggle {
+    @extend .btn;
+    color: $white;
+  }
 
-    border: none !important;
-    
-    li.bbp-forum-info, li.bbp-topic-title {
-      width: 55%;
+  .bbp-reply-header {
+
+    .bbp-meta {
+      
+      padding: $gutter-half;
+      width: 100%;
+      text-align: right;
+
+      .bbp-reply-post-date {
+        float: left;
+        margin-top: 6px;
+      }
+      .bbp-admin-links a {
+
+        @extend .btn;
+        @extend .btn-default;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .topic, .reply {
+
+    @extend .clearfix;
+
+    .bbp-header {
+
+      .bbp-reply-author {     
+        width: 20%;
+      }
     }
 
+    .bbp-reply-author, .bbp-reply-content {
+      padding: $gutter-half;
+    }
+    .bbp-reply-author {
+      margin-right: $gutter-half;
+      width: 20% !important;
+      background-color: rgba($white, 0.04);
+      border-right: 15px solid rgba($white, 0.2);
+      box-sizing: border-box;
+    }
+    .bbp-reply-content {
+      width: calc(80% - 15px);
+    }
+    .bbp-author-avatar .avatar {
+      margin-bottom: $gutter-half;
+    }
+  }
+
+  .bbp-replies {
+
+    @extend .clearfix; 
+
+    .bbp-header {
+
+      .bbp-reply-author {
+        margin-top: 6px;
+      }
+      .bbp-reply-content {
+        float: right;
+      }
+      .subscription-toggle {
+        @extend .btn;
+        float: none;
+        margin: 0;
+        background: none;
+        border: 1px solid transparent;
+        box-shadow: none;
+        transition: none;
+        color: $white !important;
+
+        &:hover, &:focus, &:active {
+          background: none;
+          border: 1px solid transparent;
+          box-shadow: none;
+          transition: none;
+        }
+      }
+    }
+  }
+  .bbp-topics, .bbp-forums, .bbp-replies {
+
+    margin-bottom: $gutter;
+    border: none;
+    
+    &, ul {
+      padding: 0;
+    }
+
+    .forum-titles {
+      overflow: hidden;
+    }
+
+    li.bbp-forum-info, li.bbp-topic-title,
+    .bbp-reply-author {
+      width: 55%;
+    }
+    .bbp-topic-meta {
+      margin-bottom: 0;
+      font-size: 0.8em;
+    }
     .bbp-header {
 
       padding: $gutter-half;
@@ -94,21 +216,26 @@
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
 
-      .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness {
+      .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness,
+      .bbp-forum-info, .bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness,
+      .bbp-reply-author, .bbp-reply-content {
         font-weight: bold;
       }
     }
     .bbp-body {
 
-      background-color: rgba($black, $light-alpha) !important;
+      background-color: rgba($black, $light-alpha);
 
       ul {
         padding: 8px;
-        border: none !important;
-        border-bottom: rgba($white, $light-alpha) !important;
-        background: none !important;
+        border-bottom: 1px solid rgba($white, 0.075);
       }
-      .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness {
+      ul:last-child {
+        border-bottom: none;
+      }
+      .bbp-topic-title, .bbp-topic-voice-count, .bbp-topic-reply-count, .bbp-topic-freshness,
+      .bbp-forum-info, .bbp-forum-topic-count, .bbp-forum-reply-count, .bbp-forum-freshness,
+      .bbp-reply-author, .bbp-reply-content {
         float: left;
         padding: $gutter-half;
         font-size: 1.2em;
@@ -118,7 +245,8 @@
         @extend %topic;
         padding-left: 65px;
       }
-      .sticky .bbp-topic-title, .sticky.status-closed .bbp-topic-title {
+      .sticky .bbp-topic-title, .sticky.status-closed .bbp-topic-title,
+      .super-sticky .bbp-topic-title, .super-sticky.status-closed .bbp-topic-title {
         @extend %sticky;
       }
       .status-closed .bbp-topic-title {
@@ -126,25 +254,20 @@
       }
     }
     .bbp-footer {
+      display: none;
       background: none;
     }
     .bbp-body, .bbp-footer {
       border-top: 1px solid rgba($black, $light-alpha);
     }
   }
-  .bbp-topics:before,
-  .bbp-topics:after,
-  .bbp-header:before,
-  .bbp-header:after,
-  .bbp-body:before,
-  .bbp-body:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
-  }
-  .bbp-topics:after,
-  .bbp-header:after,
-  .bbp-body:after {
-      clear: both;
+  .bbp-topics,
+  .bbp-header,
+  .bbp-body,
+  .bbp-body ul,
+  .bbp-replies,
+  .bbp-pagination {
+    @extend .clearfix;
   }
   #new-post {
     legend {
@@ -158,10 +281,68 @@
       border-top-right-radius: 0;
     }
     .bbp-submit-wrapper {
+      @extend .form-group;
       float: none;
     }
     p {
       @extend .form-group;
+    }
+  }
+  .bbp-pagination-count {
+    @extend .well;
+    float: left;
+    margin-bottom: $gutter;
+  }
+  .bbp-pagination-links {
+
+    @extend .pagination;
+
+    margin: $gutter-half 0 $gutter-half;
+
+    float: right;
+
+    .page-numbers {
+      @include gradient-bg($brand-primary);
+      border-color: $black !important;
+    }
+    .page-numbers.current {
+      @include gradient-bg($brand-accent);
+    }
+
+    .page-numbers:first-child {
+      margin-left: 0;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+    .page-numbers {
+      display: inline;
+      position: relative;
+      float: left; // Collapse white-space
+      padding: $padding-base-vertical $padding-base-horizontal;
+      line-height: $line-height-base;
+      text-decoration: none;
+      color: $pagination-color;
+      background-color: $pagination-bg;
+      border: 1px solid $pagination-border;
+      margin-left: -1px;
+    
+      &:first-child {
+        margin-left: 0;
+        @include border-left-radius($border-radius-base);
+      }
+      &:last-child {
+        @include border-right-radius($border-radius-base);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      color: $pagination-hover-color;
+      background-color: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
     }
   }
 }

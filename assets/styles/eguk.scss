@@ -22,38 +22,74 @@ $copy-text:             invert($brand-primary);
 
 $border-radius:         4px;
 
+@mixin gradient-bg($colour: #098cc8) {
+  background-color: $colour;
+  color: desaturate(lighten($colour, 100%), 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 0 rgba($black, 0);
+  border-radius: 2px !important;
+  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
+  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
+  background-image: -webkit-linear-gradient(top, $colour, darken($colour, 20%));
+  background-image: linear-gradient(to bottom, $colour, darken($colour, 20%));
+  box-shadow: 0 1px 1px rgba($black, 0.1),0 0 0 1px rgba($white,0.01) inset;
+}
+
+@mixin btn-bg($colour: $brand-accent) {
+
+  @include gradient-bg($colour);
+
+  &:hover {
+    background-color: lighten($colour, 20%);
+    background-image: -webkit-linear-gradient(top, darken($colour, 20%), $colour);
+    background-image: linear-gradient(to bottom, darken($colour, 20%), $colour);
+    border: 1px solid transparent;
+  }
+
+}
+
+@import "partials/_icons.scss";
 @import "partials/_forms.scss";
 @import "partials/_forums.scss";
 @import "partials/_news.scss";
 @import "partials/_navigation.scss";
 
-.blue-bg {
-  background-color: #098cc8 !important;
-  color: #fff;
-  border: 1px solid transparent !important;
-  box-shadow: 0 0 rgba($black, 0) !important;
-  border-radius: 2px;
-  -webkit-transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
-  transition: background-color .2s,box-shadow 1.2s,background-color .2s,border-color .2s,color .2s;
-  background-image: -webkit-linear-gradient(top,#0f9ada,#0076ad) !important;
-  background-image: linear-gradient(to bottom,#0f9ada,#0076ad) !important;
-  border: 0;
-  box-shadow: 0 1px 1px rgba($black, 0.3),0 0 0 1px rgba($white,0.15) inset;
+.btn-default {
+  @include btn-bg($btn-default-bg);
+  color: $brand-primary !important;
 }
-
-.btn-primary, .bbp-header {
-  @extend .blue-bg;
+.btn-primary {
+  @include btn-bg($brand-accent);
+  //color: $white !important;
+}
+.btn-info {
+  @include btn-bg($brand-accent);
+}
+.btn-success {
+  @include btn-bg($btn-success-bg);
+}
+.btn-danger {
+  @include btn-bg($btn-danger-bg);
 }
 .btn-primary:focus {
   background-image: -webkit-linear-gradient(top,#37c0ff,#0097dd);
   background-image: linear-gradient(to bottom,#37c0ff,#0097dd);
 }
 
+.well {
+  border-left-color: rgba($white, 0.3) !important;
+  background-color: rgba($white,.05) !important;
+}
+
+.bbp-header, .current {
+  @include gradient-bg($brand-accent)
+}
+
 /*=> Styles
 --------------------------------------------------*/
 body {
   background: url("#{$img-url}/battlefield_4-1485608.jpg") $black no-repeat;
-  color: #000;
+  color: $black;;
 }
 
 #masthead {
@@ -85,6 +121,8 @@ body {
 
   #content article,
   #content section {
+
+    @extend .clearfix;
 
     margin-bottom: $gutter;
     padding: $gutter;
@@ -118,11 +156,6 @@ body {
   margin-bottom: $gutter;
 }
 
-.post-edit-link {
-  @extend .btn;
-  @extend .btn-default;
-}
-
 blockquote {
   @extend .well;
 }
@@ -140,4 +173,8 @@ blockquote {
 .info {
   @extend .alert;
   @extend .alert-info;
+}
+
+.glyphicon {
+  margin-right:  8px;
 }

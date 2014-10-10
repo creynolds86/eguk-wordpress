@@ -28,3 +28,11 @@ a[class*="reply-link"]:before {
   @extend .glyphicon;
   content: "\e111";
 }
+a[class*="move-link"]:before {
+  @extend .glyphicon;
+  content: "\e068";
+}
+a[class*="split-link"]:before {
+  @extend .glyphicon;
+  content: "\e096";
+}

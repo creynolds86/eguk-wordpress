@@ -16,4 +16,9 @@
     <?php get_template_part( 'content', 'news' ); ?>
   </section>
 
+  <section id="shoutbox" class="col-md-12" role="region">
+    <?php get_template_part( 'content', 'shoutbox' ); ?>
+    <?php get_template_part( 'form', 'shoutbox' ); ?>
+  </section>
+
   <?php get_footer(); ?>

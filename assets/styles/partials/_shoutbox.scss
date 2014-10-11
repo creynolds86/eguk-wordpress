@@ -1,0 +1,11 @@
+
+/*=> Shoutbox styles
+--------------------------------------------------*/
+#shoutbox-form {
+  margin-top: $gutter;
+
+  textarea,
+  .form-group {
+    margin-bottom: $gutter-half !important;
+  }
+}

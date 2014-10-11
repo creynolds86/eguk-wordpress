@@ -7956,6 +7956,8 @@ form fieldset legend {
   border-color: #dddddd;
 }
 
+/*=> News styles
+--------------------------------------------------*/
 #news article, #search-results article {
   padding-right: 0 !important;
 }
@@ -8016,6 +8018,20 @@ form fieldset legend {
 
 .post-edit-link {
   float: right;
+}
+
+/*=> Shoutbox styles
+--------------------------------------------------*/
+#shoutbox-form {
+  margin-top: 30px;
+}
+#shoutbox-form textarea,
+#shoutbox-form .form-group,
+#shoutbox-form #bbpress-forums #new-post .bbp-submit-wrapper,
+#bbpress-forums #new-post #shoutbox-form .bbp-submit-wrapper,
+#shoutbox-form #bbpress-forums #new-post p,
+#bbpress-forums #new-post #shoutbox-form p {
+  margin-bottom: 15px !important;
 }
 
 .btn-default, form input[type="reset"],

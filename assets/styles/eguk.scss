@@ -48,11 +48,12 @@ $border-radius:         4px;
 
 }
 
-@import "partials/_icons.scss";
-@import "partials/_forms.scss";
-@import "partials/_forums.scss";
-@import "partials/_news.scss";
-@import "partials/_navigation.scss";
+@import "partials/_icons";
+@import "partials/_forms";
+@import "partials/_forums";
+@import "partials/_news";
+@import "partials/_navigation";
+@import "partials/_shoutbox";
 
 .btn-default {
   @include btn-bg($btn-default-bg);

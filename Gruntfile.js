@@ -101,6 +101,18 @@ module.exports = function(grunt) {
                         'assets/js/source/main.js'
                     ]
                 }
+            },
+            shoutbox: {
+                options: {
+                    sourceMap: 'assets/js/ajax.js.map',
+                    sourceMappingURL: 'ajax.js.map',
+                    sourceMapPrefix: 2
+                },
+                files: {
+                    'assets/js/ajax.min.js': [
+                        'assets/js/source/_ajax.js'
+                    ]
+                }
             }
         },
 

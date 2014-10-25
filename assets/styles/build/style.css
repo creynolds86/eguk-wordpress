@@ -7680,10 +7680,6 @@ form fieldset legend {
 
 /*=> Forum styles
 --------------------------------------------------*/
-.forum #page #content article {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 #bbpress-forums {
   color: white;
 }
@@ -7968,6 +7964,7 @@ form fieldset legend {
 --------------------------------------------------*/
 #news article, #search-results article {
   padding-right: 0 !important;
+  background-color: rgba(255, 255, 255, 0.025);
 }
 #news article .entry-meta, #search-results article .entry-meta {
   float: right;
@@ -8218,6 +8215,7 @@ body {
 #page #content section {
   margin-bottom: 30px;
   padding: 30px;
+  background: rgba(17, 17, 17, 0.5);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -8237,12 +8235,12 @@ body {
 #page #content section:last-of-type {
   margin-bottom: 0;
 }
-#page #content article {
-  background-color: rgba(255, 255, 255, 0.025);
-}
 #page #content .row {
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+#page #content .row section {
+  background: none;
 }
 #page #content .row:last-of-type {
   margin-bottom: 0;

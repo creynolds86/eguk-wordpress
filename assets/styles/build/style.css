@@ -7680,6 +7680,10 @@ form fieldset legend {
 
 /*=> Forum styles
 --------------------------------------------------*/
+.forum #page #content article {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 #bbpress-forums {
   color: white;
 }
@@ -8022,6 +8026,10 @@ form fieldset legend {
 
 /*=> Shoutbox styles
 --------------------------------------------------*/
+#shoutbox .wrapper {
+  max-height: 30em;
+  overflow-y: auto;
+}
 #shoutbox article {
   position: relative;
 }

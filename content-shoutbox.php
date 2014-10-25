@@ -19,9 +19,9 @@
 
   $shoutbox = new WP_Query( $args );
 
-  if ( $shoutbox->have_posts() ) :
+  if ( $shoutbox->have_posts() ) : ?>
 
-    while ( $shoutbox->have_posts() ) : $shoutbox->the_post(); ?>
+    <?php while ( $shoutbox->have_posts() ) : $shoutbox->the_post(); ?>
       
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

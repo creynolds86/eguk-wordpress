@@ -35,7 +35,7 @@
             },
             success: function(content) {
 
-              $(content).insertBefore( $('#shoutbox-form') );
+              $('#shoutbox .wrapper').html(content);
               
               $('#shoutbox-form').hide()
                                  .slideDown(200);

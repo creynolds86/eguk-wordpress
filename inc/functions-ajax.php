@@ -16,7 +16,7 @@ function ajax_shoutbox_init() {
     );
 
     add_action( 'wp_ajax_ajax-shoutbox-create-post', 'ajax_shoutbox_create_post' );
-    add_action( 'wp_ajax_ajax-shoutbox-get-new-post', 'ajax_shoutbox_get_new_post' );
+    add_action( 'wp_ajax_ajax-shoutbox-get-new-post', 'ajax_shoutbox_get_posts' );
 }
 
 add_action('init', 'ajax_shoutbox_init');
@@ -44,40 +44,11 @@ function ajax_shoutbox_create_post() {
     exit;
 
 }
-function ajax_shoutbox_get_new_post() {
-
-    $args = array(
-            'post_type'      => 'eguk_shoutbox',
-            'post_status'    => 'publish',
-            'orderby'        => 'date',
-            'order'          => 'DESC',
-            'posts_per_page' => 1
-          );
-
-    $shoutbox = new WP_Query( $args );
+function ajax_shoutbox_get_posts() {
 
     ob_start();
 
-    if ( $shoutbox->have_posts() ) :
-
-        while ( $shoutbox->have_posts() ) : $shoutbox->the_post(); ?>
-          
-          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-            <div class="entry-meta">
-              <span class="entry-date"><?php echo esc_html( get_the_date('j') ); ?></span>
-              <span class="entry-month"><?php echo esc_html( get_the_date('M') ); ?></span>
-            </div><!-- .entry-meta -->
-
-            <div class="entry-content">
-              <?php the_content(); ?>
-            </div><!-- .entry-content -->
-
-          </article><!-- #post-<?php the_ID(); ?> -->
-
-        <?php endwhile;
-
-    endif;
+    get_template_part( 'content', 'shoutbox' );
 
     echo ob_get_clean();
 

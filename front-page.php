@@ -23,7 +23,9 @@
     </section>
 
     <section id="shoutbox" class="col-md-4" role="region">
-      <?php get_template_part( 'content', 'shoutbox' ); ?>
+      <div class="wrapper">
+        <?php get_template_part( 'content', 'shoutbox' ); ?>
+      </div>
       <?php get_template_part( 'form', 'shoutbox' ); ?>
     </section>
 

@@ -2,6 +2,10 @@
 /*=> Shoutbox styles
 --------------------------------------------------*/
 #shoutbox {
+  .wrapper {
+    max-height: 30em;
+    overflow-y: auto;
+  }
   article {
     position: relative;
 

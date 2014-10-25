@@ -8,17 +8,25 @@
   * @package _egukbasetheme
   */
 
-  get_header();
+  get_header(); ?>
 
-  get_template_part( 'content', 'jumbotron' ); ?>
- 
-  <section id="news" class="col-md-12" role="region">
-    <?php get_template_part( 'content', 'news' ); ?>
-  </section>
+  <div class="row">
 
-  <section id="shoutbox" class="col-md-12" role="region">
-    <?php get_template_part( 'content', 'shoutbox' ); ?>
-    <?php get_template_part( 'form', 'shoutbox' ); ?>
-  </section>
+    <?php get_template_part( 'content', 'jumbotron' ); ?>
+
+  </div>
+  
+  <div class="row">
+
+    <section id="news" class="col-md-8" role="region">
+      <?php get_template_part( 'content', 'news' ); ?>
+    </section>
+
+    <section id="shoutbox" class="col-md-4" role="region">
+      <?php get_template_part( 'content', 'shoutbox' ); ?>
+      <?php get_template_part( 'form', 'shoutbox' ); ?>
+    </section>
+
+  </div>
 
   <?php get_footer(); ?>

@@ -1,6 +1,23 @@
 
 /*=> Shoutbox styles
 --------------------------------------------------*/
+#shoutbox {
+  article {
+    position: relative;
+
+    .entry-delete {
+      float: right;
+    }
+    .entry-meta {
+      color: rgba($white, $light-alpha);
+    }
+    .entry-content {
+      float: left;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  }
+}
 #shoutbox-form {
   margin-top: $gutter;
 

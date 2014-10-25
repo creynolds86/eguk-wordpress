@@ -6,46 +6,51 @@
 
     e.preventDefault();
 
-    $.ajax({
-      type: 'POST',
-      dataType: 'json',
-      url: shoutboxObject.ajaxUrl,
-      data: { 
-        'action': 'ajax-shoutbox-create-post',
-        'message': $('#shoutbox-form textarea').val(),
-        'security': $('#shoutbox-form #security').val()
-      },
-      beforeSend: function(data) {
+    if ( $('#shoutbox-form textarea').val() ) {
 
-        buttonText = $('#shoutbox-form .btn').text();
+      $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: shoutboxObject.ajaxUrl,
+        data: { 
+          'action': 'ajax-shoutbox-create-post',
+          'message': $('#shoutbox-form textarea').val(),
+          'security': $('#shoutbox-form #security').val()
+        },
+        beforeSend: function(data) {
 
-        $('#shoutbox-form .btn').attr('disabled', 'disabled')
-                                .text(shoutboxObject.loadingMessage);
-      },
-      complete: function(data) {
+          buttonText = $('#shoutbox-form .btn').text();
 
-        $('#shoutbox-form .btn').removeAttr('disabled')
-                                .text(buttonText);
+          $('#shoutbox-form .btn').attr('disabled', 'disabled')
+                                  .text(shoutboxObject.loadingMessage);
+        },
+        complete: function(data) {
 
-        $('#shoutbox-form textarea').val('');
+          $.ajax({
+            type: 'POST',
+            dataType: 'html',
+            url: shoutboxObject.ajaxUrl,
+            data: { 
+              'action': 'ajax-shoutbox-get-new-post'
+            },
+            success: function(content) {
 
-        $.ajax({
-          type: 'POST',
-          dataType: 'html',
-          url: shoutboxObject.ajaxUrl,
-          data: { 
-            'action': 'ajax-shoutbox-get-new-post'
-          },
-          success: function(content) {
+              $(content).insertBefore( $('#shoutbox-form') );
+              
+              $('#shoutbox-form').hide()
+                                 .slideDown(200);
 
-            $(content).insertBefore( $('#shoutbox-form') );
-            
-            $('#shoutbox-form').hide()
-                               .slideDown(200);
+              $('#shoutbox-form .btn').removeAttr('disabled')
+                                  .text(buttonText);
 
-          }
-        });
-      }
-    });
+              $('#shoutbox-form textarea').val('');
+
+            }
+          });
+        }
+      });
+    } else {
+      
+    }
   });
 })(jQuery);

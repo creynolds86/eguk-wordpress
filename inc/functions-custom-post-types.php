@@ -16,6 +16,8 @@ function create_eguk_shoutbox() {
       'public' => true
     )
   );
+
+  add_post_type_support( 'eguk_shoutbox', 'quote' );
   
 }
 

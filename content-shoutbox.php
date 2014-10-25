@@ -25,14 +25,15 @@
       
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <div class="entry-meta">
-          <span class="entry-date"><?php echo esc_html( get_the_date('j') ); ?></span>
-          <span class="entry-month"><?php echo esc_html( get_the_date('M') ); ?></span>
-        </div><!-- .entry-meta -->
-
         <div class="entry-content">
           <?php the_content(); ?>
         </div><!-- .entry-content -->
+
+        <time datetime="<?php echo get_the_date( 'c' ); ?>" class="entry-meta"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time><!-- .entry-meta -->
+
+        <?php if ( current_user_can( 'manage_options' ) ) : ?>
+        <a href="<?php echo get_delete_post_link( get_the_ID() ) ?>" class="entry-delete">Delete</a>
+        <?php endif; ?>
 
       </article><!-- #post-<?php the_ID(); ?> -->
 

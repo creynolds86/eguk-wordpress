@@ -334,7 +334,7 @@ th {
   src: url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/eguk/wp-content/themes/eguk/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 .glyphicon, a[class*="edit-link"]:before, a[class*="close-link"]:before, a[class*="sticky-link"]:before, a[class*="merge-link"]:before, a[class*="trash-link"]:before, a[class*="spam-link"]:before, a[class*="reply-to-link"]:before,
-a[class*="reply-link"]:before, a[class*="move-link"]:before, a[class*="split-link"]:before {
+a[class*="reply-link"]:before, a[class*="move-link"]:before, a[class*="split-link"]:before, a[class*="delete"]:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -7622,6 +7622,10 @@ a[class*="split-link"]:before {
   content: "\e096";
 }
 
+a[class*="delete"]:before {
+  content: "\e014";
+}
+
 form * {
   font-family: inherit !important;
 }
@@ -7963,12 +7967,13 @@ form fieldset legend {
 }
 #news article .entry-meta, #search-results article .entry-meta {
   float: right;
-  text-align: center;
+  margin: 0 0 15px 15px;
   width: 90px;
   height: 90px;
   padding: 15px;
   border-radius: 4px 0 0 4px;
   background-color: rgba(238, 238, 238, 0.1);
+  text-align: center;
 }
 #news article .entry-date, #news article .entry-month, #search-results article .entry-date, #search-results article .entry-month {
   display: block;
@@ -7981,11 +7986,6 @@ form fieldset legend {
 }
 #news article .edit-link, #search-results article .edit-link {
   margin-bottom: 0;
-}
-
-.home #news {
-  padding: 0 !important;
-  background: none !important;
 }
 
 /*=> Navigation styles
@@ -8022,6 +8022,21 @@ form fieldset legend {
 
 /*=> Shoutbox styles
 --------------------------------------------------*/
+#shoutbox article {
+  position: relative;
+}
+#shoutbox article .entry-delete {
+  float: right;
+}
+#shoutbox article .entry-meta {
+  color: rgba(255, 255, 255, 0.5);
+}
+#shoutbox article .entry-content {
+  float: left;
+  width: 100%;
+  word-wrap: break-word;
+}
+
 #shoutbox-form {
   margin-top: 30px;
 }
@@ -8195,7 +8210,6 @@ body {
 #page #content section {
   margin-bottom: 30px;
   padding: 30px;
-  background: rgba(17, 17, 17, 0.8);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -8215,6 +8229,16 @@ body {
 #page #content section:last-of-type {
   margin-bottom: 0;
 }
+#page #content article {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+#page #content .row {
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#page #content .row:last-of-type {
+  margin-bottom: 0;
+}
 
 .jumbotron {
   padding: 60px !important;
@@ -8232,7 +8256,7 @@ body {
 }
 
 .glyphicon, a[class*="edit-link"]:before, a[class*="close-link"]:before, a[class*="sticky-link"]:before, a[class*="merge-link"]:before, a[class*="trash-link"]:before, a[class*="spam-link"]:before, a[class*="reply-to-link"]:before,
-a[class*="reply-link"]:before, a[class*="move-link"]:before, a[class*="split-link"]:before {
+a[class*="reply-link"]:before, a[class*="move-link"]:before, a[class*="split-link"]:before, a[class*="delete"]:before {
   margin-right: 8px;
 }
 

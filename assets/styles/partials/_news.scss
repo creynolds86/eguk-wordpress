@@ -9,12 +9,13 @@
 
     .entry-meta {
       float: right;
-      text-align: center;
+      margin: 0 0 $gutter-half $gutter-half;
       width: 90px;
       height: 90px;
       padding: $gutter-half;
       border-radius: $border-radius 0 0 $border-radius;
       background-color: rgba(invert($brand-primary), .1);
+      text-align: center;
     }
     .entry-date, .entry-month {
       display: block;
@@ -29,8 +30,4 @@
       margin-bottom: 0;
     }
   }
-}
-.home #news {
-  padding: 0 !important;
-  background: none !important;
 }

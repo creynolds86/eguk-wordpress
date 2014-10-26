@@ -8054,6 +8054,15 @@ form fieldset legend {
   margin-bottom: 15px !important;
 }
 
+/*=> Main site footer styles
+--------------------------------------------------*/
+.site-footer {
+  padding: 30px;
+}
+.site-footer p {
+  text-align: center;
+}
+
 .btn-default, form input[type="reset"],
 form button, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a, .post-edit-link {
   background-color: white;

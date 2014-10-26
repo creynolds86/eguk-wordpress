@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package _egukbasetheme
+ */
 
   function eguk_add_subscribe_link_icon($link_html) {
 
@@ -42,6 +45,8 @@
       $html[]= "<li>$crumb</li>";
 
     echo '<ol class="breadcrumb">' . join('', $html) . '</ol>';
+
+    return;
   }
 
   add_filter( 'bbp_breadcrumbs', eguk_forum_breadcrumb_crumbs, 10 );

@@ -36,3 +36,7 @@ a[class*="split-link"]:before {
   @extend .glyphicon;
   content: "\e096";
 }
+a[class*="delete"]:before {
+  @extend .glyphicon;
+  content: "\e014";
+}

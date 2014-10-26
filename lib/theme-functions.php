@@ -96,6 +96,7 @@ function mb_scripts() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'customplugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'customscripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), NULL, true );
+		wp_enqueue_script( 'shoutbox', get_template_directory_uri() . '/assets/js/ajax.min.js', array('jquery'), NULL, true );
 	}
 }
 

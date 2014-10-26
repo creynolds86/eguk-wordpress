@@ -84,11 +84,14 @@ function mb_filter_yoast_seo_metabox() {
 EGUK Theme Functions
 *****************************************/
 
-if (!defined(EGUK_INC_DIR))
+if ( !defined(EGUK_INC_DIR) )
   define(EGUK_INC_DIR, get_template_directory() . '/inc/');
 
+if ( !defined(EGUK_ASSETS_DIR) )
+  define(EGUK_ASSETS_DIR, get_template_directory_uri() . '/assets/');
+
 if (!defined(EGUK_IMG_DIR))
-  define(EGUK_IMG_DIR, get_template_directory_uri() . '/assets/images/');
+  define(EGUK_IMG_DIR, EGUK_ASSETS_DIR . 'images/');
 
 // Register Custom Navigation Walker
 require_once(EGUK_INC_DIR . 'class-bootstrap-navwalker.php');
@@ -98,3 +101,9 @@ require_once(EGUK_INC_DIR . 'functions-enqueue.php');
 
 // Enqueue the EGUK filters
 require_once(EGUK_INC_DIR . 'functions-filters.php');
+
+// Enqueue the EGUK ajax
+require_once(EGUK_INC_DIR . 'functions-ajax.php');
+
+// Enqueue the EGUK custom post types
+require_once(EGUK_INC_DIR . 'functions-custom-post-types.php');

@@ -48,11 +48,12 @@ $border-radius:         4px;
 
 }
 
-@import "partials/_icons.scss";
-@import "partials/_forms.scss";
-@import "partials/_forums.scss";
-@import "partials/_news.scss";
-@import "partials/_navigation.scss";
+@import "partials/_icons";
+@import "partials/_forms";
+@import "partials/_forums";
+@import "partials/_news";
+@import "partials/_navigation";
+@import "partials/_shoutbox";
 @import "partials/_footer.scss";
 
 .btn-default {
@@ -123,32 +124,45 @@ body {
   max-width: 100%;
   color: $copy-text;
 
-  #content article,
-  #content section {
+  #content {
 
-    @extend .clearfix;
+    article,
+    section {
 
-    margin-bottom: $gutter;
-    padding: $gutter;
-    background: rgba($brand-primary, $alpha);
-    border-radius: $border-radius;
-    box-sizing: border-box;
+      @extend .clearfix;
 
-    .page-header {
-      
-      border: none;
+      margin-bottom: $gutter;
+      padding: $gutter;
+      background: rgba($brand-primary, $light-alpha);
+      border-radius: $border-radius;
+      box-sizing: border-box;
 
-      i {
-        color: darken($copy-text, 35%);
+      .page-header {
+        
+        border: none;
+
+        i {
+          color: darken($copy-text, 35%);
+        }
+      }
+      .entry-header h1 {
+        margin-top: 0;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
-    .entry-header h1 {
-      margin-top: 0;
+    .row {
+      margin-bottom: $gutter;
+      background-color: rgba($black, $light-alpha);
+
+      section {
+        background: none;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
-  }
-  #content article:last-of-type,
-  #content section:last-of-type {
-    margin-bottom: 0;
   }
 }
 .jumbotron {

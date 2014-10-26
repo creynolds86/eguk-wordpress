@@ -1,0 +1,32 @@
+
+/*=> Shoutbox styles
+--------------------------------------------------*/
+#shoutbox {
+  .wrapper {
+    max-height: 30em;
+    overflow-y: auto;
+  }
+  article {
+    position: relative;
+
+    .entry-delete {
+      float: right;
+    }
+    .entry-meta {
+      color: rgba($white, $light-alpha);
+    }
+    .entry-content {
+      float: left;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  }
+}
+#shoutbox-form {
+  margin-top: $gutter;
+
+  textarea,
+  .form-group {
+    margin-bottom: $gutter-half !important;
+  }
+}

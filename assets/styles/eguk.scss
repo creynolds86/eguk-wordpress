@@ -133,7 +133,7 @@ body {
 
       margin-bottom: $gutter;
       padding: $gutter;
-      background: rgba($brand-primary, $light-alpha);
+      background-color: rgba($black, $light-alpha);
       border-radius: $border-radius;
       box-sizing: border-box;
 
@@ -167,7 +167,6 @@ body {
 }
 .jumbotron {
   padding: $gutter * 2 !important;
-  background-color: rgba($brand-primary, $light-alpha) !important;
 }
 
 .entry-header {

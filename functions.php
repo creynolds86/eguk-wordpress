@@ -87,6 +87,9 @@ EGUK Theme Functions
 if (!defined(EGUK_INC_DIR))
   define(EGUK_INC_DIR, get_template_directory() . '/inc/');
 
+if (!defined(EGUK_IMG_DIR))
+  define(EGUK_IMG_DIR, get_template_directory_uri() . '/assets/images/');
+
 // Register Custom Navigation Walker
 require_once(EGUK_INC_DIR . 'class-bootstrap-navwalker.php');
 

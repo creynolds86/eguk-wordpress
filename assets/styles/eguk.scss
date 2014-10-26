@@ -53,6 +53,7 @@ $border-radius:         4px;
 @import "partials/_forums.scss";
 @import "partials/_news.scss";
 @import "partials/_navigation.scss";
+@import "partials/_footer.scss";
 
 .btn-default {
   @include btn-bg($btn-default-bg);

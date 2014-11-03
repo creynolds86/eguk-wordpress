@@ -54,6 +54,7 @@ $border-radius:         4px;
 @import "partials/_news";
 @import "partials/_navigation";
 @import "partials/_shoutbox";
+@import "partials/_footer.scss";
 
 .btn-default {
   @include btn-bg($btn-default-bg);
@@ -132,7 +133,7 @@ body {
 
       margin-bottom: $gutter;
       padding: $gutter;
-      background: rgba($brand-primary, $light-alpha);
+      background-color: rgba($black, $light-alpha);
       border-radius: $border-radius;
       box-sizing: border-box;
 
@@ -166,7 +167,6 @@ body {
 }
 .jumbotron {
   padding: $gutter * 2 !important;
-  background-color: rgba($brand-primary, $light-alpha) !important;
 }
 
 .entry-header {

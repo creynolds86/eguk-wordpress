@@ -8054,6 +8054,15 @@ form fieldset legend {
   margin-bottom: 15px !important;
 }
 
+/*=> Main site footer styles
+--------------------------------------------------*/
+.site-footer {
+  padding: 30px;
+}
+.site-footer p.copyright {
+  text-align: center;
+}
+
 .btn-default, form input[type="reset"],
 form button, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a, .post-edit-link {
   background-color: white;
@@ -8215,7 +8224,7 @@ body {
 #page #content section {
   margin-bottom: 30px;
   padding: 30px;
-  background: rgba(17, 17, 17, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -8248,7 +8257,6 @@ body {
 
 .jumbotron {
   padding: 60px !important;
-  background-color: rgba(17, 17, 17, 0.5) !important;
 }
 
 .entry-header {

@@ -90,6 +90,9 @@ if ( !defined(EGUK_INC_DIR) )
 if ( !defined(EGUK_ASSETS_DIR) )
   define(EGUK_ASSETS_DIR, get_template_directory_uri() . '/assets/');
 
+if (!defined(EGUK_IMG_DIR))
+  define(EGUK_IMG_DIR, EGUK_ASSETS_DIR . 'images/');
+
 // Register Custom Navigation Walker
 require_once(EGUK_INC_DIR . 'class-bootstrap-navwalker.php');
 

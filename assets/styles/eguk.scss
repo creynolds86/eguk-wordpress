@@ -18,7 +18,7 @@ $img-url:               "/eguk/wp-content/themes/eguk/assets/images";
 $gutter:                30px;
 $gutter-half:           $gutter / 2;
 
-$copy-text:             invert($brand-primary);
+$text-colour:           invert($brand-primary);
 
 $border-radius:         4px;
 
@@ -122,9 +122,11 @@ body {
 #page {
 
   max-width: 100%;
-  color: $copy-text;
+  color: $text-colour;
 
   #content {
+
+    @extend .clearfix;
 
     article,
     section {
@@ -142,7 +144,7 @@ body {
         border: none;
 
         i {
-          color: darken($copy-text, 35%);
+          color: darken($text-colour, 35%);
         }
       }
       .entry-header h1 {
@@ -193,5 +195,5 @@ blockquote {
 }
 
 .glyphicon {
-  margin-right:  8px;
+  margin-right: 8px;
 }

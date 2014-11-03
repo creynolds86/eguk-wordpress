@@ -7279,12 +7279,12 @@ form .carousel-caption button, .carousel-caption #bbpress-forums .subscription-t
 #bbpress-forums .bbp-header:before,
 #bbpress-forums .bbp-body:before,
 #bbpress-forums .bbp-body ul:before,
-#bbpress-forums .bbp-pagination:before, #page #content article:before,
+#bbpress-forums .bbp-pagination:before, #page #content:before, #page #content article:before,
 #page #content section:before, .clearfix:after, #bbpress-forums .topic:after, #bbpress-forums .reply:after, #bbpress-forums .bbp-replies:after, #bbpress-forums .bbp-topics:after,
 #bbpress-forums .bbp-header:after,
 #bbpress-forums .bbp-body:after,
 #bbpress-forums .bbp-body ul:after,
-#bbpress-forums .bbp-pagination:after, #page #content article:after,
+#bbpress-forums .bbp-pagination:after, #page #content:after, #page #content article:after,
 #page #content section:after {
   content: " ";
   display: table;
@@ -7293,7 +7293,7 @@ form .carousel-caption button, .carousel-caption #bbpress-forums .subscription-t
 #bbpress-forums .bbp-header:after,
 #bbpress-forums .bbp-body:after,
 #bbpress-forums .bbp-body ul:after,
-#bbpress-forums .bbp-pagination:after, #page #content article:after,
+#bbpress-forums .bbp-pagination:after, #page #content:after, #page #content article:after,
 #page #content section:after {
   clear: both;
 }
@@ -8060,6 +8060,7 @@ form fieldset legend {
   padding: 30px;
 }
 .site-footer p.copyright {
+  margin-bottom: 0;
   text-align: center;
 }
 

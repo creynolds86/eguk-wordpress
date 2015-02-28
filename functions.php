@@ -96,6 +96,9 @@ if (!defined(EGUK_IMG_DIR))
 // Register Custom Navigation Walker
 require_once(EGUK_INC_DIR . 'class-bootstrap-navwalker.php');
 
+// Enqueue the EGUK custom post types
+require_once(EGUK_INC_DIR . 'functions-init.php');
+
 // Enqueue the EGUK css and scripts
 require_once(EGUK_INC_DIR . 'functions-enqueue.php');
 

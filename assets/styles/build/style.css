@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: EGUK Theme
 Theme URI: http://www.elitegaminguk.com
@@ -303,7 +304,7 @@ th {
 
   .btn > .caret, form input[type="submit"] > .caret,
   form input[type="reset"] > .caret,
-  form button > .caret, #bbpress-forums .subscription-toggle > .caret, #bbpress-forums .favorite-toggle > .caret, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a > .caret, #bbpress-forums .bbp-replies .bbp-header .subscription-toggle > .caret, .post-edit-link > .caret,
+  form button > .caret, #bbpress-forums .subscription-toggle > .caret, #bbpress-forums .is-subscribed .subscription-toggle > .caret, #bbpress-forums .favorite-toggle > .caret, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a > .caret, #bbpress-forums .bbp-replies .bbp-header .subscription-toggle > .caret, .post-edit-link > .caret,
   .dropup > .btn > .caret,
   form .dropup > input[type="submit"] > .caret,
   form .dropup > input[type="reset"] > .caret,
@@ -1165,7 +1166,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: white;
+  background-color: #fff;
 }
 
 input,
@@ -1213,8 +1214,8 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1655,8 +1656,8 @@ code {
 kbd {
   padding: 2px 4px;
   font-size: 90%;
-  color: white;
-  background-color: #333333;
+  color: #fff;
+  background-color: #333;
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1675,8 +1676,8 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
-  background-color: whitesmoke;
-  border: 1px solid #cccccc;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 pre code {
@@ -2612,11 +2613,11 @@ th {
   padding: 8px;
   line-height: 1.42857;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #ddd;
 }
 .table > caption + thead > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
@@ -2627,10 +2628,10 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: white;
+  background-color: #fff;
 }
 
 .table-condensed > thead > tr > th,
@@ -2643,7 +2644,7 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td,
@@ -2651,7 +2652,7 @@ th {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > th,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -2665,7 +2666,7 @@ th {
 
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 table col[class*="col-"] {
@@ -2691,7 +2692,7 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.active,
 .table > tfoot > tr.active > td,
 .table > tfoot > tr.active > th {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 .table-hover > tbody > tr > td.active:hover,
@@ -2778,7 +2779,7 @@ table th[class*="col-"] {
     overflow-y: hidden;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     -webkit-overflow-scrolling: touch;
   }
   .table-responsive > .table {
@@ -2894,9 +2895,9 @@ output {
   font-size: 14px;
   line-height: 1.42857;
   color: #555555;
-  background-color: white;
+  background-color: #fff;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -3532,7 +3533,7 @@ form input[type="reset"]:hover,
 form button:hover, #bbpress-forums .subscription-toggle:hover, #bbpress-forums .favorite-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:hover, #bbpress-forums .bbp-replies .bbp-header .subscription-toggle:hover, .post-edit-link:hover, .btn:focus, form input[type="submit"]:focus,
 form input[type="reset"]:focus,
 form button:focus, #bbpress-forums .subscription-toggle:focus, #bbpress-forums .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:focus, #bbpress-forums .bbp-replies .bbp-header .subscription-toggle:focus, .post-edit-link:focus {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 .btn:active, form input[type="submit"]:active,
@@ -3562,9 +3563,9 @@ form fieldset[disabled] button, fieldset[disabled] #bbpress-forums .subscription
 
 .btn-default, form input[type="reset"],
 form button, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a, .post-edit-link {
-  color: #333333;
-  background-color: white;
-  border-color: #cccccc;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
 }
 .btn-default:hover, form input[type="reset"]:hover,
 form button:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:hover, .post-edit-link:hover, .btn-default:focus, form input[type="reset"]:focus,
@@ -3572,7 +3573,7 @@ form button:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links 
 form button:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:active, .post-edit-link:active, .btn-default.active, form input.active[type="reset"],
 form button.active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active, .active.post-edit-link, .open > .btn-default.dropdown-toggle, form .open > input.dropdown-toggle[type="reset"],
 form .open > button.dropdown-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle, .open > .dropdown-toggle.post-edit-link {
-  color: #333333;
+  color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3603,18 +3604,18 @@ fieldset[disabled] form button:active,
 form fieldset[disabled] button:active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a:active, fieldset[disabled] .post-edit-link:active, fieldset[disabled] .btn-default.active, fieldset[disabled] form input.active[type="reset"], form fieldset[disabled] input.active[type="reset"],
 fieldset[disabled] form button.active,
 form fieldset[disabled] button.active, fieldset[disabled] #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links fieldset[disabled] a.active, fieldset[disabled] .active.post-edit-link {
-  background-color: white;
-  border-color: #cccccc;
+  background-color: #fff;
+  border-color: #ccc;
 }
 .btn-default .badge, form input[type="reset"] .badge,
 form button .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a .badge, .post-edit-link .badge {
-  color: white;
-  background-color: #333333;
+  color: #fff;
+  background-color: #333;
 }
 
 .btn-primary, form input[type="submit"],
 form button[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"] {
-  color: white;
+  color: #fff;
   background-color: #428bca;
   border-color: #357ebd;
 }
@@ -3624,7 +3625,7 @@ form button[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .b
 form button[type="submit"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:active, .btn-primary.active, form input.active[type="submit"],
 form button.active[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="edit-link"], .open > .btn-primary.dropdown-toggle, form .open > input.dropdown-toggle[type="submit"],
 form .open > button.dropdown-toggle[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="edit-link"] {
-  color: white;
+  color: #fff;
   background-color: #3071a9;
   border-color: #285e8e;
 }
@@ -3661,16 +3662,16 @@ form fieldset[disabled] button.active[type="submit"], fieldset[disabled] #bbpres
 .btn-primary .badge, form input[type="submit"] .badge,
 form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"] .badge {
   color: #428bca;
-  background-color: white;
+  background-color: #fff;
 }
 
 .btn-success, #bbpress-forums .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"] {
-  color: white;
+  color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
 .btn-success:hover, #bbpress-forums .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:hover, .btn-success:focus, #bbpress-forums .subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:focus, .btn-success:active, #bbpress-forums .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:active, .btn-success.active, #bbpress-forums .active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="reply-to-link"], .open > .btn-success.dropdown-toggle, #bbpress-forums .open > .dropdown-toggle.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="reply-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="reply-to-link"] {
-  color: white;
+  color: #fff;
   background-color: #449d44;
   border-color: #398439;
 }
@@ -3683,16 +3684,16 @@ form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .
 }
 .btn-success .badge, #bbpress-forums .subscription-toggle .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"] .badge {
   color: #5cb85c;
-  background-color: white;
+  background-color: #fff;
 }
 
 .btn-info {
-  color: white;
+  color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
-  color: white;
+  color: #fff;
   background-color: #31b0d5;
   border-color: #269abc;
 }
@@ -3705,16 +3706,16 @@ form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .
 }
 .btn-info .badge {
   color: #5bc0de;
-  background-color: white;
+  background-color: #fff;
 }
 
 .btn-warning {
-  color: white;
+  color: #fff;
   background-color: #f0ad4e;
   border-color: #eea236;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
-  color: white;
+  color: #fff;
   background-color: #ec971f;
   border-color: #d58512;
 }
@@ -3727,16 +3728,16 @@ form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .
 }
 .btn-warning .badge {
   color: #f0ad4e;
-  background-color: white;
+  background-color: #fff;
 }
 
 .btn-danger, #bbpress-forums .is-subscribed .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"] {
-  color: white;
+  color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 .btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:hover, .btn-danger:focus, #bbpress-forums .is-subscribed .subscription-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:focus, .btn-danger:active, #bbpress-forums .is-subscribed .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:active, .btn-danger.active, #bbpress-forums .is-subscribed .active.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a.active[class*="spam-link"], .open > .btn-danger.dropdown-toggle, #bbpress-forums .is-subscribed .open > .dropdown-toggle.subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="trash-link"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .open > a.dropdown-toggle[class*="spam-link"] {
-  color: white;
+  color: #fff;
   background-color: #c9302c;
   border-color: #ac2925;
 }
@@ -3749,7 +3750,7 @@ form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .
 }
 .btn-danger .badge, #bbpress-forums .is-subscribed .subscription-toggle .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"] .badge {
   color: #d9534f;
-  background-color: white;
+  background-color: #fff;
 }
 
 .btn-link {
@@ -3777,7 +3778,7 @@ form button[type="submit"] .badge, #bbpress-forums .bbp-reply-header .bbp-meta .
 
 .btn-lg, .btn-group-lg > .btn, form .btn-group-lg > input[type="submit"],
 form .btn-group-lg > input[type="reset"],
-form .btn-group-lg > button, #bbpress-forums .btn-group-lg > .subscription-toggle, #bbpress-forums .btn-group-lg > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-lg > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-lg > .subscription-toggle, .btn-group-lg > .post-edit-link {
+form .btn-group-lg > button, #bbpress-forums .btn-group-lg > .subscription-toggle, #bbpress-forums .is-subscribed .btn-group-lg > .subscription-toggle, #bbpress-forums .btn-group-lg > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-lg > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-lg > .subscription-toggle, .btn-group-lg > .post-edit-link {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
@@ -3786,7 +3787,7 @@ form .btn-group-lg > button, #bbpress-forums .btn-group-lg > .subscription-toggl
 
 .btn-sm, .btn-group-sm > .btn, form .btn-group-sm > input[type="submit"],
 form .btn-group-sm > input[type="reset"],
-form .btn-group-sm > button, #bbpress-forums .btn-group-sm > .subscription-toggle, #bbpress-forums .btn-group-sm > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-sm > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-sm > .subscription-toggle, .btn-group-sm > .post-edit-link {
+form .btn-group-sm > button, #bbpress-forums .btn-group-sm > .subscription-toggle, #bbpress-forums .is-subscribed .btn-group-sm > .subscription-toggle, #bbpress-forums .btn-group-sm > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-sm > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-sm > .subscription-toggle, .btn-group-sm > .post-edit-link {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -3795,7 +3796,7 @@ form .btn-group-sm > button, #bbpress-forums .btn-group-sm > .subscription-toggl
 
 .btn-xs, .btn-group-xs > .btn, form .btn-group-xs > input[type="submit"],
 form .btn-group-xs > input[type="reset"],
-form .btn-group-xs > button, #bbpress-forums .btn-group-xs > .subscription-toggle, #bbpress-forums .btn-group-xs > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-xs > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-xs > .subscription-toggle, .btn-group-xs > .post-edit-link {
+form .btn-group-xs > button, #bbpress-forums .btn-group-xs > .subscription-toggle, #bbpress-forums .is-subscribed .btn-group-xs > .subscription-toggle, #bbpress-forums .btn-group-xs > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-xs > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-xs > .subscription-toggle, .btn-group-xs > .post-edit-link {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -3881,8 +3882,8 @@ tbody.collapse.in {
   list-style: none;
   font-size: 14px;
   text-align: left;
-  background-color: white;
-  border: 1px solid #cccccc;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -3911,11 +3912,11 @@ tbody.collapse.in {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #262626;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
   outline: 0;
   background-color: #428bca;
@@ -4004,12 +4005,13 @@ tbody.collapse.in {
 }
 .btn-group > .btn, form .btn-group > input[type="submit"],
 form .btn-group > input[type="reset"],
-form .btn-group > button, #bbpress-forums .btn-group > .subscription-toggle, #bbpress-forums .btn-group > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle, .btn-group > .post-edit-link,
+form .btn-group > button, #bbpress-forums .btn-group > .subscription-toggle, #bbpress-forums .is-subscribed .btn-group > .subscription-toggle, #bbpress-forums .btn-group > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle, .btn-group > .post-edit-link,
 .btn-group-vertical > .btn,
 form .btn-group-vertical > input[type="submit"],
 form .btn-group-vertical > input[type="reset"],
 form .btn-group-vertical > button,
 #bbpress-forums .btn-group-vertical > .subscription-toggle,
+#bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle,
 #bbpress-forums .btn-group-vertical > .favorite-toggle,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a,
 #bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle,
@@ -4019,57 +4021,67 @@ form .btn-group-vertical > button,
 }
 .btn-group > .btn:hover, form .btn-group > input[type="submit"]:hover,
 form .btn-group > input[type="reset"]:hover,
-form .btn-group > button:hover, #bbpress-forums .btn-group > .subscription-toggle:hover, #bbpress-forums .btn-group > .favorite-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:hover, .btn-group > .post-edit-link:hover, .btn-group > .btn:focus, form .btn-group > input[type="submit"]:focus,
+form .btn-group > button:hover, #bbpress-forums .btn-group > .subscription-toggle:hover, #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:hover, #bbpress-forums .btn-group > .favorite-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:hover, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:hover, .btn-group > .post-edit-link:hover, .btn-group > .btn:focus, form .btn-group > input[type="submit"]:focus,
 form .btn-group > input[type="reset"]:focus,
-form .btn-group > button:focus, #bbpress-forums .btn-group > .subscription-toggle:focus, #bbpress-forums .btn-group > .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:focus, .btn-group > .post-edit-link:focus, .btn-group > .btn:active, form .btn-group > input[type="submit"]:active,
+form .btn-group > button:focus, #bbpress-forums .btn-group > .subscription-toggle:focus, #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:focus, #bbpress-forums .btn-group > .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:focus, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:focus, .btn-group > .post-edit-link:focus, .btn-group > .btn:active, form .btn-group > input[type="submit"]:active,
 form .btn-group > input[type="reset"]:active,
-form .btn-group > button:active, #bbpress-forums .btn-group > .subscription-toggle:active, #bbpress-forums .btn-group > .favorite-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:active, .btn-group > .post-edit-link:active, .btn-group > .btn.active, form .btn-group > input.active[type="submit"],
+form .btn-group > button:active, #bbpress-forums .btn-group > .subscription-toggle:active, #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:active, #bbpress-forums .btn-group > .favorite-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:active, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:active, .btn-group > .post-edit-link:active, .btn-group > .btn.active, form .btn-group > input.active[type="submit"],
 form .btn-group > input.active[type="reset"],
-form .btn-group > button.active, #bbpress-forums .btn-group > .active.subscription-toggle, #bbpress-forums .btn-group > .active.favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a.active, .btn-group > .active.post-edit-link,
+form .btn-group > button.active, #bbpress-forums .btn-group > .active.subscription-toggle, #bbpress-forums .is-subscribed .btn-group > .active.subscription-toggle, #bbpress-forums .btn-group > .active.favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a.active, #bbpress-forums .bbp-replies .bbp-header .btn-group > .active.subscription-toggle, .btn-group > .active.post-edit-link,
 .btn-group-vertical > .btn:hover,
 form .btn-group-vertical > input[type="submit"]:hover,
 form .btn-group-vertical > input[type="reset"]:hover,
 form .btn-group-vertical > button:hover,
 #bbpress-forums .btn-group-vertical > .subscription-toggle:hover,
+#bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:hover,
 #bbpress-forums .btn-group-vertical > .favorite-toggle:hover,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:hover,
+#bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:hover,
 .btn-group-vertical > .post-edit-link:hover,
 .btn-group-vertical > .btn:focus,
 form .btn-group-vertical > input[type="submit"]:focus,
 form .btn-group-vertical > input[type="reset"]:focus,
 form .btn-group-vertical > button:focus,
 #bbpress-forums .btn-group-vertical > .subscription-toggle:focus,
+#bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:focus,
 #bbpress-forums .btn-group-vertical > .favorite-toggle:focus,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:focus,
+#bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:focus,
 .btn-group-vertical > .post-edit-link:focus,
 .btn-group-vertical > .btn:active,
 form .btn-group-vertical > input[type="submit"]:active,
 form .btn-group-vertical > input[type="reset"]:active,
 form .btn-group-vertical > button:active,
 #bbpress-forums .btn-group-vertical > .subscription-toggle:active,
+#bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:active,
 #bbpress-forums .btn-group-vertical > .favorite-toggle:active,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:active,
+#bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:active,
 .btn-group-vertical > .post-edit-link:active,
 .btn-group-vertical > .btn.active,
 form .btn-group-vertical > input.active[type="submit"],
 form .btn-group-vertical > input.active[type="reset"],
 form .btn-group-vertical > button.active,
 #bbpress-forums .btn-group-vertical > .active.subscription-toggle,
+#bbpress-forums .is-subscribed .btn-group-vertical > .active.subscription-toggle,
 #bbpress-forums .btn-group-vertical > .active.favorite-toggle,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a.active,
+#bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .active.subscription-toggle,
 .btn-group-vertical > .active.post-edit-link {
   z-index: 2;
 }
 .btn-group > .btn:focus, form .btn-group > input[type="submit"]:focus,
 form .btn-group > input[type="reset"]:focus,
-form .btn-group > button:focus, #bbpress-forums .btn-group > .subscription-toggle:focus, #bbpress-forums .btn-group > .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:focus, .btn-group > .post-edit-link:focus,
+form .btn-group > button:focus, #bbpress-forums .btn-group > .subscription-toggle:focus, #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:focus, #bbpress-forums .btn-group > .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:focus, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:focus, .btn-group > .post-edit-link:focus,
 .btn-group-vertical > .btn:focus,
 form .btn-group-vertical > input[type="submit"]:focus,
 form .btn-group-vertical > input[type="reset"]:focus,
 form .btn-group-vertical > button:focus,
 #bbpress-forums .btn-group-vertical > .subscription-toggle:focus,
+#bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:focus,
 #bbpress-forums .btn-group-vertical > .favorite-toggle:focus,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:focus,
+#bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:focus,
 .btn-group-vertical > .post-edit-link:focus {
   outline: 0;
 }
@@ -4078,11 +4090,11 @@ form .btn-group-vertical > button:focus,
 .btn-group form input[type="reset"] + .btn,
 form .btn-group input[type="reset"] + .btn,
 .btn-group form button + .btn,
-form .btn-group button + .btn, .btn-group #bbpress-forums .subscription-toggle + .btn, #bbpress-forums .btn-group .subscription-toggle + .btn, .btn-group #bbpress-forums .favorite-toggle + .btn, #bbpress-forums .btn-group .favorite-toggle + .btn, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .btn, .btn-group .post-edit-link + .btn, .btn-group form .btn + input[type="submit"], form .btn-group .btn + input[type="submit"], .btn-group form input[type="submit"] + input[type="submit"], form .btn-group input[type="submit"] + input[type="submit"],
+form .btn-group button + .btn, .btn-group #bbpress-forums .subscription-toggle + .btn, #bbpress-forums .btn-group .subscription-toggle + .btn, .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .btn, .btn-group #bbpress-forums .favorite-toggle + .btn, #bbpress-forums .btn-group .favorite-toggle + .btn, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .btn, .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .btn, .btn-group .post-edit-link + .btn, .btn-group form .btn + input[type="submit"], form .btn-group .btn + input[type="submit"], .btn-group form input[type="submit"] + input[type="submit"], form .btn-group input[type="submit"] + input[type="submit"],
 .btn-group form input[type="reset"] + input[type="submit"],
 form .btn-group input[type="reset"] + input[type="submit"],
 .btn-group form button + input[type="submit"],
-form .btn-group button + input[type="submit"], .btn-group #bbpress-forums form .subscription-toggle + input[type="submit"], form .btn-group #bbpress-forums .subscription-toggle + input[type="submit"], #bbpress-forums .btn-group form .subscription-toggle + input[type="submit"], form #bbpress-forums .btn-group .subscription-toggle + input[type="submit"], .btn-group #bbpress-forums form .favorite-toggle + input[type="submit"], form .btn-group #bbpress-forums .favorite-toggle + input[type="submit"], #bbpress-forums .btn-group form .favorite-toggle + input[type="submit"], form #bbpress-forums .btn-group .favorite-toggle + input[type="submit"], .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form a + input[type="submit"], form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form a + input[type="submit"], form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + input[type="submit"], .btn-group form .post-edit-link + input[type="submit"], form .btn-group .post-edit-link + input[type="submit"],
+form .btn-group button + input[type="submit"], .btn-group #bbpress-forums form .subscription-toggle + input[type="submit"], form .btn-group #bbpress-forums .subscription-toggle + input[type="submit"], #bbpress-forums .btn-group form .subscription-toggle + input[type="submit"], form #bbpress-forums .btn-group .subscription-toggle + input[type="submit"], form .btn-group #bbpress-forums .is-subscribed .subscription-toggle + input[type="submit"], .btn-group #bbpress-forums form .favorite-toggle + input[type="submit"], form .btn-group #bbpress-forums .favorite-toggle + input[type="submit"], #bbpress-forums .btn-group form .favorite-toggle + input[type="submit"], form #bbpress-forums .btn-group .favorite-toggle + input[type="submit"], .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form a + input[type="submit"], form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form a + input[type="submit"], form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + input[type="submit"], form .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + input[type="submit"], .btn-group form .post-edit-link + input[type="submit"], form .btn-group .post-edit-link + input[type="submit"],
 .btn-group form .btn + input[type="reset"],
 form .btn-group .btn + input[type="reset"],
 .btn-group form input[type="submit"] + input[type="reset"],
@@ -4095,6 +4107,7 @@ form .btn-group button + input[type="reset"],
 form .btn-group #bbpress-forums .subscription-toggle + input[type="reset"],
 #bbpress-forums .btn-group form .subscription-toggle + input[type="reset"],
 form #bbpress-forums .btn-group .subscription-toggle + input[type="reset"],
+form .btn-group #bbpress-forums .is-subscribed .subscription-toggle + input[type="reset"],
 .btn-group #bbpress-forums form .favorite-toggle + input[type="reset"],
 form .btn-group #bbpress-forums .favorite-toggle + input[type="reset"],
 #bbpress-forums .btn-group form .favorite-toggle + input[type="reset"],
@@ -4103,6 +4116,7 @@ form #bbpress-forums .btn-group .favorite-toggle + input[type="reset"],
 form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="reset"],
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form a + input[type="reset"],
 form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + input[type="reset"],
+form .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + input[type="reset"],
 .btn-group form .post-edit-link + input[type="reset"],
 form .btn-group .post-edit-link + input[type="reset"],
 .btn-group form .btn + button,
@@ -4117,6 +4131,7 @@ form .btn-group button + button,
 form .btn-group #bbpress-forums .subscription-toggle + button,
 #bbpress-forums .btn-group form .subscription-toggle + button,
 form #bbpress-forums .btn-group .subscription-toggle + button,
+form .btn-group #bbpress-forums .is-subscribed .subscription-toggle + button,
 .btn-group #bbpress-forums form .favorite-toggle + button,
 form .btn-group #bbpress-forums .favorite-toggle + button,
 #bbpress-forums .btn-group form .favorite-toggle + button,
@@ -4138,7 +4153,11 @@ form .btn-group #bbpress-forums input[type="reset"] + .subscription-toggle,
 .btn-group form #bbpress-forums button + .subscription-toggle,
 #bbpress-forums .btn-group form button + .subscription-toggle,
 form .btn-group #bbpress-forums button + .subscription-toggle,
-#bbpress-forums form .btn-group button + .subscription-toggle, .btn-group #bbpress-forums .subscription-toggle + .subscription-toggle, #bbpress-forums .btn-group .subscription-toggle + .subscription-toggle, .btn-group #bbpress-forums .favorite-toggle + .subscription-toggle, #bbpress-forums .btn-group .favorite-toggle + .subscription-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .subscription-toggle, .btn-group #bbpress-forums .post-edit-link + .subscription-toggle, #bbpress-forums .btn-group .post-edit-link + .subscription-toggle, .btn-group #bbpress-forums .btn + .favorite-toggle, #bbpress-forums .btn-group .btn + .favorite-toggle, .btn-group form #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums .btn-group form input[type="submit"] + .favorite-toggle, form .btn-group #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums form .btn-group input[type="submit"] + .favorite-toggle,
+#bbpress-forums form .btn-group button + .subscription-toggle, .btn-group #bbpress-forums .subscription-toggle + .subscription-toggle, #bbpress-forums .btn-group .subscription-toggle + .subscription-toggle, .btn-group #bbpress-forums .favorite-toggle + .subscription-toggle, #bbpress-forums .btn-group .favorite-toggle + .subscription-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .subscription-toggle, .btn-group #bbpress-forums .post-edit-link + .subscription-toggle, #bbpress-forums .btn-group .post-edit-link + .subscription-toggle, .btn-group #bbpress-forums .is-subscribed .btn + .subscription-toggle, .btn-group form #bbpress-forums .is-subscribed input[type="submit"] + .subscription-toggle, form .btn-group #bbpress-forums .is-subscribed input[type="submit"] + .subscription-toggle,
+.btn-group form #bbpress-forums .is-subscribed input[type="reset"] + .subscription-toggle,
+form .btn-group #bbpress-forums .is-subscribed input[type="reset"] + .subscription-toggle,
+.btn-group form #bbpress-forums .is-subscribed button + .subscription-toggle,
+form .btn-group #bbpress-forums .is-subscribed button + .subscription-toggle, #bbpress-forums .btn-group .is-subscribed .subscription-toggle + .subscription-toggle, .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .subscription-toggle, .btn-group #bbpress-forums .is-subscribed .favorite-toggle + .subscription-toggle, #bbpress-forums .btn-group .is-subscribed .favorite-toggle + .subscription-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .is-subscribed a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .is-subscribed a + .subscription-toggle, .btn-group #bbpress-forums .is-subscribed .post-edit-link + .subscription-toggle, .btn-group #bbpress-forums .btn + .favorite-toggle, #bbpress-forums .btn-group .btn + .favorite-toggle, .btn-group form #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums .btn-group form input[type="submit"] + .favorite-toggle, form .btn-group #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums form .btn-group input[type="submit"] + .favorite-toggle,
 .btn-group form #bbpress-forums input[type="reset"] + .favorite-toggle,
 #bbpress-forums .btn-group form input[type="reset"] + .favorite-toggle,
 form .btn-group #bbpress-forums input[type="reset"] + .favorite-toggle,
@@ -4146,7 +4165,7 @@ form .btn-group #bbpress-forums input[type="reset"] + .favorite-toggle,
 .btn-group form #bbpress-forums button + .favorite-toggle,
 #bbpress-forums .btn-group form button + .favorite-toggle,
 form .btn-group #bbpress-forums button + .favorite-toggle,
-#bbpress-forums form .btn-group button + .favorite-toggle, .btn-group #bbpress-forums .subscription-toggle + .favorite-toggle, #bbpress-forums .btn-group .subscription-toggle + .favorite-toggle, .btn-group #bbpress-forums .favorite-toggle + .favorite-toggle, #bbpress-forums .btn-group .favorite-toggle + .favorite-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .favorite-toggle, .btn-group #bbpress-forums .post-edit-link + .favorite-toggle, #bbpress-forums .btn-group .post-edit-link + .favorite-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .btn + a, .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form input[type="submit"] + a, form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .btn-group input[type="submit"] + a,
+#bbpress-forums form .btn-group button + .favorite-toggle, .btn-group #bbpress-forums .subscription-toggle + .favorite-toggle, #bbpress-forums .btn-group .subscription-toggle + .favorite-toggle, .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .favorite-toggle, .btn-group #bbpress-forums .favorite-toggle + .favorite-toggle, #bbpress-forums .btn-group .favorite-toggle + .favorite-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .favorite-toggle, .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .favorite-toggle, .btn-group #bbpress-forums .post-edit-link + .favorite-toggle, #bbpress-forums .btn-group .post-edit-link + .favorite-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .btn + a, .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form input[type="submit"] + a, form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .btn-group input[type="submit"] + a,
 .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="reset"] + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form input[type="reset"] + a,
 form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="reset"] + a,
@@ -4154,15 +4173,17 @@ form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links inp
 .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links button + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group form button + a,
 form .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links button + a,
-#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .btn-group button + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .subscription-toggle + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .favorite-toggle + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .post-edit-link + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .post-edit-link + a,
+#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .btn-group button + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .subscription-toggle + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .is-subscribed .subscription-toggle + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .favorite-toggle + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .bbp-replies .bbp-header .subscription-toggle + a, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .post-edit-link + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .post-edit-link + a, .btn-group #bbpress-forums .bbp-replies .bbp-header .btn + .subscription-toggle, .btn-group form #bbpress-forums .bbp-replies .bbp-header input[type="submit"] + .subscription-toggle, form .btn-group #bbpress-forums .bbp-replies .bbp-header input[type="submit"] + .subscription-toggle,
+.btn-group form #bbpress-forums .bbp-replies .bbp-header input[type="reset"] + .subscription-toggle,
+form .btn-group #bbpress-forums .bbp-replies .bbp-header input[type="reset"] + .subscription-toggle,
 .btn-group form #bbpress-forums .bbp-replies .bbp-header button + .subscription-toggle,
 #bbpress-forums .bbp-replies .bbp-header .btn-group form button + .subscription-toggle,
 form .btn-group #bbpress-forums .bbp-replies .bbp-header button + .subscription-toggle,
-#bbpress-forums .bbp-replies .bbp-header form .btn-group button + .subscription-toggle, .btn-group .btn + .post-edit-link, .btn-group form input[type="submit"] + .post-edit-link, form .btn-group input[type="submit"] + .post-edit-link,
+#bbpress-forums .bbp-replies .bbp-header form .btn-group button + .subscription-toggle, #bbpress-forums .btn-group .bbp-replies .bbp-header .subscription-toggle + .subscription-toggle, .btn-group #bbpress-forums .bbp-replies .bbp-header .favorite-toggle + .subscription-toggle, #bbpress-forums .btn-group .bbp-replies .bbp-header .favorite-toggle + .subscription-toggle, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .bbp-replies .bbp-header a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .bbp-replies .bbp-header a + .subscription-toggle, .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .subscription-toggle, .btn-group #bbpress-forums .bbp-replies .bbp-header .post-edit-link + .subscription-toggle, .btn-group .btn + .post-edit-link, .btn-group form input[type="submit"] + .post-edit-link, form .btn-group input[type="submit"] + .post-edit-link,
 .btn-group form input[type="reset"] + .post-edit-link,
 form .btn-group input[type="reset"] + .post-edit-link,
 .btn-group form button + .post-edit-link,
-form .btn-group button + .post-edit-link, .btn-group #bbpress-forums .subscription-toggle + .post-edit-link, #bbpress-forums .btn-group .subscription-toggle + .post-edit-link, .btn-group #bbpress-forums .favorite-toggle + .post-edit-link, #bbpress-forums .btn-group .favorite-toggle + .post-edit-link, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .post-edit-link, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .post-edit-link, .btn-group .post-edit-link + .post-edit-link,
+form .btn-group button + .post-edit-link, .btn-group #bbpress-forums .subscription-toggle + .post-edit-link, #bbpress-forums .btn-group .subscription-toggle + .post-edit-link, .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .post-edit-link, .btn-group #bbpress-forums .favorite-toggle + .post-edit-link, #bbpress-forums .btn-group .favorite-toggle + .post-edit-link, .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .post-edit-link, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .post-edit-link, .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .post-edit-link, .btn-group .post-edit-link + .post-edit-link,
 .btn-group .btn + .btn-group,
 .btn-group form input[type="submit"] + .btn-group,
 form .btn-group input[type="submit"] + .btn-group,
@@ -4172,10 +4193,12 @@ form .btn-group input[type="reset"] + .btn-group,
 form .btn-group button + .btn-group,
 .btn-group #bbpress-forums .subscription-toggle + .btn-group,
 #bbpress-forums .btn-group .subscription-toggle + .btn-group,
+.btn-group #bbpress-forums .is-subscribed .subscription-toggle + .btn-group,
 .btn-group #bbpress-forums .favorite-toggle + .btn-group,
 #bbpress-forums .btn-group .favorite-toggle + .btn-group,
 .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn-group,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group a + .btn-group,
+.btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .btn-group,
 .btn-group .post-edit-link + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group form .btn-group + input[type="submit"],
@@ -4186,10 +4209,12 @@ form .btn-group .btn-group + input[type="reset"],
 form .btn-group .btn-group + button,
 .btn-group #bbpress-forums .btn-group + .subscription-toggle,
 #bbpress-forums .btn-group .btn-group + .subscription-toggle,
+.btn-group #bbpress-forums .is-subscribed .btn-group + .subscription-toggle,
 .btn-group #bbpress-forums .btn-group + .favorite-toggle,
 #bbpress-forums .btn-group .btn-group + .favorite-toggle,
 .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group .btn-group + a,
+.btn-group #bbpress-forums .bbp-replies .bbp-header .btn-group + .subscription-toggle,
 .btn-group .btn-group + .post-edit-link,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
@@ -4211,7 +4236,7 @@ form .btn-group .btn-group + button,
 }
 .btn-toolbar > .btn, form .btn-toolbar > input[type="submit"],
 form .btn-toolbar > input[type="reset"],
-form .btn-toolbar > button, #bbpress-forums .btn-toolbar > .subscription-toggle, #bbpress-forums .btn-toolbar > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-toolbar > a, #bbpress-forums .bbp-replies .bbp-header .btn-toolbar > .subscription-toggle, .btn-toolbar > .post-edit-link,
+form .btn-toolbar > button, #bbpress-forums .btn-toolbar > .subscription-toggle, #bbpress-forums .is-subscribed .btn-toolbar > .subscription-toggle, #bbpress-forums .btn-toolbar > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-toolbar > a, #bbpress-forums .bbp-replies .bbp-header .btn-toolbar > .subscription-toggle, .btn-toolbar > .post-edit-link,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
@@ -4219,25 +4244,25 @@ form .btn-toolbar > button, #bbpress-forums .btn-toolbar > .subscription-toggle,
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle),
 form .btn-group > input[type="reset"]:not(:first-child):not(:last-child):not(.dropdown-toggle),
-form .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .subscription-toggle:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .favorite-toggle:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .post-edit-link:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+form .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .subscription-toggle:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .favorite-toggle:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .post-edit-link:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 .btn-group > .btn:first-child, form .btn-group > input[type="submit"]:first-child,
 form .btn-group > input[type="reset"]:first-child,
-form .btn-group > button:first-child, #bbpress-forums .btn-group > .subscription-toggle:first-child, #bbpress-forums .btn-group > .favorite-toggle:first-child, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:first-child, .btn-group > .post-edit-link:first-child {
+form .btn-group > button:first-child, #bbpress-forums .btn-group > .subscription-toggle:first-child, #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:first-child, #bbpress-forums .btn-group > .favorite-toggle:first-child, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:first-child, #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:first-child, .btn-group > .post-edit-link:first-child {
   margin-left: 0;
 }
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle),
 form .btn-group > input[type="reset"]:first-child:not(:last-child):not(.dropdown-toggle),
-form .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .subscription-toggle:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .favorite-toggle:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .post-edit-link:first-child:not(:last-child):not(.dropdown-toggle) {
+form .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .subscription-toggle:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .btn-group > .favorite-toggle:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .post-edit-link:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 .btn-group > .btn:last-child:not(:first-child), form .btn-group > input[type="submit"]:last-child:not(:first-child),
 form .btn-group > input[type="reset"]:last-child:not(:first-child),
-form .btn-group > button:last-child:not(:first-child), #bbpress-forums .btn-group > .subscription-toggle:last-child:not(:first-child), #bbpress-forums .btn-group > .favorite-toggle:last-child:not(:first-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:last-child:not(:first-child), .btn-group > .post-edit-link:last-child:not(:first-child),
+form .btn-group > button:last-child:not(:first-child), #bbpress-forums .btn-group > .subscription-toggle:last-child:not(:first-child), #bbpress-forums .is-subscribed .btn-group > .subscription-toggle:last-child:not(:first-child), #bbpress-forums .btn-group > .favorite-toggle:last-child:not(:first-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group > a:last-child:not(:first-child), #bbpress-forums .bbp-replies .bbp-header .btn-group > .subscription-toggle:last-child:not(:first-child), .btn-group > .post-edit-link:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -4317,7 +4342,7 @@ form .dropup .btn-group-lg > button .caret, .dropup #bbpress-forums .btn-group-l
 
 .btn-group-vertical > .btn, form .btn-group-vertical > input[type="submit"],
 form .btn-group-vertical > input[type="reset"],
-form .btn-group-vertical > button, #bbpress-forums .btn-group-vertical > .subscription-toggle, #bbpress-forums .btn-group-vertical > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle, .btn-group-vertical > .post-edit-link,
+form .btn-group-vertical > button, #bbpress-forums .btn-group-vertical > .subscription-toggle, #bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle, #bbpress-forums .btn-group-vertical > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle, .btn-group-vertical > .post-edit-link,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 form .btn-group-vertical > .btn-group > input[type="submit"],
@@ -4412,19 +4437,19 @@ form .btn-group-vertical > .btn-group + button,
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child), form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child),
 form .btn-group-vertical > input[type="reset"]:not(:first-child):not(:last-child),
-form .btn-group-vertical > button:not(:first-child):not(:last-child), #bbpress-forums .btn-group-vertical > .subscription-toggle:not(:first-child):not(:last-child), #bbpress-forums .btn-group-vertical > .favorite-toggle:not(:first-child):not(:last-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:not(:first-child):not(:last-child), .btn-group-vertical > .post-edit-link:not(:first-child):not(:last-child) {
+form .btn-group-vertical > button:not(:first-child):not(:last-child), #bbpress-forums .btn-group-vertical > .subscription-toggle:not(:first-child):not(:last-child), #bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:not(:first-child):not(:last-child), #bbpress-forums .btn-group-vertical > .favorite-toggle:not(:first-child):not(:last-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:not(:first-child):not(:last-child), #bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:not(:first-child):not(:last-child), .btn-group-vertical > .post-edit-link:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 .btn-group-vertical > .btn:first-child:not(:last-child), form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child),
 form .btn-group-vertical > input[type="reset"]:first-child:not(:last-child),
-form .btn-group-vertical > button:first-child:not(:last-child), #bbpress-forums .btn-group-vertical > .subscription-toggle:first-child:not(:last-child), #bbpress-forums .btn-group-vertical > .favorite-toggle:first-child:not(:last-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:first-child:not(:last-child), .btn-group-vertical > .post-edit-link:first-child:not(:last-child) {
+form .btn-group-vertical > button:first-child:not(:last-child), #bbpress-forums .btn-group-vertical > .subscription-toggle:first-child:not(:last-child), #bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:first-child:not(:last-child), #bbpress-forums .btn-group-vertical > .favorite-toggle:first-child:not(:last-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:first-child:not(:last-child), #bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:first-child:not(:last-child), .btn-group-vertical > .post-edit-link:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .btn-group-vertical > .btn:last-child:not(:first-child), form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child),
 form .btn-group-vertical > input[type="reset"]:last-child:not(:first-child),
-form .btn-group-vertical > button:last-child:not(:first-child), #bbpress-forums .btn-group-vertical > .subscription-toggle:last-child:not(:first-child), #bbpress-forums .btn-group-vertical > .favorite-toggle:last-child:not(:first-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:last-child:not(:first-child), .btn-group-vertical > .post-edit-link:last-child:not(:first-child) {
+form .btn-group-vertical > button:last-child:not(:first-child), #bbpress-forums .btn-group-vertical > .subscription-toggle:last-child:not(:first-child), #bbpress-forums .is-subscribed .btn-group-vertical > .subscription-toggle:last-child:not(:first-child), #bbpress-forums .btn-group-vertical > .favorite-toggle:last-child:not(:first-child), #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-vertical > a:last-child:not(:first-child), #bbpress-forums .bbp-replies .bbp-header .btn-group-vertical > .subscription-toggle:last-child:not(:first-child), .btn-group-vertical > .post-edit-link:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -4459,7 +4484,7 @@ form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:firs
 }
 .btn-group-justified > .btn, form .btn-group-justified > input[type="submit"],
 form .btn-group-justified > input[type="reset"],
-form .btn-group-justified > button, #bbpress-forums .btn-group-justified > .subscription-toggle, #bbpress-forums .btn-group-justified > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-justified > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-justified > .subscription-toggle, .btn-group-justified > .post-edit-link,
+form .btn-group-justified > button, #bbpress-forums .btn-group-justified > .subscription-toggle, #bbpress-forums .is-subscribed .btn-group-justified > .subscription-toggle, #bbpress-forums .btn-group-justified > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-justified > a, #bbpress-forums .bbp-replies .bbp-header .btn-group-justified > .subscription-toggle, .btn-group-justified > .post-edit-link,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
@@ -4553,10 +4578,10 @@ form .input-group select:not(:first-child):not(:last-child) {
   color: #555555;
   text-align: center;
   background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
-.input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control, .form-horizontal .form-group-sm form input.input-group-addon[type="text"], form .form-horizontal .form-group-sm input.input-group-addon[type="text"], .form-horizontal .form-group-sm form input.input-group-addon[type="password"], form .form-horizontal .form-group-sm input.input-group-addon[type="password"], .form-horizontal .form-group-sm form textarea.input-group-addon, form .form-horizontal .form-group-sm textarea.input-group-addon, .form-horizontal .form-group-sm form select.input-group-addon, form .form-horizontal .form-group-sm select.input-group-addon,
+.input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control, .form-horizontal .form-group-sm form input.input-group-addon[type="text"], form .form-horizontal .form-group-sm input.input-group-addon[type="text"], .form-horizontal .form-group-sm form input.input-group-addon[type="password"], form .form-horizontal .form-group-sm input.input-group-addon[type="password"], .form-horizontal .form-group-sm form textarea.input-group-addon, form .form-horizontal .form-group-sm textarea.input-group-addon, .form-horizontal .form-group-sm form select.input-group-addon, form .form-horizontal .form-group-sm select.input-group-addon, form .input-group-sm > input.input-group-addon[type="text"], form .input-group-sm > input.input-group-addon[type="password"], form .input-group-sm > textarea.input-group-addon, form .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 form .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
@@ -4570,7 +4595,7 @@ form .input-group-sm > .input-group-btn > button.input-group-addon,
   font-size: 12px;
   border-radius: 3px;
 }
-.input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control, .form-horizontal .form-group-lg form input.input-group-addon[type="text"], form .form-horizontal .form-group-lg input.input-group-addon[type="text"], .form-horizontal .form-group-lg form input.input-group-addon[type="password"], form .form-horizontal .form-group-lg input.input-group-addon[type="password"], .form-horizontal .form-group-lg form textarea.input-group-addon, form .form-horizontal .form-group-lg textarea.input-group-addon, .form-horizontal .form-group-lg form select.input-group-addon, form .form-horizontal .form-group-lg select.input-group-addon,
+.input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control, .form-horizontal .form-group-lg form input.input-group-addon[type="text"], form .form-horizontal .form-group-lg input.input-group-addon[type="text"], .form-horizontal .form-group-lg form input.input-group-addon[type="password"], form .form-horizontal .form-group-lg input.input-group-addon[type="password"], .form-horizontal .form-group-lg form textarea.input-group-addon, form .form-horizontal .form-group-lg textarea.input-group-addon, .form-horizontal .form-group-lg form select.input-group-addon, form .form-horizontal .form-group-lg select.input-group-addon, form .input-group-lg > input.input-group-addon[type="text"], form .input-group-lg > input.input-group-addon[type="password"], form .input-group-lg > textarea.input-group-addon, form .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 form .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
@@ -4596,8 +4621,10 @@ form .input-group-btn:first-child > input[type="submit"],
 form .input-group-btn:first-child > input[type="reset"],
 form .input-group-btn:first-child > button,
 #bbpress-forums .input-group-btn:first-child > .subscription-toggle,
+#bbpress-forums .is-subscribed .input-group-btn:first-child > .subscription-toggle,
 #bbpress-forums .input-group-btn:first-child > .favorite-toggle,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:first-child > a,
+#bbpress-forums .bbp-replies .bbp-header .input-group-btn:first-child > .subscription-toggle,
 .input-group-btn:first-child > .post-edit-link,
 .input-group-btn:first-child > .btn-group > .btn,
 form .input-group-btn:first-child > .btn-group > input[type="submit"],
@@ -4613,8 +4640,10 @@ form .input-group-btn:last-child > input[type="submit"]:not(:last-child):not(.dr
 form .input-group-btn:last-child > input[type="reset"]:not(:last-child):not(.dropdown-toggle),
 form .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle),
 #bbpress-forums .input-group-btn:last-child > .subscription-toggle:not(:last-child):not(.dropdown-toggle),
+#bbpress-forums .is-subscribed .input-group-btn:last-child > .subscription-toggle:not(:last-child):not(.dropdown-toggle),
 #bbpress-forums .input-group-btn:last-child > .favorite-toggle:not(:last-child):not(.dropdown-toggle),
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
+#bbpress-forums .bbp-replies .bbp-header .input-group-btn:last-child > .subscription-toggle:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .post-edit-link:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 form .input-group-btn:last-child > .btn-group:not(:last-child) > input[type="submit"],
@@ -4639,8 +4668,10 @@ form .input-group-btn:last-child > input[type="submit"],
 form .input-group-btn:last-child > input[type="reset"],
 form .input-group-btn:last-child > button,
 #bbpress-forums .input-group-btn:last-child > .subscription-toggle,
+#bbpress-forums .is-subscribed .input-group-btn:last-child > .subscription-toggle,
 #bbpress-forums .input-group-btn:last-child > .favorite-toggle,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:last-child > a,
+#bbpress-forums .bbp-replies .bbp-header .input-group-btn:last-child > .subscription-toggle,
 .input-group-btn:last-child > .post-edit-link,
 .input-group-btn:last-child > .btn-group > .btn,
 form .input-group-btn:last-child > .btn-group > input[type="submit"],
@@ -4656,8 +4687,10 @@ form .input-group-btn:first-child > input[type="submit"]:not(:first-child),
 form .input-group-btn:first-child > input[type="reset"]:not(:first-child),
 form .input-group-btn:first-child > button:not(:first-child),
 #bbpress-forums .input-group-btn:first-child > .subscription-toggle:not(:first-child),
+#bbpress-forums .is-subscribed .input-group-btn:first-child > .subscription-toggle:not(:first-child),
 #bbpress-forums .input-group-btn:first-child > .favorite-toggle:not(:first-child),
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:first-child > a:not(:first-child),
+#bbpress-forums .bbp-replies .bbp-header .input-group-btn:first-child > .subscription-toggle:not(:first-child),
 .input-group-btn:first-child > .post-edit-link:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 form .input-group-btn:first-child > .btn-group:not(:first-child) > input[type="submit"],
@@ -4682,7 +4715,7 @@ form .input-group-btn:first-child > .btn-group:not(:first-child) > button,
 }
 .input-group-btn > .btn, form .input-group-btn > input[type="submit"],
 form .input-group-btn > input[type="reset"],
-form .input-group-btn > button, #bbpress-forums .input-group-btn > .subscription-toggle, #bbpress-forums .input-group-btn > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a, #bbpress-forums .bbp-replies .bbp-header .input-group-btn > .subscription-toggle, .input-group-btn > .post-edit-link {
+form .input-group-btn > button, #bbpress-forums .input-group-btn > .subscription-toggle, #bbpress-forums .is-subscribed .input-group-btn > .subscription-toggle, #bbpress-forums .input-group-btn > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a, #bbpress-forums .bbp-replies .bbp-header .input-group-btn > .subscription-toggle, .input-group-btn > .post-edit-link {
   position: relative;
 }
 .input-group-btn > .btn + .btn, form .input-group-btn > input[type="submit"] + .btn,
@@ -4734,22 +4767,22 @@ form .input-group-btn > button + .post-edit-link, #bbpress-forums .input-group-b
 }
 .input-group-btn > .btn:hover, form .input-group-btn > input[type="submit"]:hover,
 form .input-group-btn > input[type="reset"]:hover,
-form .input-group-btn > button:hover, #bbpress-forums .input-group-btn > .subscription-toggle:hover, #bbpress-forums .input-group-btn > .favorite-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a:hover, .input-group-btn > .post-edit-link:hover, .input-group-btn > .btn:focus, form .input-group-btn > input[type="submit"]:focus,
+form .input-group-btn > button:hover, #bbpress-forums .input-group-btn > .subscription-toggle:hover, #bbpress-forums .is-subscribed .input-group-btn > .subscription-toggle:hover, #bbpress-forums .input-group-btn > .favorite-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a:hover, #bbpress-forums .bbp-replies .bbp-header .input-group-btn > .subscription-toggle:hover, .input-group-btn > .post-edit-link:hover, .input-group-btn > .btn:focus, form .input-group-btn > input[type="submit"]:focus,
 form .input-group-btn > input[type="reset"]:focus,
-form .input-group-btn > button:focus, #bbpress-forums .input-group-btn > .subscription-toggle:focus, #bbpress-forums .input-group-btn > .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a:focus, .input-group-btn > .post-edit-link:focus, .input-group-btn > .btn:active, form .input-group-btn > input[type="submit"]:active,
+form .input-group-btn > button:focus, #bbpress-forums .input-group-btn > .subscription-toggle:focus, #bbpress-forums .is-subscribed .input-group-btn > .subscription-toggle:focus, #bbpress-forums .input-group-btn > .favorite-toggle:focus, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a:focus, #bbpress-forums .bbp-replies .bbp-header .input-group-btn > .subscription-toggle:focus, .input-group-btn > .post-edit-link:focus, .input-group-btn > .btn:active, form .input-group-btn > input[type="submit"]:active,
 form .input-group-btn > input[type="reset"]:active,
-form .input-group-btn > button:active, #bbpress-forums .input-group-btn > .subscription-toggle:active, #bbpress-forums .input-group-btn > .favorite-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a:active, .input-group-btn > .post-edit-link:active {
+form .input-group-btn > button:active, #bbpress-forums .input-group-btn > .subscription-toggle:active, #bbpress-forums .is-subscribed .input-group-btn > .subscription-toggle:active, #bbpress-forums .input-group-btn > .favorite-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn > a:active, #bbpress-forums .bbp-replies .bbp-header .input-group-btn > .subscription-toggle:active, .input-group-btn > .post-edit-link:active {
   z-index: 2;
 }
 .input-group-btn:first-child > .btn, form .input-group-btn:first-child > input[type="submit"],
 form .input-group-btn:first-child > input[type="reset"],
-form .input-group-btn:first-child > button, #bbpress-forums .input-group-btn:first-child > .subscription-toggle, #bbpress-forums .input-group-btn:first-child > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:first-child > a, .input-group-btn:first-child > .post-edit-link,
+form .input-group-btn:first-child > button, #bbpress-forums .input-group-btn:first-child > .subscription-toggle, #bbpress-forums .is-subscribed .input-group-btn:first-child > .subscription-toggle, #bbpress-forums .input-group-btn:first-child > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:first-child > a, #bbpress-forums .bbp-replies .bbp-header .input-group-btn:first-child > .subscription-toggle, .input-group-btn:first-child > .post-edit-link,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 .input-group-btn:last-child > .btn, form .input-group-btn:last-child > input[type="submit"],
 form .input-group-btn:last-child > input[type="reset"],
-form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last-child > .subscription-toggle, #bbpress-forums .input-group-btn:last-child > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:last-child > a, .input-group-btn:last-child > .post-edit-link,
+form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last-child > .subscription-toggle, #bbpress-forums .is-subscribed .input-group-btn:last-child > .subscription-toggle, #bbpress-forums .input-group-btn:last-child > .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .input-group-btn:last-child > a, #bbpress-forums .bbp-replies .bbp-header .input-group-btn:last-child > .subscription-toggle, .input-group-btn:last-child > .post-edit-link,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -4803,7 +4836,7 @@ form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 .nav-tabs > li {
   float: left;
@@ -4816,12 +4849,12 @@ form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+  border-color: #eeeeee #eeeeee #ddd;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -4836,7 +4869,7 @@ form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last
   margin-left: 2px;
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: white;
+  color: #fff;
   background-color: #428bca;
 }
 
@@ -4884,11 +4917,11 @@ form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last
 .nav-tabs.nav-justified > .active > a:hover,
 .nav-tabs-justified > .active > a:focus,
 .nav-tabs.nav-justified > .active > a:focus {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 @media (min-width: 768px) {
   .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #ddd;
     border-radius: 4px 4px 0 0;
   }
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -4896,7 +4929,7 @@ form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: white;
+    border-bottom-color: #fff;
   }
 }
 
@@ -5197,13 +5230,13 @@ form .input-group-btn:last-child > button, #bbpress-forums .input-group-btn:last
 }
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, form .btn-group-sm > input.navbar-btn[type="submit"],
 form .btn-group-sm > input.navbar-btn[type="reset"],
-form .btn-group-sm > button.navbar-btn, #bbpress-forums .btn-group-sm > .navbar-btn.subscription-toggle, #bbpress-forums .btn-group-sm > .navbar-btn.favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-sm > a.navbar-btn, .btn-group-sm > .navbar-btn.post-edit-link {
+form .btn-group-sm > button.navbar-btn, #bbpress-forums .btn-group-sm > .navbar-btn.subscription-toggle, #bbpress-forums .is-subscribed .btn-group-sm > .navbar-btn.subscription-toggle, #bbpress-forums .btn-group-sm > .navbar-btn.favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-sm > a.navbar-btn, #bbpress-forums .bbp-replies .bbp-header .btn-group-sm > .navbar-btn.subscription-toggle, .btn-group-sm > .navbar-btn.post-edit-link {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, form .btn-group-xs > input.navbar-btn[type="submit"],
 form .btn-group-xs > input.navbar-btn[type="reset"],
-form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-btn.subscription-toggle, #bbpress-forums .btn-group-xs > .navbar-btn.favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-xs > a.navbar-btn, .btn-group-xs > .navbar-btn.post-edit-link {
+form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-btn.subscription-toggle, #bbpress-forums .is-subscribed .btn-group-xs > .navbar-btn.subscription-toggle, #bbpress-forums .btn-group-xs > .navbar-btn.favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn-group-xs > a.navbar-btn, #bbpress-forums .bbp-replies .bbp-header .btn-group-xs > .navbar-btn.subscription-toggle, .btn-group-xs > .navbar-btn.post-edit-link {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -5228,38 +5261,38 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777777;
+  color: #777;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #5e5e5e;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #777777;
+  color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777777;
+  color: #777;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  color: #333;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
+  color: #555;
   background-color: #e7e7e7;
 }
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
+  color: #ccc;
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  border-color: #ddd;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
+  background-color: #ddd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888888;
+  background-color: #888;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -5267,50 +5300,50 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #e7e7e7;
-  color: #555555;
+  color: #555;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777;
+    color: #777;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
+    color: #333;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
+    color: #555;
     background-color: #e7e7e7;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
+    color: #ccc;
     background-color: transparent;
   }
 }
 .navbar-default .navbar-link {
-  color: #777777;
+  color: #777;
 }
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  color: #333;
 }
 .navbar-default .btn-link {
-  color: #777777;
+  color: #777;
 }
 .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
-  color: #333333;
+  color: #333;
 }
 .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #cccccc;
+  color: #ccc;
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #222;
   border-color: #090909;
 }
 .navbar-inverse .navbar-brand {
   color: #777777;
 }
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: white;
+  color: #fff;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
@@ -5320,25 +5353,25 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
   color: #777777;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: white;
+  color: #fff;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  color: white;
+  color: #fff;
   background-color: #090909;
 }
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
-  color: #444444;
+  color: #444;
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #333333;
+  border-color: #333;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-  background-color: #333333;
+  background-color: #333;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: white;
+  background-color: #fff;
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
@@ -5346,7 +5379,7 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 }
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: #090909;
-  color: white;
+  color: #fff;
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -5359,15 +5392,15 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
     color: #777777;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: white;
+    color: #fff;
     background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: white;
+    color: #fff;
     background-color: #090909;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #444444;
+    color: #444;
     background-color: transparent;
   }
 }
@@ -5375,32 +5408,32 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
   color: #777777;
 }
 .navbar-inverse .navbar-link:hover {
-  color: white;
+  color: #fff;
 }
 .navbar-inverse .btn-link {
   color: #777777;
 }
 .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus {
-  color: white;
+  color: #fff;
 }
 .navbar-inverse .btn-link[disabled]:hover, .navbar-inverse .btn-link[disabled]:focus, fieldset[disabled] .navbar-inverse .btn-link:hover, fieldset[disabled] .navbar-inverse .btn-link:focus {
-  color: #444444;
+  color: #444;
 }
 
 .breadcrumb {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-radius: 4px;
 }
 .breadcrumb > li {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
-  content: "/\00a0";
+  content: "/ ";
   padding: 0 5px;
-  color: #cccccc;
+  color: #ccc;
 }
 .breadcrumb > .active {
   color: #777777;
@@ -5424,8 +5457,8 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
   line-height: 1.42857;
   text-decoration: none;
   color: #428bca;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   margin-left: -1px;
 }
 .pagination > li:first-child > a, #bbpress-forums .bbp-pagination-links > li:first-child > a,
@@ -5448,7 +5481,7 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 #bbpress-forums .bbp-pagination-links > li > span:focus {
   color: #2a6496;
   background-color: #eeeeee;
-  border-color: #dddddd;
+  border-color: #ddd;
 }
 .pagination > .active > a, #bbpress-forums .bbp-pagination-links > .active > a, .pagination > .active > a:hover, #bbpress-forums .bbp-pagination-links > .active > a:hover, .pagination > .active > a:focus, #bbpress-forums .bbp-pagination-links > .active > a:focus,
 .pagination > .active > span,
@@ -5458,7 +5491,7 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 .pagination > .active > span:focus,
 #bbpress-forums .bbp-pagination-links > .active > span:focus {
   z-index: 2;
-  color: white;
+  color: #fff;
   background-color: #428bca;
   border-color: #428bca;
   cursor: default;
@@ -5475,8 +5508,8 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 .pagination > .disabled > a:focus,
 #bbpress-forums .bbp-pagination-links > .disabled > a:focus {
   color: #777777;
-  background-color: white;
-  border-color: #dddddd;
+  background-color: #fff;
+  border-color: #ddd;
   cursor: not-allowed;
 }
 
@@ -5532,8 +5565,8 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 .pager li > span {
   display: inline-block;
   padding: 5px 14px;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 15px;
 }
 .pager li > a:hover,
@@ -5554,7 +5587,7 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
 .pager .disabled > a:focus,
 .pager .disabled > span {
   color: #777777;
-  background-color: white;
+  background-color: #fff;
   cursor: not-allowed;
 }
 
@@ -5564,7 +5597,7 @@ form .btn-group-xs > button.navbar-btn, #bbpress-forums .btn-group-xs > .navbar-
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: white;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -5581,7 +5614,7 @@ form button .label, #bbpress-forums .subscription-toggle .label, #bbpress-forums
 }
 
 a.label:hover, a.label:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -5634,7 +5667,7 @@ a.label:hover, a.label:focus {
   padding: 3px 7px;
   font-size: 12px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   line-height: 1;
   vertical-align: baseline;
   white-space: nowrap;
@@ -5659,14 +5692,14 @@ form .btn-group-xs > button .badge, #bbpress-forums .btn-group-xs > .subscriptio
 }
 a.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
   color: #428bca;
-  background-color: white;
+  background-color: #fff;
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
 
 a.badge:hover, a.badge:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -5715,8 +5748,8 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -5846,7 +5879,6 @@ a.thumbnail.active {
   from {
     background-position: 40px 0;
   }
-
   to {
     background-position: 0 0;
   }
@@ -5855,7 +5887,6 @@ a.thumbnail.active {
   from {
     background-position: 40px 0;
   }
-
   to {
     background-position: 0 0;
   }
@@ -5864,7 +5895,7 @@ a.thumbnail.active {
   overflow: hidden;
   height: 20px;
   margin-bottom: 20px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-radius: 4px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -5875,7 +5906,7 @@ a.thumbnail.active {
   height: 100%;
   font-size: 12px;
   line-height: 20px;
-  color: white;
+  color: #fff;
   text-align: center;
   background-color: #428bca;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -5984,8 +6015,8 @@ a.thumbnail.active {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
 }
 .list-group-item:first-child {
   border-top-right-radius: 4px;
@@ -6004,15 +6035,15 @@ a.thumbnail.active {
 }
 
 a.list-group-item {
-  color: #555555;
+  color: #555;
 }
 a.list-group-item .list-group-item-heading {
-  color: #333333;
+  color: #333;
 }
 a.list-group-item:hover, a.list-group-item:focus {
   text-decoration: none;
-  color: #555555;
-  background-color: whitesmoke;
+  color: #555;
+  background-color: #f5f5f5;
 }
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
@@ -6027,7 +6058,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
-  color: white;
+  color: #fff;
   background-color: #428bca;
   border-color: #428bca;
 }
@@ -6140,7 +6171,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 .panel {
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6179,8 +6210,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 .panel-footer {
   padding: 10px 15px;
-  background-color: whitesmoke;
-  border-top: 1px solid #dddddd;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
@@ -6268,7 +6299,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 .panel > .panel-body + .table,
 .panel > .panel-body + .table-responsive {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .panel > .table > tbody:first-child > tr:first-child th,
 .panel > .table > tbody:first-child > tr:first-child td {
@@ -6345,39 +6376,39 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-bottom: 0;
 }
 .panel-group .panel-heading + .panel-collapse > .panel-body {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .panel-group .panel-footer {
   border-top: 0;
 }
 .panel-group .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .panel-default {
-  border-color: #dddddd;
+  border-color: #ddd;
 }
 .panel-default > .panel-heading {
   color: #333333;
-  background-color: whitesmoke;
-  border-color: #dddddd;
+  background-color: #f5f5f5;
+  border-color: #ddd;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #dddddd;
+  border-top-color: #ddd;
 }
 .panel-default > .panel-heading .badge {
-  color: whitesmoke;
+  color: #f5f5f5;
   background-color: #333333;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #dddddd;
+  border-bottom-color: #ddd;
 }
 
 .panel-primary {
   border-color: #428bca;
 }
 .panel-primary > .panel-heading {
-  color: white;
+  color: #fff;
   background-color: #428bca;
   border-color: #428bca;
 }
@@ -6386,7 +6417,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 .panel-primary > .panel-heading .badge {
   color: #428bca;
-  background-color: white;
+  background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #428bca;
@@ -6498,7 +6529,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6523,13 +6554,13 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: black;
-  text-shadow: 0 1px 0 white;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover, .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -6584,8 +6615,8 @@ button.close {
 
 .modal-content {
   position: relative;
-  background-color: white;
-  border: 1px solid #999999;
+  background-color: #fff;
+  border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -6600,7 +6631,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: black;
+  background-color: #000;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -6647,11 +6678,11 @@ button.close {
 .modal-footer form input[type="reset"] + .btn,
 form .modal-footer input[type="reset"] + .btn,
 .modal-footer form button + .btn,
-form .modal-footer button + .btn, .modal-footer #bbpress-forums .subscription-toggle + .btn, #bbpress-forums .modal-footer .subscription-toggle + .btn, .modal-footer #bbpress-forums .favorite-toggle + .btn, #bbpress-forums .modal-footer .favorite-toggle + .btn, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .btn, .modal-footer .post-edit-link + .btn, .modal-footer form .btn + input[type="submit"], form .modal-footer .btn + input[type="submit"], .modal-footer form input[type="submit"] + input[type="submit"], form .modal-footer input[type="submit"] + input[type="submit"],
+form .modal-footer button + .btn, .modal-footer #bbpress-forums .subscription-toggle + .btn, #bbpress-forums .modal-footer .subscription-toggle + .btn, .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + .btn, .modal-footer #bbpress-forums .favorite-toggle + .btn, #bbpress-forums .modal-footer .favorite-toggle + .btn, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .btn, .modal-footer #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .btn, .modal-footer .post-edit-link + .btn, .modal-footer form .btn + input[type="submit"], form .modal-footer .btn + input[type="submit"], .modal-footer form input[type="submit"] + input[type="submit"], form .modal-footer input[type="submit"] + input[type="submit"],
 .modal-footer form input[type="reset"] + input[type="submit"],
 form .modal-footer input[type="reset"] + input[type="submit"],
 .modal-footer form button + input[type="submit"],
-form .modal-footer button + input[type="submit"], .modal-footer #bbpress-forums form .subscription-toggle + input[type="submit"], form .modal-footer #bbpress-forums .subscription-toggle + input[type="submit"], #bbpress-forums .modal-footer form .subscription-toggle + input[type="submit"], form #bbpress-forums .modal-footer .subscription-toggle + input[type="submit"], .modal-footer #bbpress-forums form .favorite-toggle + input[type="submit"], form .modal-footer #bbpress-forums .favorite-toggle + input[type="submit"], #bbpress-forums .modal-footer form .favorite-toggle + input[type="submit"], form #bbpress-forums .modal-footer .favorite-toggle + input[type="submit"], .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form a + input[type="submit"], form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form a + input[type="submit"], form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + input[type="submit"], .modal-footer form .post-edit-link + input[type="submit"], form .modal-footer .post-edit-link + input[type="submit"],
+form .modal-footer button + input[type="submit"], .modal-footer #bbpress-forums form .subscription-toggle + input[type="submit"], form .modal-footer #bbpress-forums .subscription-toggle + input[type="submit"], #bbpress-forums .modal-footer form .subscription-toggle + input[type="submit"], form #bbpress-forums .modal-footer .subscription-toggle + input[type="submit"], form .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + input[type="submit"], .modal-footer #bbpress-forums form .favorite-toggle + input[type="submit"], form .modal-footer #bbpress-forums .favorite-toggle + input[type="submit"], #bbpress-forums .modal-footer form .favorite-toggle + input[type="submit"], form #bbpress-forums .modal-footer .favorite-toggle + input[type="submit"], .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form a + input[type="submit"], form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form a + input[type="submit"], form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + input[type="submit"], form .modal-footer #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + input[type="submit"], .modal-footer form .post-edit-link + input[type="submit"], form .modal-footer .post-edit-link + input[type="submit"],
 .modal-footer form .btn + input[type="reset"],
 form .modal-footer .btn + input[type="reset"],
 .modal-footer form input[type="submit"] + input[type="reset"],
@@ -6664,6 +6695,7 @@ form .modal-footer button + input[type="reset"],
 form .modal-footer #bbpress-forums .subscription-toggle + input[type="reset"],
 #bbpress-forums .modal-footer form .subscription-toggle + input[type="reset"],
 form #bbpress-forums .modal-footer .subscription-toggle + input[type="reset"],
+form .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + input[type="reset"],
 .modal-footer #bbpress-forums form .favorite-toggle + input[type="reset"],
 form .modal-footer #bbpress-forums .favorite-toggle + input[type="reset"],
 #bbpress-forums .modal-footer form .favorite-toggle + input[type="reset"],
@@ -6672,6 +6704,7 @@ form #bbpress-forums .modal-footer .favorite-toggle + input[type="reset"],
 form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="reset"],
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form a + input[type="reset"],
 form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + input[type="reset"],
+form .modal-footer #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + input[type="reset"],
 .modal-footer form .post-edit-link + input[type="reset"],
 form .modal-footer .post-edit-link + input[type="reset"],
 .modal-footer form .btn + button,
@@ -6686,6 +6719,7 @@ form .modal-footer button + button,
 form .modal-footer #bbpress-forums .subscription-toggle + button,
 #bbpress-forums .modal-footer form .subscription-toggle + button,
 form #bbpress-forums .modal-footer .subscription-toggle + button,
+form .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + button,
 .modal-footer #bbpress-forums form .favorite-toggle + button,
 form .modal-footer #bbpress-forums .favorite-toggle + button,
 #bbpress-forums .modal-footer form .favorite-toggle + button,
@@ -6707,7 +6741,11 @@ form .modal-footer #bbpress-forums input[type="reset"] + .subscription-toggle,
 .modal-footer form #bbpress-forums button + .subscription-toggle,
 #bbpress-forums .modal-footer form button + .subscription-toggle,
 form .modal-footer #bbpress-forums button + .subscription-toggle,
-#bbpress-forums form .modal-footer button + .subscription-toggle, .modal-footer #bbpress-forums .subscription-toggle + .subscription-toggle, #bbpress-forums .modal-footer .subscription-toggle + .subscription-toggle, .modal-footer #bbpress-forums .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .favorite-toggle + .subscription-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .subscription-toggle, .modal-footer #bbpress-forums .post-edit-link + .subscription-toggle, #bbpress-forums .modal-footer .post-edit-link + .subscription-toggle, .modal-footer #bbpress-forums .btn + .favorite-toggle, #bbpress-forums .modal-footer .btn + .favorite-toggle, .modal-footer form #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums .modal-footer form input[type="submit"] + .favorite-toggle, form .modal-footer #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums form .modal-footer input[type="submit"] + .favorite-toggle,
+#bbpress-forums form .modal-footer button + .subscription-toggle, .modal-footer #bbpress-forums .subscription-toggle + .subscription-toggle, #bbpress-forums .modal-footer .subscription-toggle + .subscription-toggle, .modal-footer #bbpress-forums .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .favorite-toggle + .subscription-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .subscription-toggle, .modal-footer #bbpress-forums .post-edit-link + .subscription-toggle, #bbpress-forums .modal-footer .post-edit-link + .subscription-toggle, .modal-footer #bbpress-forums .is-subscribed .btn + .subscription-toggle, .modal-footer form #bbpress-forums .is-subscribed input[type="submit"] + .subscription-toggle, form .modal-footer #bbpress-forums .is-subscribed input[type="submit"] + .subscription-toggle,
+.modal-footer form #bbpress-forums .is-subscribed input[type="reset"] + .subscription-toggle,
+form .modal-footer #bbpress-forums .is-subscribed input[type="reset"] + .subscription-toggle,
+.modal-footer form #bbpress-forums .is-subscribed button + .subscription-toggle,
+form .modal-footer #bbpress-forums .is-subscribed button + .subscription-toggle, #bbpress-forums .modal-footer .is-subscribed .subscription-toggle + .subscription-toggle, .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + .subscription-toggle, .modal-footer #bbpress-forums .is-subscribed .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .is-subscribed .favorite-toggle + .subscription-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .is-subscribed a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .is-subscribed a + .subscription-toggle, .modal-footer #bbpress-forums .is-subscribed .post-edit-link + .subscription-toggle, .modal-footer #bbpress-forums .btn + .favorite-toggle, #bbpress-forums .modal-footer .btn + .favorite-toggle, .modal-footer form #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums .modal-footer form input[type="submit"] + .favorite-toggle, form .modal-footer #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums form .modal-footer input[type="submit"] + .favorite-toggle,
 .modal-footer form #bbpress-forums input[type="reset"] + .favorite-toggle,
 #bbpress-forums .modal-footer form input[type="reset"] + .favorite-toggle,
 form .modal-footer #bbpress-forums input[type="reset"] + .favorite-toggle,
@@ -6715,7 +6753,7 @@ form .modal-footer #bbpress-forums input[type="reset"] + .favorite-toggle,
 .modal-footer form #bbpress-forums button + .favorite-toggle,
 #bbpress-forums .modal-footer form button + .favorite-toggle,
 form .modal-footer #bbpress-forums button + .favorite-toggle,
-#bbpress-forums form .modal-footer button + .favorite-toggle, .modal-footer #bbpress-forums .subscription-toggle + .favorite-toggle, #bbpress-forums .modal-footer .subscription-toggle + .favorite-toggle, .modal-footer #bbpress-forums .favorite-toggle + .favorite-toggle, #bbpress-forums .modal-footer .favorite-toggle + .favorite-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .favorite-toggle, .modal-footer #bbpress-forums .post-edit-link + .favorite-toggle, #bbpress-forums .modal-footer .post-edit-link + .favorite-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn + a, .modal-footer form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form input[type="submit"] + a, form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer input[type="submit"] + a,
+#bbpress-forums form .modal-footer button + .favorite-toggle, .modal-footer #bbpress-forums .subscription-toggle + .favorite-toggle, #bbpress-forums .modal-footer .subscription-toggle + .favorite-toggle, .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + .favorite-toggle, .modal-footer #bbpress-forums .favorite-toggle + .favorite-toggle, #bbpress-forums .modal-footer .favorite-toggle + .favorite-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .favorite-toggle, .modal-footer #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .favorite-toggle, .modal-footer #bbpress-forums .post-edit-link + .favorite-toggle, #bbpress-forums .modal-footer .post-edit-link + .favorite-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn + a, .modal-footer form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form input[type="submit"] + a, form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer input[type="submit"] + a,
 .modal-footer form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="reset"] + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form input[type="reset"] + a,
 form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="reset"] + a,
@@ -6723,15 +6761,17 @@ form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links 
 .modal-footer form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links button + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer form button + a,
 form .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links button + a,
-#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer button + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .modal-footer .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .subscription-toggle + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .modal-footer .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .favorite-toggle + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .post-edit-link + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .post-edit-link + a,
+#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer button + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .modal-footer .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .subscription-toggle + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .is-subscribed .subscription-toggle + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .modal-footer .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .favorite-toggle + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .bbp-replies .bbp-header .subscription-toggle + a, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .post-edit-link + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .post-edit-link + a, .modal-footer #bbpress-forums .bbp-replies .bbp-header .btn + .subscription-toggle, .modal-footer form #bbpress-forums .bbp-replies .bbp-header input[type="submit"] + .subscription-toggle, form .modal-footer #bbpress-forums .bbp-replies .bbp-header input[type="submit"] + .subscription-toggle,
+.modal-footer form #bbpress-forums .bbp-replies .bbp-header input[type="reset"] + .subscription-toggle,
+form .modal-footer #bbpress-forums .bbp-replies .bbp-header input[type="reset"] + .subscription-toggle,
 .modal-footer form #bbpress-forums .bbp-replies .bbp-header button + .subscription-toggle,
 #bbpress-forums .bbp-replies .bbp-header .modal-footer form button + .subscription-toggle,
 form .modal-footer #bbpress-forums .bbp-replies .bbp-header button + .subscription-toggle,
-#bbpress-forums .bbp-replies .bbp-header form .modal-footer button + .subscription-toggle, .modal-footer .btn + .post-edit-link, .modal-footer form input[type="submit"] + .post-edit-link, form .modal-footer input[type="submit"] + .post-edit-link,
+#bbpress-forums .bbp-replies .bbp-header form .modal-footer button + .subscription-toggle, #bbpress-forums .modal-footer .bbp-replies .bbp-header .subscription-toggle + .subscription-toggle, .modal-footer #bbpress-forums .bbp-replies .bbp-header .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .bbp-replies .bbp-header .favorite-toggle + .subscription-toggle, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .bbp-replies .bbp-header a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .bbp-replies .bbp-header a + .subscription-toggle, .modal-footer #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .subscription-toggle, .modal-footer #bbpress-forums .bbp-replies .bbp-header .post-edit-link + .subscription-toggle, .modal-footer .btn + .post-edit-link, .modal-footer form input[type="submit"] + .post-edit-link, form .modal-footer input[type="submit"] + .post-edit-link,
 .modal-footer form input[type="reset"] + .post-edit-link,
 form .modal-footer input[type="reset"] + .post-edit-link,
 .modal-footer form button + .post-edit-link,
-form .modal-footer button + .post-edit-link, .modal-footer #bbpress-forums .subscription-toggle + .post-edit-link, #bbpress-forums .modal-footer .subscription-toggle + .post-edit-link, .modal-footer #bbpress-forums .favorite-toggle + .post-edit-link, #bbpress-forums .modal-footer .favorite-toggle + .post-edit-link, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .post-edit-link, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .post-edit-link, .modal-footer .post-edit-link + .post-edit-link {
+form .modal-footer button + .post-edit-link, .modal-footer #bbpress-forums .subscription-toggle + .post-edit-link, #bbpress-forums .modal-footer .subscription-toggle + .post-edit-link, .modal-footer #bbpress-forums .is-subscribed .subscription-toggle + .post-edit-link, .modal-footer #bbpress-forums .favorite-toggle + .post-edit-link, #bbpress-forums .modal-footer .favorite-toggle + .post-edit-link, .modal-footer #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .post-edit-link, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer a + .post-edit-link, .modal-footer #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .post-edit-link, .modal-footer .post-edit-link + .post-edit-link {
   margin-left: 5px;
   margin-bottom: 0;
 }
@@ -6739,11 +6779,11 @@ form .modal-footer button + .post-edit-link, .modal-footer #bbpress-forums .subs
 .modal-footer .btn-group form input[type="reset"] + .btn,
 form .modal-footer .btn-group input[type="reset"] + .btn,
 .modal-footer .btn-group form button + .btn,
-form .modal-footer .btn-group button + .btn, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .btn, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .btn, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .btn, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .btn, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .btn, .modal-footer .btn-group .post-edit-link + .btn, .modal-footer .btn-group form .btn + input[type="submit"], form .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group form input[type="submit"] + input[type="submit"], form .modal-footer .btn-group input[type="submit"] + input[type="submit"],
+form .modal-footer .btn-group button + .btn, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .btn, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .btn, .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .btn, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .btn, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .btn, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .btn, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .btn, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .btn, .modal-footer .btn-group .post-edit-link + .btn, .modal-footer .btn-group form .btn + input[type="submit"], form .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group form input[type="submit"] + input[type="submit"], form .modal-footer .btn-group input[type="submit"] + input[type="submit"],
 .modal-footer .btn-group form input[type="reset"] + input[type="submit"],
 form .modal-footer .btn-group input[type="reset"] + input[type="submit"],
 .modal-footer .btn-group form button + input[type="submit"],
-form .modal-footer .btn-group button + input[type="submit"], .modal-footer .btn-group #bbpress-forums form .subscription-toggle + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .subscription-toggle + input[type="submit"], #bbpress-forums .modal-footer .btn-group form .subscription-toggle + input[type="submit"], form #bbpress-forums .modal-footer .btn-group .subscription-toggle + input[type="submit"], .modal-footer .btn-group #bbpress-forums form .favorite-toggle + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .favorite-toggle + input[type="submit"], #bbpress-forums .modal-footer .btn-group form .favorite-toggle + input[type="submit"], form #bbpress-forums .modal-footer .btn-group .favorite-toggle + input[type="submit"], .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form a + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form a + input[type="submit"], form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + input[type="submit"], .modal-footer .btn-group form .post-edit-link + input[type="submit"], form .modal-footer .btn-group .post-edit-link + input[type="submit"],
+form .modal-footer .btn-group button + input[type="submit"], .modal-footer .btn-group #bbpress-forums form .subscription-toggle + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .subscription-toggle + input[type="submit"], #bbpress-forums .modal-footer .btn-group form .subscription-toggle + input[type="submit"], form #bbpress-forums .modal-footer .btn-group .subscription-toggle + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + input[type="submit"], .modal-footer .btn-group #bbpress-forums form .favorite-toggle + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .favorite-toggle + input[type="submit"], #bbpress-forums .modal-footer .btn-group form .favorite-toggle + input[type="submit"], form #bbpress-forums .modal-footer .btn-group .favorite-toggle + input[type="submit"], .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form a + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form a + input[type="submit"], form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + input[type="submit"], form .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + input[type="submit"], .modal-footer .btn-group form .post-edit-link + input[type="submit"], form .modal-footer .btn-group .post-edit-link + input[type="submit"],
 .modal-footer .btn-group form .btn + input[type="reset"],
 form .modal-footer .btn-group .btn + input[type="reset"],
 .modal-footer .btn-group form input[type="submit"] + input[type="reset"],
@@ -6756,6 +6796,7 @@ form .modal-footer .btn-group button + input[type="reset"],
 form .modal-footer .btn-group #bbpress-forums .subscription-toggle + input[type="reset"],
 #bbpress-forums .modal-footer .btn-group form .subscription-toggle + input[type="reset"],
 form #bbpress-forums .modal-footer .btn-group .subscription-toggle + input[type="reset"],
+form .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + input[type="reset"],
 .modal-footer .btn-group #bbpress-forums form .favorite-toggle + input[type="reset"],
 form .modal-footer .btn-group #bbpress-forums .favorite-toggle + input[type="reset"],
 #bbpress-forums .modal-footer .btn-group form .favorite-toggle + input[type="reset"],
@@ -6764,6 +6805,7 @@ form #bbpress-forums .modal-footer .btn-group .favorite-toggle + input[type="res
 form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + input[type="reset"],
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form a + input[type="reset"],
 form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + input[type="reset"],
+form .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + input[type="reset"],
 .modal-footer .btn-group form .post-edit-link + input[type="reset"],
 form .modal-footer .btn-group .post-edit-link + input[type="reset"],
 .modal-footer .btn-group form .btn + button,
@@ -6778,6 +6820,7 @@ form .modal-footer .btn-group button + button,
 form .modal-footer .btn-group #bbpress-forums .subscription-toggle + button,
 #bbpress-forums .modal-footer .btn-group form .subscription-toggle + button,
 form #bbpress-forums .modal-footer .btn-group .subscription-toggle + button,
+form .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + button,
 .modal-footer .btn-group #bbpress-forums form .favorite-toggle + button,
 form .modal-footer .btn-group #bbpress-forums .favorite-toggle + button,
 #bbpress-forums .modal-footer .btn-group form .favorite-toggle + button,
@@ -6786,6 +6829,7 @@ form #bbpress-forums .modal-footer .btn-group .favorite-toggle + button,
 form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + button,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form a + button,
 form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + button,
+form .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + button,
 .modal-footer .btn-group form .post-edit-link + button,
 form .modal-footer .btn-group .post-edit-link + button, .modal-footer .btn-group #bbpress-forums .btn + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .btn + .subscription-toggle, .modal-footer .btn-group form #bbpress-forums input[type="submit"] + .subscription-toggle, #bbpress-forums .modal-footer .btn-group form input[type="submit"] + .subscription-toggle, form .modal-footer .btn-group #bbpress-forums input[type="submit"] + .subscription-toggle, #bbpress-forums form .modal-footer .btn-group input[type="submit"] + .subscription-toggle,
 .modal-footer .btn-group form #bbpress-forums input[type="reset"] + .subscription-toggle,
@@ -6795,7 +6839,11 @@ form .modal-footer .btn-group #bbpress-forums input[type="reset"] + .subscriptio
 .modal-footer .btn-group form #bbpress-forums button + .subscription-toggle,
 #bbpress-forums .modal-footer .btn-group form button + .subscription-toggle,
 form .modal-footer .btn-group #bbpress-forums button + .subscription-toggle,
-#bbpress-forums form .modal-footer .btn-group button + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .post-edit-link + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .post-edit-link + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .btn + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .btn + .favorite-toggle, .modal-footer .btn-group form #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums .modal-footer .btn-group form input[type="submit"] + .favorite-toggle, form .modal-footer .btn-group #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums form .modal-footer .btn-group input[type="submit"] + .favorite-toggle,
+#bbpress-forums form .modal-footer .btn-group button + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .post-edit-link + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .post-edit-link + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .is-subscribed .btn + .subscription-toggle, .modal-footer .btn-group form #bbpress-forums .is-subscribed input[type="submit"] + .subscription-toggle, form .modal-footer .btn-group #bbpress-forums .is-subscribed input[type="submit"] + .subscription-toggle,
+.modal-footer .btn-group form #bbpress-forums .is-subscribed input[type="reset"] + .subscription-toggle,
+form .modal-footer .btn-group #bbpress-forums .is-subscribed input[type="reset"] + .subscription-toggle,
+.modal-footer .btn-group form #bbpress-forums .is-subscribed button + .subscription-toggle,
+form .modal-footer .btn-group #bbpress-forums .is-subscribed button + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .is-subscribed .subscription-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .is-subscribed .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .is-subscribed .favorite-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .is-subscribed a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .is-subscribed a + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .is-subscribed .post-edit-link + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .btn + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .btn + .favorite-toggle, .modal-footer .btn-group form #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums .modal-footer .btn-group form input[type="submit"] + .favorite-toggle, form .modal-footer .btn-group #bbpress-forums input[type="submit"] + .favorite-toggle, #bbpress-forums form .modal-footer .btn-group input[type="submit"] + .favorite-toggle,
 .modal-footer .btn-group form #bbpress-forums input[type="reset"] + .favorite-toggle,
 #bbpress-forums .modal-footer .btn-group form input[type="reset"] + .favorite-toggle,
 form .modal-footer .btn-group #bbpress-forums input[type="reset"] + .favorite-toggle,
@@ -6803,7 +6851,7 @@ form .modal-footer .btn-group #bbpress-forums input[type="reset"] + .favorite-to
 .modal-footer .btn-group form #bbpress-forums button + .favorite-toggle,
 #bbpress-forums .modal-footer .btn-group form button + .favorite-toggle,
 form .modal-footer .btn-group #bbpress-forums button + .favorite-toggle,
-#bbpress-forums form .modal-footer .btn-group button + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .post-edit-link + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .post-edit-link + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .btn + a, .modal-footer .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form input[type="submit"] + a, form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer .btn-group input[type="submit"] + a,
+#bbpress-forums form .modal-footer .btn-group button + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .favorite-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .post-edit-link + .favorite-toggle, #bbpress-forums .modal-footer .btn-group .post-edit-link + .favorite-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .btn + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .btn + a, .modal-footer .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form input[type="submit"] + a, form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="submit"] + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer .btn-group input[type="submit"] + a,
 .modal-footer .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="reset"] + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form input[type="reset"] + a,
 form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links input[type="reset"] + a,
@@ -6811,11 +6859,15 @@ form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-a
 .modal-footer .btn-group form #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links button + a,
 #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group form button + a,
 form .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links button + a,
-#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer .btn-group button + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .modal-footer .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .subscription-toggle + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .modal-footer .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .favorite-toggle + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .post-edit-link + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .post-edit-link + a, .modal-footer .btn-group .btn + .post-edit-link, .modal-footer .btn-group form input[type="submit"] + .post-edit-link, form .modal-footer .btn-group input[type="submit"] + .post-edit-link,
+#bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links form .modal-footer .btn-group button + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .modal-footer .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .subscription-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .subscription-toggle + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .is-subscribed .subscription-toggle + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .modal-footer .btn-group .bbp-reply-header .bbp-meta .bbp-admin-links .favorite-toggle + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .favorite-toggle + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .bbp-replies .bbp-header .subscription-toggle + a, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .post-edit-link + a, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .post-edit-link + a, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .btn + .subscription-toggle, .modal-footer .btn-group form #bbpress-forums .bbp-replies .bbp-header input[type="submit"] + .subscription-toggle, form .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header input[type="submit"] + .subscription-toggle,
+.modal-footer .btn-group form #bbpress-forums .bbp-replies .bbp-header input[type="reset"] + .subscription-toggle,
+form .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header input[type="reset"] + .subscription-toggle,
+.modal-footer .btn-group form #bbpress-forums .bbp-replies .bbp-header button + .subscription-toggle,
+form .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header button + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .bbp-replies .bbp-header .subscription-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .favorite-toggle + .subscription-toggle, #bbpress-forums .modal-footer .btn-group .bbp-replies .bbp-header .favorite-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .bbp-replies .bbp-header a + .subscription-toggle, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group .bbp-replies .bbp-header a + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .subscription-toggle, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .post-edit-link + .subscription-toggle, .modal-footer .btn-group .btn + .post-edit-link, .modal-footer .btn-group form input[type="submit"] + .post-edit-link, form .modal-footer .btn-group input[type="submit"] + .post-edit-link,
 .modal-footer .btn-group form input[type="reset"] + .post-edit-link,
 form .modal-footer .btn-group input[type="reset"] + .post-edit-link,
 .modal-footer .btn-group form button + .post-edit-link,
-form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .post-edit-link, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .post-edit-link, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .post-edit-link, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .post-edit-link, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .post-edit-link, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .post-edit-link, .modal-footer .btn-group .post-edit-link + .post-edit-link {
+form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group #bbpress-forums .subscription-toggle + .post-edit-link, #bbpress-forums .modal-footer .btn-group .subscription-toggle + .post-edit-link, .modal-footer .btn-group #bbpress-forums .is-subscribed .subscription-toggle + .post-edit-link, .modal-footer .btn-group #bbpress-forums .favorite-toggle + .post-edit-link, #bbpress-forums .modal-footer .btn-group .favorite-toggle + .post-edit-link, .modal-footer .btn-group #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a + .post-edit-link, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links .modal-footer .btn-group a + .post-edit-link, .modal-footer .btn-group #bbpress-forums .bbp-replies .bbp-header .subscription-toggle + .post-edit-link, .modal-footer .btn-group .post-edit-link + .post-edit-link {
   margin-left: -1px;
 }
 .modal-footer .btn-block + .btn-block {
@@ -6883,10 +6935,10 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
 .tooltip-inner {
   max-width: 200px;
   padding: 3px 8px;
-  color: white;
+  color: #fff;
   text-align: center;
   text-decoration: none;
-  background-color: black;
+  background-color: #000;
   border-radius: 4px;
 }
 
@@ -6903,52 +6955,52 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: black;
+  border-top-color: #000;
 }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: black;
+  border-top-color: #000;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: black;
+  border-top-color: #000;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: black;
+  border-right-color: #000;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: black;
+  border-left-color: #000;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: black;
+  border-bottom-color: #000;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: black;
+  border-bottom-color: #000;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: black;
+  border-bottom-color: #000;
 }
 
 .popover {
@@ -6960,9 +7012,9 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   max-width: 276px;
   padding: 1px;
   text-align: left;
-  background-color: white;
+  background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -7027,7 +7079,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
-  border-top-color: white;
+  border-top-color: #fff;
 }
 .popover.right > .arrow {
   top: 50%;
@@ -7042,7 +7094,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
-  border-right-color: white;
+  border-right-color: #fff;
 }
 .popover.bottom > .arrow {
   left: 50%;
@@ -7057,7 +7109,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
-  border-bottom-color: white;
+  border-bottom-color: #fff;
 }
 .popover.left > .arrow {
   top: 50%;
@@ -7071,7 +7123,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   content: " ";
   right: 1px;
   border-right-width: 0;
-  border-left-color: white;
+  border-left-color: #fff;
   bottom: -10px;
 }
 
@@ -7138,7 +7190,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
-  color: white;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -7158,7 +7210,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
 }
 .carousel-control:hover, .carousel-control:focus {
   outline: 0;
-  color: white;
+  color: #fff;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
@@ -7213,7 +7265,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
@@ -7223,7 +7275,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   margin: 0;
   width: 12px;
   height: 12px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .carousel-caption {
@@ -7234,7 +7286,7 @@ form .modal-footer .btn-group button + .post-edit-link, .modal-footer .btn-group
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: white;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -7902,17 +7954,17 @@ form fieldset legend {
   float: right;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers {
-  background-color: #111111;
+  background-color: #111;
   color: white;
   border: 1px solid transparent;
   box-shadow: 0 0 transparent;
   border-radius: 2px !important;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #111111, black);
-  background-image: linear-gradient(to bottom, #111111, black);
+  background-image: -webkit-linear-gradient(top, #111, black);
+  background-image: linear-gradient(to bottom, #111, black);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
-  border-color: black !important;
+  border-color: #000 !important;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers.current {
   background-color: #428bca;
@@ -7939,8 +7991,8 @@ form fieldset legend {
   line-height: 1.42857;
   text-decoration: none;
   color: #428bca;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   margin-left: -1px;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers:first-child {
@@ -7957,7 +8009,7 @@ form fieldset legend {
 #bbpress-forums > li > span:focus {
   color: #2a6496;
   background-color: #eeeeee;
-  border-color: #dddddd;
+  border-color: #ddd;
 }
 
 /*=> News styles
@@ -8066,23 +8118,23 @@ form fieldset legend {
 
 .btn-default, form input[type="reset"],
 form button, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a, .post-edit-link {
-  background-color: white;
+  background-color: #fff;
   color: white;
   border: 1px solid transparent;
   box-shadow: 0 0 transparent;
   border-radius: 2px !important;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, white, #cccccc);
-  background-image: linear-gradient(to bottom, white, #cccccc);
+  background-image: -webkit-linear-gradient(top, #fff, #cccccc);
+  background-image: linear-gradient(to bottom, #fff, #cccccc);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
-  color: #111111 !important;
+  color: #111 !important;
 }
 .btn-default:hover, form input[type="reset"]:hover,
 form button:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:hover, .post-edit-link:hover {
   background-color: white;
-  background-image: -webkit-linear-gradient(top, #cccccc, white);
-  background-image: linear-gradient(to bottom, #cccccc, white);
+  background-image: -webkit-linear-gradient(top, #cccccc, #fff);
+  background-image: linear-gradient(to bottom, #cccccc, #fff);
   border: 1px solid transparent;
 }
 
@@ -8195,8 +8247,8 @@ form button[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .b
 /*=> Styles
 --------------------------------------------------*/
 body {
-  background: url("/eguk/wp-content/themes/eguk/assets/images/battlefield_4-1485608.jpg") black no-repeat;
-  color: black;
+  background: url("/eguk/wp-content/themes/eguk/assets/images/battlefield_4-1485608.jpg") #000 no-repeat;
+  color: #000;
 }
 
 #masthead {

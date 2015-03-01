@@ -7945,29 +7945,7 @@ form fieldset legend {
   float: right;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers {
-  background-color: #111;
-  color: white;
-  border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
-  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #111, black);
-  background-image: linear-gradient(to bottom, #111, black);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   border-color: #000 !important;
-}
-#bbpress-forums .bbp-pagination-links .page-numbers.current {
-  background-color: #428bca;
-  color: white;
-  border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
-  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #428bca, #245682);
-  background-image: linear-gradient(to bottom, #428bca, #245682);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers:first-child {
   margin-left: 0;
@@ -8145,20 +8123,16 @@ form button, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a, .po
   background-color: #fff;
   color: white;
   border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
+  border-radius: 0;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #fff, #cccccc);
-  background-image: linear-gradient(to bottom, #fff, #cccccc);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   color: #111 !important;
 }
 .btn-default:hover, form input[type="reset"]:hover,
-form button:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:hover, .post-edit-link:hover {
-  background-color: white;
-  background-image: -webkit-linear-gradient(top, #cccccc, #fff);
-  background-image: linear-gradient(to bottom, #cccccc, #fff);
+form button:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:hover, .post-edit-link:hover, .btn-default:active, form input[type="reset"]:active,
+form button:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a:active, .post-edit-link:active {
+  background-color: #cccccc;
   border: 1px solid transparent;
 }
 
@@ -8167,20 +8141,16 @@ form button[type="submit"], #bbpress-forums .bbp-reply-header .bbp-meta .bbp-adm
   background-color: #428bca;
   color: white;
   border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
+  border-radius: 0;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #428bca, #245682);
-  background-image: linear-gradient(to bottom, #428bca, #245682);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   color: white !important;
 }
 .btn-primary:hover, form input[type="submit"]:hover,
-form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:hover {
-  background-color: #92bce0;
-  background-image: -webkit-linear-gradient(top, #245682, #428bca);
-  background-image: linear-gradient(to bottom, #245682, #428bca);
+form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:hover, .btn-primary:active, form input[type="submit"]:active,
+form button[type="submit"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="edit-link"]:active {
+  background-color: #245682;
   border: 1px solid transparent;
 }
 
@@ -8188,19 +8158,14 @@ form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .b
   background-color: #428bca;
   color: white;
   border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
+  border-radius: 0;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #428bca, #245682);
-  background-image: linear-gradient(to bottom, #428bca, #245682);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   color: white !important;
 }
-.btn-info:hover {
-  background-color: #92bce0;
-  background-image: -webkit-linear-gradient(top, #245682, #428bca);
-  background-image: linear-gradient(to bottom, #245682, #428bca);
+.btn-info:hover, .btn-info:active {
+  background-color: #245682;
   border: 1px solid transparent;
 }
 
@@ -8208,19 +8173,14 @@ form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .b
   background-color: #5cb85c;
   color: white;
   border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
+  border-radius: 0;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #5cb85c, #357935);
-  background-image: linear-gradient(to bottom, #5cb85c, #357935);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   color: white !important;
 }
-.btn-success:hover, #bbpress-forums .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:hover {
-  background-color: #a3d7a3;
-  background-image: -webkit-linear-gradient(top, #357935, #5cb85c);
-  background-image: linear-gradient(to bottom, #357935, #5cb85c);
+.btn-success:hover, #bbpress-forums .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:hover, .btn-success:active, #bbpress-forums .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="reply-to-link"]:active {
+  background-color: #357935;
   border: 1px solid transparent;
 }
 
@@ -8228,19 +8188,14 @@ form button[type="submit"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .b
   background-color: #d9534f;
   color: white;
   border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
+  border-radius: 0;
   -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
   transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #d9534f, #a02622);
-  background-image: linear-gradient(to bottom, #d9534f, #a02622);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   color: white !important;
 }
-.btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:hover {
-  background-color: #eba5a3;
-  background-image: -webkit-linear-gradient(top, #a02622, #d9534f);
-  background-image: linear-gradient(to bottom, #a02622, #d9534f);
+.btn-danger:hover, #bbpress-forums .is-subscribed .subscription-toggle:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:hover, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:hover, .btn-danger:active, #bbpress-forums .is-subscribed .subscription-toggle:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="trash-link"]:active, #bbpress-forums .bbp-reply-header .bbp-meta .bbp-admin-links a[class*="spam-link"]:active {
+  background-color: #a02622;
   border: 1px solid transparent;
 }
 
@@ -8253,19 +8208,6 @@ form button[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .b
 .well, #bbpress-forums .bbp-pagination-count, blockquote {
   border-left-color: rgba(255, 255, 255, 0.3) !important;
   background-color: rgba(255, 255, 255, 0.05) !important;
-}
-
-.bbp-header, .current {
-  background-color: #428bca;
-  color: white;
-  border: 1px solid transparent;
-  box-shadow: 0 0 transparent;
-  border-radius: 2px !important;
-  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, #428bca, #245682);
-  background-image: linear-gradient(to bottom, #428bca, #245682);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.01) inset;
 }
 
 /*=> Styles

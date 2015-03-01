@@ -8,8 +8,8 @@
   height: 55px;
 
   #menu-primary-navigation > li.current-menu-item, .current-menu-parent {
-    background: rgba($brand-primary, $light-alpha);
-    border-bottom: 3px solid rgba(invert($brand-primary), $light-alpha);
+    background: rgba($brand-primary, $brand-light-alpha);
+    border-bottom: 3px solid rgba(invert($brand-primary), $brand-light-alpha);
     height: 55px;
   }
   #menu-primary-navigation > li.current-menu-item > a, .current-menu-parent > a {
@@ -23,7 +23,7 @@
 .breadcrumb {
 
   margin-bottom: $gutter;
-  background-color: rgba($brand-primary, $alpha);
+  background-color: rgba($brand-primary, $brand-alpha);
 
   > li + li:before {
     padding-left: 8px;

@@ -1,0 +1,42 @@
+/*=> Mixins
+--------------------------------------------------*/
+
+@mixin gradient-bg($colour: #098cc8) {
+  background-color: $colour;
+  color: desaturate(lighten($colour, 100%), 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 0 rgba($black, 0);
+  border-radius: 2px !important;
+  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
+  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
+  background-image: -webkit-linear-gradient(top, $colour, darken($colour, 20%));
+  background-image: linear-gradient(to bottom, $colour, darken($colour, 20%));
+  box-shadow: 0 1px 1px rgba($black, 0.1),0 0 0 1px rgba($white,0.01) inset;
+}
+
+@mixin btn-bg($colour: $brand-accent) {
+
+  @include gradient-bg($colour);
+
+  &:hover {
+    background-color: lighten($colour, 20%);
+    background-image: -webkit-linear-gradient(top, darken($colour, 20%), $colour);
+    background-image: linear-gradient(to bottom, darken($colour, 20%), $colour);
+    border: 1px solid transparent;
+  }
+
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+/*=> Functions
+--------------------------------------------------*/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}

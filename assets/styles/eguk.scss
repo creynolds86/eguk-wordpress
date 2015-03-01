@@ -1,60 +1,18 @@
 
-/*=> Variables
---------------------------------------------------*/
-$brand-primary:         #111;
-$brand-accent:          #428bca;
-$brand-success:         #5cb85c;
-$brand-info:            #5bc0de;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+@import "partials/_alerts.scss";
 
-$black:                 #000;
-$white:                 invert($black);
-$alpha:                 .8;
-$light-alpha:           .5;
-
-$img-url:               "/eguk/wp-content/themes/eguk/assets/images";
-
-$gutter:                30px;
-$gutter-half:           $gutter / 2;
-
-$text-colour:           invert($brand-primary);
-
-$border-radius:         4px;
-
-@mixin gradient-bg($colour: #098cc8) {
-  background-color: $colour;
-  color: desaturate(lighten($colour, 100%), 100%);
-  border: 1px solid transparent;
-  box-shadow: 0 0 rgba($black, 0);
-  border-radius: 2px !important;
-  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
-  background-image: -webkit-linear-gradient(top, $colour, darken($colour, 20%));
-  background-image: linear-gradient(to bottom, $colour, darken($colour, 20%));
-  box-shadow: 0 1px 1px rgba($black, 0.1),0 0 0 1px rgba($white,0.01) inset;
-}
-
-@mixin btn-bg($colour: $brand-accent) {
-
-  @include gradient-bg($colour);
-
-  &:hover {
-    background-color: lighten($colour, 20%);
-    background-image: -webkit-linear-gradient(top, darken($colour, 20%), $colour);
-    background-image: linear-gradient(to bottom, darken($colour, 20%), $colour);
-    border: 1px solid transparent;
-  }
-
-}
-
-@import "partials/_icons";
+@import "partials/_footer.scss";
 @import "partials/_forms";
 @import "partials/_forums";
-@import "partials/_news";
+@import "partials/_icons";
 @import "partials/_navigation";
+@import "partials/_news";
 @import "partials/_shoutbox";
-@import "partials/_footer.scss";
+
+/*=> Buttons
+--------------------------------------------------*/
 
 .btn-default {
   @include btn-bg($btn-default-bg);
@@ -116,7 +74,7 @@ body {
   height: 200px;
   background-image: url("#{$img-url}/logo.png");
   background-size: 200px;
-  opacity: $light-alpha;
+  opacity: $brand-light-alpha;
 }
 
 #page {
@@ -135,7 +93,7 @@ body {
 
       margin-bottom: $gutter;
       padding: $gutter;
-      background-color: rgba($black, $light-alpha);
+      background-color: rgba($black, $brand-light-alpha);
       border-radius: $border-radius;
       box-sizing: border-box;
 
@@ -156,7 +114,7 @@ body {
     }
     .row {
       margin-bottom: $gutter;
-      background-color: rgba($black, $light-alpha);
+      background-color: rgba($black, $brand-light-alpha);
 
       section {
         background: none;

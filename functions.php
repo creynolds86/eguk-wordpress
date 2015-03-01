@@ -99,7 +99,7 @@ require_once(EGUK_INC_DIR . 'class-bootstrap-navwalker.php');
 // Enqueue the EGUK custom post types
 require_once(EGUK_INC_DIR . 'functions-init.php');
 
-// Enqueue the EGUK css and scripts
+// Enqueue the EGUK CSS and scripts
 require_once(EGUK_INC_DIR . 'functions-enqueue.php');
 
 // Enqueue the EGUK filters

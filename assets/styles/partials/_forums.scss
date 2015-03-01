@@ -64,8 +64,7 @@
   .bbp-topic-revision-log-item,
   .bbp-reply-revision-log-item,
   .bbp-template-notice {
-    @extend .alert;
-    @extend .alert-info;
+    @include alert(5px, .4);
   }
   .bbp-topic-revision-log,
   .bbp-reply-revision-log {
@@ -80,8 +79,10 @@
   }
   .bbp-template-notice {
 
-    margin-bottom: $gutter;
-
+    &.error {
+      border-color: $brand-warning;
+      background-color: rgba($brand-warning, .4);
+    }
     p {
       margin: 0 !important;
       padding: 0;
@@ -176,6 +177,7 @@
     .bbp-reply-content {
       width: calc(80% - 15px);
     }
+
     .bbp-author-avatar .avatar {
       margin-bottom: $gutter-half;
     }
@@ -255,7 +257,7 @@
     }
     .bbp-body {
 
-      background-color: rgba($black, $light-alpha);
+      background-color: rgba($black, $brand-light-alpha);
 
       ul {
         padding: 8px;
@@ -289,7 +291,7 @@
       background: none;
     }
     .bbp-body, .bbp-footer {
-      border-top: 1px solid rgba($black, $light-alpha);
+      border-top: 1px solid rgba($black, $brand-light-alpha);
     }
   }
   .bbp-topics,

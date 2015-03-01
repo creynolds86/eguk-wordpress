@@ -7744,7 +7744,7 @@ form fieldset legend {
   margin-bottom: 15px;
   padding: 15px;
   width: 100%;
-  background: rgba(66, 139, 202, 0.4);
+  background: rgba(66, 139, 202, 0.15);
   color: rgba(255, 255, 255, 0.8);
 }
 #bbpress-forums .bbp-topic-revision-log,

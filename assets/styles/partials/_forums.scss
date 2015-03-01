@@ -64,7 +64,7 @@
   .bbp-topic-revision-log-item,
   .bbp-reply-revision-log-item,
   .bbp-template-notice {
-    @include alert(5px, .4);
+    @include alert(5px, .15);
   }
   .bbp-topic-revision-log,
   .bbp-reply-revision-log {

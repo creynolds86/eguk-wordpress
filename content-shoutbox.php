@@ -25,15 +25,23 @@
       
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+        <div class="entry-avatar" >
+          <?php echo get_avatar( get_the_author_email(), 512 ); ?>
+        </div>
+
         <div class="entry-content">
+
           <?php the_content(); ?>
+
+          <time datetime="<?php echo get_the_date( 'c' ); ?>" class="entry-meta"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time><!-- .entry-meta -->
+
+          <?php if ( current_user_can( 'manage_options' ) ) : ?>
+
+          <a href="<?php echo get_delete_post_link( get_the_ID() ) ?>" class="entry-delete">Delete</a>
+
+          <?php endif; ?>
+
         </div><!-- .entry-content -->
-
-        <time datetime="<?php echo get_the_date( 'c' ); ?>" class="entry-meta"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time><!-- .entry-meta -->
-
-        <?php if ( current_user_can( 'manage_options' ) ) : ?>
-        <a href="<?php echo get_delete_post_link( get_the_ID() ) ?>" class="entry-delete">Delete</a>
-        <?php endif; ?>
 
       </article><!-- #post-<?php the_ID(); ?> -->
 

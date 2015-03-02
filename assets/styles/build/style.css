@@ -7949,8 +7949,8 @@ form fieldset legend {
 }
 #bbpress-forums .bbp-pagination-links .page-numbers:first-child {
   margin-left: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers {
   display: inline;
@@ -8066,7 +8066,7 @@ a[class*="delete"]:before {
   width: 90px;
   height: 90px;
   padding: 15px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 2px 0 0 2px;
   background-color: rgba(238, 238, 238, 0.1);
   text-align: center;
 }
@@ -8085,22 +8085,38 @@ a[class*="delete"]:before {
 
 /*=> Shoutbox styles
 --------------------------------------------------*/
-#shoutbox .wrapper {
+#page #content #shoutbox .wrapper {
   max-height: 30em;
   overflow-y: auto;
 }
-#shoutbox article {
+#page #content #shoutbox article {
   position: relative;
+  margin-bottom: 15px;
+  padding: 0 !important;
 }
-#shoutbox article .entry-delete {
+#page #content #shoutbox article .entry-delete,
+#page #content #shoutbox article .entry-meta {
+  font-size: 12px;
+}
+#page #content #shoutbox article .entry-delete {
   float: right;
 }
-#shoutbox article .entry-meta {
+#page #content #shoutbox article .entry-meta {
   color: rgba(255, 255, 255, 0.5);
 }
-#shoutbox article .entry-content {
+#page #content #shoutbox article .entry-avatar {
   float: left;
+  width: 25%;
+  border-right: 5px solid #428bca;
+}
+#page #content #shoutbox article .entry-avatar img {
   width: 100%;
+  height: auto;
+}
+#page #content #shoutbox article .entry-content {
+  float: left;
+  padding: 10px 15px;
+  width: 75%;
   word-wrap: break-word;
 }
 
@@ -8244,7 +8260,7 @@ body {
   margin-bottom: 30px;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
 }
 #page #content article .page-header,

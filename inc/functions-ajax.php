@@ -31,7 +31,7 @@ function ajax_shoutbox_create_post() {
 
     $args = array(
                 'post_title'    => 'shoutbox-' . rand(1, 1000),
-                'post_content'  => sanitize_text_field( $_POST['message'] ),
+                'post_content'  => $content,
                 'post_status'   => 'publish',
                 'post_type'     => 'eguk_shoutbox',
                 'post_author'   => get_current_user_id(),
@@ -46,11 +46,11 @@ function ajax_shoutbox_create_post() {
 }
 function ajax_shoutbox_get_posts() {
 
-    ob_start();
+    //ob_start();
 
     get_template_part( 'content', 'shoutbox' );
 
-    echo ob_get_clean();
+    //echo ob_get_clean();
 
     wp_reset_postdata();
 

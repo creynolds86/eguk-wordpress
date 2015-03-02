@@ -26,7 +26,7 @@
       <div class="wrapper">
         <?php get_template_part( 'content', 'shoutbox' ); ?>
       </div>
-      <?php get_template_part( 'form', 'shoutbox' ); ?>
+      <?php if ( is_user_logged_in() ) get_template_part( 'form', 'shoutbox' ); ?>
     </section>
 
   </div>

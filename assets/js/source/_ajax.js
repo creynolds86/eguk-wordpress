@@ -1,56 +1,80 @@
 (function($) {
 
-	$('#shoutbox-form').on('submit', function(e) {
+  var buttonText;
 
-    var buttonText;
+  function scroll_to_last_shout() {
 
-    e.preventDefault();
+    var $wrapper  = $('#shoutbox .wrapper'),
+        $scrollTo = $wrapper.find('article:last-child');
 
-    if ( $('#shoutbox-form textarea').val() ) {
+    $('#shoutbox .wrapper').animate({
+      scrollTop: $scrollTo.offset().top - $wrapper.offset().top + $wrapper.scrollTop()
+    });
+  }
 
-      $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: shoutboxObject.ajaxUrl,
-        data: { 
-          'action': 'ajax-shoutbox-create-post',
-          'message': $('#shoutbox-form textarea').val(),
-          'security': $('#shoutbox-form #security').val()
-        },
-        beforeSend: function(data) {
+  function shoutbox_ajax() {
 
-          buttonText = $('#shoutbox-form .btn').text();
+    $.ajax({
+      type: 'POST',
+      dataType: 'html',
+      url: shoutboxObject.ajaxUrl,
+      data: { 
+        'action': 'ajax-shoutbox-get-new-post'
+      },
+      success: function(content) {
 
-          $('#shoutbox-form .btn').attr('disabled', 'disabled')
-                                  .text(shoutboxObject.loadingMessage);
-        },
-        complete: function(data) {
+        $('#shoutbox .wrapper').html(content);
 
-          $.ajax({
-            type: 'POST',
-            dataType: 'html',
-            url: shoutboxObject.ajaxUrl,
-            data: { 
-              'action': 'ajax-shoutbox-get-new-post'
-            },
-            success: function(content) {
+        $('#shoutbox-form .btn').removeAttr('disabled')
+                                .text(buttonText);
 
-              $('#shoutbox .wrapper').html(content);
-              
-              $('#shoutbox-form').hide()
-                                 .slideDown(200);
+        $('#shoutbox-form textarea').val('');
 
-              $('#shoutbox-form .btn').removeAttr('disabled')
-                                  .text(buttonText);
+      },
+      complete: function() {
 
-              $('#shoutbox-form textarea').val('');
+        scroll_to_last_shout();
 
-            }
-          });
-        }
-      });
-    } else {
-      
-    }
+      }
+    });
+  }
+
+  $(function() {
+
+    scroll_to_last_shout();
+
+    $('#shoutbox-form').on('submit', function(e) {
+
+      e.preventDefault();
+
+      if ( $('#shoutbox-form textarea').val() ) {
+
+        $.ajax({
+          type: 'POST',
+          dataType: 'json',
+          url: shoutboxObject.ajaxUrl,
+          data: { 
+            'action':   'ajax-shoutbox-create-post',
+            'message':  $('#shoutbox-form textarea').val(),
+            'security': $('#shoutbox-form #security').val()
+          },
+          beforeSend: function(data) {
+
+            buttonText = $('#shoutbox-form .btn').text();
+
+            $('#shoutbox-form .btn').attr('disabled', 'disabled')
+                                    .text(shoutboxObject.loadingMessage);
+          },
+          complete: function(data) {
+
+            shoutbox_ajax();
+
+          }
+        });
+      }
+    });
+
+    setInterval(shoutbox_ajax(), 1400);
+
   });
 })(jQuery);

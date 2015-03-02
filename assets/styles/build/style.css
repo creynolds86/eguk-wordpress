@@ -7661,6 +7661,7 @@ form * {
 }
 form input[type="text"], form input[type="password"], form textarea, form select {
   margin-bottom: 30px !important;
+  border-radius: 0 !important;
 }
 form input[type="text"], form input[type="password"] {
   width: 50%;
@@ -7949,8 +7950,8 @@ form fieldset legend {
 }
 #bbpress-forums .bbp-pagination-links .page-numbers:first-child {
   margin-left: 0;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 #bbpress-forums .bbp-pagination-links .page-numbers {
   display: inline;
@@ -8066,7 +8067,7 @@ a[class*="delete"]:before {
   width: 90px;
   height: 90px;
   padding: 15px;
-  border-radius: 2px 0 0 2px;
+  border-radius: 0 0 0 0;
   background-color: rgba(238, 238, 238, 0.1);
   text-align: center;
 }
@@ -8263,7 +8264,7 @@ body {
   margin-bottom: 30px;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+  border-radius: 0;
   box-sizing: border-box;
 }
 #page #content article .page-header,

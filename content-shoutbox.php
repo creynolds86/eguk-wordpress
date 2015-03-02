@@ -11,15 +11,13 @@
          : 1;
   
   $args = array(
-            'post_type' => 'eguk_shoutbox',
-            'orderby'   => 'date',
-            'order'     => 'ASC',
-            'paged'     => $paged
+            'post_type'      => 'eguk_shoutbox',
+            'orderby'        => 'date',
+            'order'          => 'ASC',
+            'posts_per_page' => -1
           );
 
-  $user_args = array(
-                'is_online' => true
-               );
+  $user_args = array( 'is_online' => true );
 
   $user_query = new WP_User_Query( $user_args );
   $user_status = $user_query->results[0]->data->is_online;

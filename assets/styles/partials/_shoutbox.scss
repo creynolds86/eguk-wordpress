@@ -27,11 +27,15 @@
       width: 25%;
       border-right: 5px solid rgba($brand-accent, 1);
 
+      &.is-online {
+        border-right: 5px solid rgba($brand-success, 1);
+      }
       img {
         width: 100%;
         height: auto;
       }
     }
+
     .entry-content {
       float: left;
       padding: 10px $gutter-half;

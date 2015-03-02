@@ -8109,6 +8109,9 @@ a[class*="delete"]:before {
   width: 25%;
   border-right: 5px solid #428bca;
 }
+#page #content #shoutbox article .entry-avatar.is-online {
+  border-right: 5px solid #5cb85c;
+}
 #page #content #shoutbox article .entry-avatar img {
   width: 100%;
   height: auto;

@@ -17,6 +17,13 @@
             'paged'     => $paged
           );
 
+  $user_args = array(
+                'is_online' => true
+               );
+
+  $user_query = new WP_User_Query( $user_args );
+  $user_status = $user_query->results[0]->data->is_online;
+
   $shoutbox = new WP_Query( $args );
 
   if ( $shoutbox->have_posts() ) : ?>
@@ -25,7 +32,7 @@
       
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <div class="entry-avatar" >
+        <div class="entry-avatar<?php echo ($user_status) ? ' is-online' : '' ?>">
           <?php echo get_avatar( get_the_author_email(), 512 ); ?>
         </div>
 

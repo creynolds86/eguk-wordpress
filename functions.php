@@ -110,3 +110,6 @@ require_once(EGUK_INC_DIR . 'functions-ajax.php');
 
 // Enqueue the EGUK custom post types
 require_once(EGUK_INC_DIR . 'functions-custom-post-types.php');
+
+// Enqueue the EGUK user functions
+require_once(EGUK_INC_DIR . 'functions-users.php');

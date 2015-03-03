@@ -6,6 +6,8 @@
   * @package _egukbasetheme
   */
 
+  global $wpdb;
+
   $paged = get_query_var( 'paged' )
          ? get_query_var( 'paged' )
          : 1;
@@ -17,17 +19,36 @@
             'posts_per_page' => -1
           );
 
-  $user_args = array( 'is_online' => true );
-
-  $user_query = new WP_User_Query( $user_args );
-  $user_status = $user_query->results[0]->data->is_online;
-
   $shoutbox = new WP_Query( $args );
+
+  $online_users = $wpdb->get_results( 
+                    $wpdb->prepare( 
+                      "
+                       SELECT ID, user_nicename FROM $wpdb->users
+                       WHERE is_online = %s
+                      ",
+                      true 
+                    )
+                  );
+
+  foreach ( $online_users as $user ) :
+
+    $online_user_ids[] = $user->ID;
+
+  endforeach;
 
   if ( $shoutbox->have_posts() ) : ?>
 
-    <?php while ( $shoutbox->have_posts() ) : $shoutbox->the_post(); ?>
-      
+    <?php
+
+      while ( $shoutbox->have_posts() ) : $shoutbox->the_post(); 
+
+      $user_status = (!empty($online_user_ids))
+                     ? in_array(get_the_author_meta('ID'), $online_user_ids)
+                     : false;
+
+    ?>
+
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="entry-avatar<?php echo ($user_status) ? ' is-online' : '' ?>">

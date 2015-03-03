@@ -4,7 +4,9 @@
 
   $(function() {
 
-    if ($('#shoutbox-form').length) {
+    if ($('#shoutbox').length) {
+
+      setInterval(shoutbox_ajax, 10000);
 
       function scroll_to_last_shout() {
 
@@ -28,11 +30,6 @@
           success: function(content) {
 
             $('#shoutbox .wrapper').html(content);
-
-            $('#shoutbox-form .btn').removeAttr('disabled')
-                                    .text(buttonText);
-
-            $('#shoutbox-form textarea').val('');
 
           },
           complete: function() {
@@ -66,6 +63,15 @@
 
               $('#shoutbox-form .btn').attr('disabled', 'disabled')
                                       .text(shoutboxObject.loadingMessage);
+
+            },
+            success: function(data) {
+
+              $('#shoutbox-form .btn').removeAttr('disabled')
+                                      .text(buttonText);
+
+              $('#shoutbox-form textarea').val('');
+
             },
             complete: function(data) {
 
@@ -75,8 +81,6 @@
           });
         }
       });
-
-      setInterval(shoutbox_ajax(), 1400);
     }
   });
 })(jQuery);

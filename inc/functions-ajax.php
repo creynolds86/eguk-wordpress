@@ -17,6 +17,7 @@ function ajax_shoutbox_init() {
 
     add_action( 'wp_ajax_ajax-shoutbox-create-post', 'ajax_shoutbox_create_post' );
     add_action( 'wp_ajax_ajax-shoutbox-get-new-post', 'ajax_shoutbox_get_posts' );
+    add_action( 'wp_ajax_nopriv_ajax-shoutbox-get-new-post', 'ajax_shoutbox_get_posts' );
 }
 
 add_action('init', 'ajax_shoutbox_init');

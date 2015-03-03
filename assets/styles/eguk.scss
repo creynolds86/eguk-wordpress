@@ -52,8 +52,8 @@
 /*=> Styles
 --------------------------------------------------*/
 body {
-  background: url("#{$img-url}/battlefield_4-1485608.jpg") $black no-repeat;
-  color: $black;;
+  background: url("#{$img-url}/#{$brand-bg-image}") $black no-repeat;
+  color: $black;
 }
 
 #masthead {

@@ -1,56 +1,82 @@
 (function($) {
 
-	$('#shoutbox-form').on('submit', function(e) {
+  var buttonText;
 
-    var buttonText;
+  $(function() {
 
-    e.preventDefault();
+    if ($('#shoutbox-form').length) {
 
-    if ( $('#shoutbox-form textarea').val() ) {
+      function scroll_to_last_shout() {
 
-      $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: shoutboxObject.ajaxUrl,
-        data: { 
-          'action': 'ajax-shoutbox-create-post',
-          'message': $('#shoutbox-form textarea').val(),
-          'security': $('#shoutbox-form #security').val()
-        },
-        beforeSend: function(data) {
+        var $wrapper  = $('#shoutbox .wrapper'),
+            $scrollTo = $wrapper.find('article:last-child');
 
-          buttonText = $('#shoutbox-form .btn').text();
+        $('#shoutbox .wrapper').animate({
+          scrollTop: $scrollTo.offset().top - $wrapper.offset().top + $wrapper.scrollTop()
+        });
+      }
 
-          $('#shoutbox-form .btn').attr('disabled', 'disabled')
-                                  .text(shoutboxObject.loadingMessage);
-        },
-        complete: function(data) {
+      function shoutbox_ajax() {
+
+        $.ajax({
+          type: 'POST',
+          dataType: 'html',
+          url: shoutboxObject.ajaxUrl,
+          data: { 
+            'action': 'ajax-shoutbox-get-new-post'
+          },
+          success: function(content) {
+
+            $('#shoutbox .wrapper').html(content);
+
+            $('#shoutbox-form .btn').removeAttr('disabled')
+                                    .text(buttonText);
+
+            $('#shoutbox-form textarea').val('');
+
+          },
+          complete: function() {
+
+            scroll_to_last_shout();
+
+          }
+        });
+      }
+
+      scroll_to_last_shout();
+
+      $('#shoutbox-form').on('submit', function(e) {
+
+        e.preventDefault();
+
+        if ( $('#shoutbox-form textarea').val() ) {
 
           $.ajax({
             type: 'POST',
-            dataType: 'html',
+            dataType: 'json',
             url: shoutboxObject.ajaxUrl,
             data: { 
-              'action': 'ajax-shoutbox-get-new-post'
+              'action':   'ajax-shoutbox-create-post',
+              'message':  $('#shoutbox-form textarea').val(),
+              'security': $('#shoutbox-form #security').val()
             },
-            success: function(content) {
+            beforeSend: function(data) {
 
-              $('#shoutbox .wrapper').html(content);
-              
-              $('#shoutbox-form').hide()
-                                 .slideDown(200);
+              buttonText = $('#shoutbox-form .btn').text();
 
-              $('#shoutbox-form .btn').removeAttr('disabled')
-                                  .text(buttonText);
+              $('#shoutbox-form .btn').attr('disabled', 'disabled')
+                                      .text(shoutboxObject.loadingMessage);
+            },
+            complete: function(data) {
 
-              $('#shoutbox-form textarea').val('');
+              shoutbox_ajax();
 
             }
           });
         }
       });
-    } else {
-      
+
+      setInterval(shoutbox_ajax(), 1400);
     }
   });
 })(jQuery);

@@ -31,7 +31,7 @@ function ajax_shoutbox_create_post() {
 
     $args = array(
                 'post_title'    => 'shoutbox-' . rand(1, 1000),
-                'post_content'  => sanitize_text_field( $_POST['message'] ),
+                'post_content'  => $content,
                 'post_status'   => 'publish',
                 'post_type'     => 'eguk_shoutbox',
                 'post_author'   => get_current_user_id(),

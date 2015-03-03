@@ -1,23 +1,45 @@
 
 /*=> Shoutbox styles
 --------------------------------------------------*/
-#shoutbox {
+#page #content #shoutbox {
   .wrapper {
     max-height: 30em;
     overflow-y: auto;
   }
   article {
     position: relative;
+    margin-bottom: $gutter-half;
+    padding: 0 !important;
 
+    .entry-delete,
+    .entry-meta {
+      font-size: 12px;
+    }
     .entry-delete {
       float: right;
     }
     .entry-meta {
       color: rgba($white, $brand-light-alpha);
     }
+    .entry-avatar {
+
+      float: left;
+      width: 25%;
+      border-right: 5px solid rgba($brand-accent, 1);
+
+      &.is-online {
+        border-right: 5px solid rgba($brand-success, 1);
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
     .entry-content {
       float: left;
-      width: 100%;
+      padding: 10px $gutter-half;
+      width: 75%;
       word-wrap: break-word;
     }
   }

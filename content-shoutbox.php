@@ -47,6 +47,8 @@
                      ? in_array(get_the_author_meta('ID'), $online_user_ids)
                      : false;
 
+      $time_diff = human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago');
+
     ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -59,7 +61,7 @@
 
           <?php the_content(); ?>
 
-          <time datetime="<?php echo get_the_date( 'c' ); ?>" class="entry-meta"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time><!-- .entry-meta -->
+          <time datetime="<?php echo get_the_date( 'c' ); ?>" class="entry-meta"><?php echo $time_diff; ?></time><!-- .entry-meta -->
 
           <?php if ( current_user_can( 'manage_options' ) ) : ?>
 

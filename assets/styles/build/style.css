@@ -8232,7 +8232,7 @@ form button[type="submit"]:focus, #bbpress-forums .bbp-reply-header .bbp-meta .b
 /*=> Styles
 --------------------------------------------------*/
 body {
-  background: url("/eguk/wp-content/themes/eguk/assets/images/battlefield_4-1485608.jpg") #000 no-repeat;
+  background: url("/eguk/wp-content/themes/eguk/assets/images/bg.jpg") #000 no-repeat;
   color: #000;
 }
 

@@ -1,0 +1,40 @@
+/*=> Mixins
+--------------------------------------------------*/
+
+@mixin gradient-bg($colour: #098cc8) {
+  
+}
+
+@mixin btn-bg($colour: $brand-accent) {
+
+  @include gradient-bg($colour);
+
+  background-color: $colour;
+  color: desaturate(lighten($colour, 100%), 100%);
+  border: 1px solid transparent;
+  border-radius: 0;
+  -webkit-transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
+  transition: background-color .2s, box-shadow .2s, background-color .2s, border-color .2s, color .2s;
+  box-shadow: 0 1px 1px rgba($black, 0.1),0 0 0 1px rgba($white,0.01) inset;
+
+  &:hover,
+  &:active {
+    background-color: darken($colour, 20%);
+    border: 1px solid transparent;
+  }
+
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+/*=> Functions
+--------------------------------------------------*/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}

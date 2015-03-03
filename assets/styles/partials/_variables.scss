@@ -1,0 +1,20 @@
+$brand-primary:         #111;
+$brand-accent:          #428bca;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$black:                 #000;
+$white:                 invert($black);
+$brand-alpha:           .8;
+$brand-light-alpha:     .5;
+
+$img-url:               "/eguk/wp-content/themes/eguk/assets/images";
+
+$gutter:                30px;
+$gutter-half:           $gutter / 2;
+
+$text-colour:           invert($brand-primary);
+
+$border-radius:         4px;

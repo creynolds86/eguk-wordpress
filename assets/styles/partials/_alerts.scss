@@ -1,0 +1,51 @@
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+%animation.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@mixin alert($border-size, $alpha, $colour: rgba($brand-accent, $brand-alpha)) {
+
+  @extend %animation.fade-in;
+
+  border: none;
+  border-left: $border-size solid rgba(66, 139, 202, 2);
+  border-radius: 0;
+  margin-bottom: $gutter-half;
+  padding: $gutter-half;
+  width: 100%;
+  background: rgba($colour, $alpha);
+  color: rgba(lighten( invert($colour), 100%), $brand-alpha);
+
+}

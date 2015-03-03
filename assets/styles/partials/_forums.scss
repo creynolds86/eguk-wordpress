@@ -321,54 +321,7 @@
       @extend .form-group;
     }
   }
-  .bbp-pagination-count {
-    @extend .well;
-    float: left;
-    margin-bottom: $gutter;
-  }
-  .bbp-pagination-links {
-
-    @extend .pagination;
-
-    margin: $gutter-half 0 $gutter-half;
-
-    float: right;
-
-    .page-numbers {
-      @include gradient-bg($brand-primary);
-      border-color: $black !important;
-    }
-    .page-numbers.current {
-      @include gradient-bg($brand-accent);
-    }
-
-    .page-numbers:first-child {
-      margin-left: 0;
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
-    }
-    .page-numbers {
-      display: inline;
-      position: relative;
-      float: left; // Collapse white-space
-      padding: $padding-base-vertical $padding-base-horizontal;
-      line-height: $line-height-base;
-      text-decoration: none;
-      color: $pagination-color;
-      background-color: $pagination-bg;
-      border: 1px solid $pagination-border;
-      margin-left: -1px;
-    
-      &:first-child {
-        margin-left: 0;
-        @include border-left-radius($border-radius-base);
-      }
-      &:last-child {
-        @include border-right-radius($border-radius-base);
-      }
-    }
-  }
-
+  
   > li > a,
   > li > span {
     &:hover,

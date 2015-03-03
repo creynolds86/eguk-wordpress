@@ -1,0 +1,42 @@
+
+/*=> Pagination styles
+--------------------------------------------------*/
+
+.bbp-pagination-count {
+  float: left;
+  margin-bottom: $gutter-half;
+  padding: 10px;
+  background-color: rgba($black, $brand-light-alpha);
+}
+.bbp-pagination-links {
+
+  @extend .pagination;
+
+  float: right;
+  margin: 0;
+
+  .page-numbers {
+    display: inline;
+    position: relative;
+    float: left; // Collapse white-space
+    padding: $padding-base-vertical $padding-base-horizontal;
+    line-height: $line-height-base;
+    text-decoration: none;
+    color: $brand-accent;
+    background-color: rgba(darken($brand-accent, 40%), $brand-alpha);
+    margin-left: 2px;
+  
+    &.current {
+      background-color: $brand-accent;
+      color: $text-colour;
+    }
+    &.next,
+    &.prev {
+      padding: 6px 9px;
+      background-color: rgba(darken($brand-accent, 60%), $brand-alpha);
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
